@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hi, I'&apos;m Sam</title>
+        <title>Hi, I&apos;m Sam</title>
         
       </Head>
       <Container>
         <Section>
-          <HeroH1>Hi I'&apos;m Sam!
+          <HeroH1>Hi I&apos;m Sam!
             <br />
             Thank you for vistiting my site.
           </HeroH1>

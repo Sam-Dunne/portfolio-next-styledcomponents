@@ -140,7 +140,7 @@ export default function Projects() {
                     <ProjectsCard>
                         <ProjectsTitle>Attack of the Clone</ProjectsTitle>
                         <ProjectsCardTextWrapper>
-                            <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt'&apos;s homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </ProjectsCardText>
+                            <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </ProjectsCardText>
                         </ProjectsCardTextWrapper>
                         <ProjectImageContainer>
                             {/* <ProjectImageWrapper>
