@@ -12,7 +12,7 @@ const ProjectsTitle = styled.h1`
     font-family: 'Oswald', sans-serif;
     
     @media ${device.tablet} {
-        font-size: 3rem;
+        font-size: 2.6rem;
     
     }
 
@@ -26,6 +26,7 @@ const ProjectsSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
     `;
 
 const ProjectsCard = styled.div`
@@ -46,19 +47,31 @@ const ProjectsCard = styled.div`
 
 const ProjectsCardTextWrapper = styled.div`
     background: #fafafa;
-    width: 80vw;
+    width: 80%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 25px;
     border-radius: 8px;
 
     @media ${device.tablet} {
         width: 65%;
         margin: 20px auto 40px auto;
+        padding: 40px;
     }
 
     @media ${device.laptopL} {
-        width: 50%;
+        width: 512px;
         margin: 20px auto 40px auto;
+    }
+`;
+
+const ProjectsCardText = styled.h5`
+
+    @media ${device.tablet} {
+        font-size: 1.3rem;
+    }
+
+    @media ${device.laptopL} {
+       font-size: 1.5rem;
     }
 `;
 
@@ -71,11 +84,11 @@ const ProjectImageContainer = styled.div`
     
     @media ${device.tablet} {
         width: 90%;
+    }
+    
+    @media ${device.laptopL} {
         flex-direction: row;
         justify-content: space-around;
-    }
-
-    @media ${device.laptopL} {
     }
 `;
 
@@ -89,11 +102,12 @@ const ProjectImageWrapper = styled.div`
 
     @media ${device.tablet} {
         margin-bottom: 40px;
-        width: 180px;
+        width: 90%;
 
     }
 
     @media ${device.laptopL} {
+        width: 512px;
     }
     `;
 
@@ -108,6 +122,7 @@ const ProjectsImage = styled(Image)`
     }
 
     @media ${device.laptopL} {
+        
     }
 
 `;
@@ -118,7 +133,7 @@ export default function Projects() {
             <Head>
                 <title>Projects</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet" />
             </Head>
             <Container>
@@ -126,21 +141,19 @@ export default function Projects() {
                 <ProjectsSection>
                     <ProjectsCard>
                         <ProjectsTitle>Attack of the Clone</ProjectsTitle>
-                        <ProjectImageContainer>
-                        </ProjectImageContainer>
                         <ProjectsCardTextWrapper>
-                            <h5>A sandbox for learning Styled-Components, disguised as a partial clone of Shipt's homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </h5>
+                            <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt's homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </ProjectsCardText>
                         </ProjectsCardTextWrapper>
                         <ProjectImageContainer>
-                            <ProjectImageWrapper>
+                            {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/shiptCloneMobile.png' alt='shipt clone full view' width={397} height={705} objectFit='cover' priority={true} />
-                            </ProjectImageWrapper>
+                            </ProjectImageWrapper> */}
                             <ProjectImageWrapper>
                                 <ProjectsImage src='/shiptCloneFull.png' alt='shipt clone full view' width={758} height={670} objectFit='cover' priority={true} />
                             </ProjectImageWrapper>
-                            <ProjectImageWrapper>
+                            {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/ShiptCloneMobileNav.png' alt='shipt clone full view' width={393} height={705} objectFit='fill' priority={true} />
-                            </ProjectImageWrapper>
+                            </ProjectImageWrapper> */}
                         </ProjectImageContainer>
                     </ProjectsCard>
                 </ProjectsSection>
@@ -150,18 +163,18 @@ export default function Projects() {
                             Recipe Registry <br /> Full Stack App
                         </ProjectsTitle>
                         <ProjectsCardTextWrapper>
-                            <h5>MERN(ish) Web App. Featuring RESTful API, CRUD operations, Authentication, Authorization, Many-to-Many Relationships, Createable Multi-Select (was a doozy) and more.     </h5>
+                            <ProjectsCardText>MERN(ish) Web App. Featuring RESTful API, CRUD operations, Authentication, Authorization, Many-to-Many Relationships, Createable Multi-Select (was a doozy) and more.     </ProjectsCardText>
                         </ProjectsCardTextWrapper>
                         <ProjectImageContainer>
-                            <ProjectImageWrapper>
+                            {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/recipeIngredients.png' alt='shipt clone full view' width={512} height={456} objectFit='fill' priority={true} />
-                            </ProjectImageWrapper>
+                            </ProjectImageWrapper> */}
                             <ProjectImageWrapper>
-                                <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={723} objectFit='cover' priority={true} />
+                                <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={723} objectFit='fill' priority={true} />
                             </ProjectImageWrapper>
-                            <ProjectImageWrapper>
+                            {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/addRecipe.png' alt='shipt clone full view' width={1062} height={742} objectFit='cover' priority={true} />
-                            </ProjectImageWrapper>
+                            </ProjectImageWrapper> */}
                         </ProjectImageContainer>
                     </ProjectsCard>
                 </ProjectsSection>
