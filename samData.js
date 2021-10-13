@@ -4,7 +4,7 @@ const samDunne = {
     goodDude: true,
     goodHang: true,
     teamPlayer: true,
-    openToWork: true,
+    egoManiac: false,
     verbalCommAbility: true,
     writtenCommAbility: true
 }

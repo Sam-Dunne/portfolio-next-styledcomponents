@@ -15,9 +15,14 @@ export default function Home() {
       </Head>
       <Container>
         <Section>
-          <HeroH1>Hi I&apos;m Sam!
+          <HeroH1>Hi, I&apos;m Sam!
             <br />
             Thank you for vistiting my site.
+            <br />
+            <strong>
+            #OPENTOWORK
+            </strong>
+
           </HeroH1>
           <ImageWrapper>
             <SCImage src="/samDataObject.png" alt="Picture of upside down dog" width={400} height={300} objectFit='cover' priority={true} />

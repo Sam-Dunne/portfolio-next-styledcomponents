@@ -101,10 +101,11 @@ export const Button = styled.button`
 `;
 
 export const HeroH1 = styled.h1`
-    font-family: 'Oswald', sans-serif;
+    font-family: arial, sans-serif;
     font-weight: 600;
     font-size: 1.5rem;    
     margin: 0 0 30px 0;
+    text-align: ${props => props.centered ? 'center' : 'start'};
     
     @media ${device.tablet} {
         font-size: 2rem;
@@ -119,14 +120,15 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeaderTitle = styled.h1`
-    font-family: 'Oswald', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 2.5rem;    
+    font-size: 2.5rem;   
+    font-size: ${props => props.small ? '1.3rem' : '2.2rem'}; 
     margin: 40px 0 30px 0;
     text-align: center;
     
     @media ${device.tablet} {
-        font-size: 4rem;
+        font-size: ${props => props.small ? '1.5rem' : '3rem'} ;
     }
 
     @media ${device.laptopL} {

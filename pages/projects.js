@@ -26,12 +26,12 @@ const ProjectsSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     `;
 
 const ProjectsCard = styled.div`
     background: #8c1aff;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 40px 0;
     border-radius: 15px;
     box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
     width: 90vw;
@@ -47,13 +47,13 @@ const ProjectsCard = styled.div`
 
 const ProjectsCardTextWrapper = styled.div`
     background: #fafafa;
-    width: 80%;
+    width: 70vw;
     margin: 20px auto;
     padding: 25px;
     border-radius: 8px;
 
     @media ${device.tablet} {
-        width: 65%;
+        width: 60vw;
         margin: 20px auto 40px auto;
         padding: 40px;
     }
@@ -94,26 +94,31 @@ const ProjectImageContainer = styled.div`
 
 const ProjectImageWrapper = styled.div`
     position: relative;
-    width: 80%;
+    width: 70vw;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.75);
+    margin-top: 30px;
+    transition:
+        transform 350ms ease-in;
+  
+    &:hover {
+        transform: scale(1.1);
+    }
+    
     @media ${device.tablet} {
         margin-bottom: 40px;
-        width: 90%;
-
+        width: 60vw;
+        
     }
-
+    
     @media ${device.laptopL} {
         width: 512px;
     }
     `;
 
 const ProjectsImage = styled(Image)`
-    border-radius: 10px;
     display: block;
+    border-radius: 10px;
     
 
     @media ${device.tablet} {
@@ -132,7 +137,7 @@ export default function Projects() {
         <>
             <Head>
                 <title>Projects</title>
-             
+
             </Head>
             <Container>
                 <HeaderTitle>Projects</HeaderTitle>
@@ -146,12 +151,14 @@ export default function Projects() {
                             {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/shiptCloneMobile.png' alt='shipt clone full view' width={397} height={705} objectFit='cover' priority={true} />
                             </ProjectImageWrapper> */}
-                            <ProjectImageWrapper>
-                                <ProjectsImage src='/shiptCloneFull.png' alt='shipt clone full view' width={758} height={670} objectFit='cover' priority={true} />
-                            </ProjectImageWrapper>
+                            <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                <ProjectImageWrapper>
+                                    <ProjectsImage src='/shiptCloneFull.png' alt='shipt clone full view' width={758} height={670} objectFit='cover' layout='responsive' priority={true} />
+                                </ProjectImageWrapper>
+                            </a>
                             {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/ShiptCloneMobileNav.png' alt='shipt clone full view' width={393} height={705} objectFit='fill' priority={true} />
-                            </ProjectImageWrapper> */}
+                                </ProjectImageWrapper> */}
                         </ProjectImageContainer>
                     </ProjectsCard>
                 </ProjectsSection>
@@ -167,9 +174,11 @@ export default function Projects() {
                             {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/recipeIngredients.png' alt='shipt clone full view' width={512} height={456} objectFit='fill' priority={true} />
                             </ProjectImageWrapper> */}
-                            <ProjectImageWrapper>
-                                <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={723} objectFit='fill' priority={true} />
-                            </ProjectImageWrapper>
+                            <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                <ProjectImageWrapper>
+                                    <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={723} objectFit='fill' layout='responsive' priority={true} />
+                                </ProjectImageWrapper>
+                            </a>
                             {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/addRecipe.png' alt='shipt clone full view' width={1062} height={742} objectFit='cover' priority={true} />
                             </ProjectImageWrapper> */}

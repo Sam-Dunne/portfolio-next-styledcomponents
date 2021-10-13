@@ -1,4 +1,4 @@
-import { Container, Section, HeroH1, ImageWrapper, SCImage } from "../globalstyle";
+import { Container, Section, HeroH1, ImageWrapper, SCImage, HeaderTitle } from "../globalstyle";
 
 
 
@@ -6,6 +6,7 @@ const AboutContent = ({  }) => {
     return (
         <>
             <Container>
+                <HeaderTitle>About</HeaderTitle>
                 <Section>
                     <HeroH1>Hi, I&apos;m Sam! This is my dog, Goof. <br /> I am a Junior Dev, who enjoys learning and problem-solving. <br /> I&apos;m seeking a workplace to grow and be challenged.</HeroH1>
                     <ImageWrapper>
@@ -19,7 +20,7 @@ const AboutContent = ({  }) => {
                     </ImageWrapper>
                 </Section>
                 <Section>
-                    <HeroH1>Prior to Pandemic, I worked in Audio for Live Events and Concerts. So I have experience working in dynamic fast paced environments in teams, leading those teams, and getting along with widely diverse people. </HeroH1>
+                    <HeroH1>My background in Live Event Production and Food Service give me experience working in dynamic fast paced environments in teams, leading those teams, and getting along with widely diverse peoples and personalities. </HeroH1>
                     <ImageWrapper>
                         <SCImage src="/dliveConsole.png" alt="audio mixing console" width={600} height={400} objectFit="cover" priority={true} />
                     </ImageWrapper>
