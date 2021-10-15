@@ -32,7 +32,7 @@ const contact = ({ small }) => {
                     <br /> 
                     at my <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>RecipeRegistryApp,</a> <br /> or via <a href='https://www.linkedin.com/in/samdunnewebdev/' rel='noopener noreferrer' target='_blank'>LinkedIn.</a> 
                     </HeaderTitle>
-                    <HeaderTitle small>20 hour days in Event Production don&apos;t leave much coding time, but prove I&apos;m not lazy... I have to recoup 1.5 years income now that shows are back, so don&apos;t judge me by my github activity please. <br />Thanks for visiting! </HeaderTitle>
+                    <HeaderTitle small>20 hour days in Event Production don&apos;t leave much time at the keys, though I read regularly, but proves I&apos;m not lazy... I have to recoup 1.5 years income now that shows are back, so don&apos;t judge me by my github activity please. <br />Thanks for visiting! </HeaderTitle>
                 </ContactContainer>
             </Container>
 

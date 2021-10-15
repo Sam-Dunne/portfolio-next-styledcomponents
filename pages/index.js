@@ -17,7 +17,7 @@ export default function Home() {
         <Section>
           <HeroH1>Hi, I&apos;m Sam!
             <br />
-            Thank you for vistiting my site.
+            Thank you for visiting my site.
             <br />
             <strong>
             #OPENTOWORK
