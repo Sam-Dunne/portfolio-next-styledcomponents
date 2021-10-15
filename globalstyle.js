@@ -22,8 +22,9 @@ export const Container = styled.div`
     z-index: 1;
     width: 100%;
     padding-bottom: 10px 50px;
-    min-height: 70vh;
-    max-height: fit-content;
+    min-height: 65vh;
+    height: fit-content;
+    margin-bottom: 60px;
     position: relative;
     
 `;
@@ -123,12 +124,13 @@ export const HeaderTitle = styled.h1`
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 2.5rem;   
+    color: #6600CC;
     font-size: ${props => props.small ? '1.3rem' : '2.2rem'}; 
     margin: 40px 0 30px 0;
     text-align: center;
     
     @media ${device.tablet} {
-        font-size: ${props => props.small ? '1.5rem' : '3rem'} ;
+        font-size: ${props => props.small ? '1.5rem' : '3.3rem'} ;
     }
 
     @media ${device.laptopL} {
@@ -147,6 +149,31 @@ export const HeroH3 = styled.h6`
         max-width: 450px;
         margin: 25px 0;
     }
+`;
+
+export const LinkGrid = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-gap: 35px;
+
+height: fit-content;
+min-width: fit-content;
+width: 75vw;
+margin: 0 auto 80px auto;
+
+@media ${device.tablet} {
+    width: 50vw;
+    grid-gap: 45px;
+
+}
+
+@media ${device.laptopL} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 50vw;
+    grid-gap: 45px;
+}
 `;
 
 export default GlobalStyle;

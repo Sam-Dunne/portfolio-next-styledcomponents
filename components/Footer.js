@@ -28,10 +28,17 @@ const FooterImageWrapper = styled.div`
     background: #fafafa;
     padding: 10px;
     border-radius: 15px;
+    transition: 
+        transform 200ms ease-in;
+
 
     @media ${device.tablet} {
         width: 80px;
         height: 80px;
+    }
+
+    &:hover {
+        transform: scale(1.05)
     }
 
     `;

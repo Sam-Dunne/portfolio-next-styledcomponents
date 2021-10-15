@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from 'next/image';
 import styled from 'styled-components';
+import InPageLink from "../components/InPageLink";
 import { device } from '../device';
-import { HeaderTitle } from "../globalstyle";
+import { HeaderTitle, LinkGrid } from "../globalstyle";
 
 
 const Header = styled.h1`
@@ -45,7 +46,12 @@ export default function CV() {
                     <CVImage src="/resume2021-10-12.png" alt="Picture of upside down dog" width={647} height={687} objectFit="cover" layout='responsive' priority={true} />
                 </CVImageWrapper>
             </CVContainer>
-
+            <LinkGrid>
+                <InPageLink href='/about' children='About'></InPageLink>
+                <InPageLink href='/projects' children='Projects'></InPageLink>
+                <InPageLink href='/contact' children='Contact'></InPageLink>
+                <InPageLink href='/' children='Home'></InPageLink>
+            </LinkGrid>
 
 
         </>

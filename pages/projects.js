@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { device } from '../device';
-import { Container, HeroH1, HeaderTitle } from '../globalstyle';
+import { Container, HeroH1, HeaderTitle, LinkGrid } from '../globalstyle';
+import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
 
 const ProjectsTitle = styled.h1`
@@ -185,6 +186,12 @@ export default function Projects() {
                         </ProjectImageContainer>
                     </ProjectsCard>
                 </ProjectsSection>
+                <LinkGrid>
+                    <InPageLink href='/about' children='About'></InPageLink>
+                    <InPageLink href='/cv' children='CV'></InPageLink>
+                    <InPageLink href='/contact' children='Contact'></InPageLink>
+                    <InPageLink href='/' children='Home'></InPageLink>
+                </LinkGrid>
             </Container>
         </>
     )
