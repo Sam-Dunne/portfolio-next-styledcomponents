@@ -37,10 +37,10 @@ export default function Home() {
           </ImageWrapper>
         </Section>
         <LinkGrid>
-          <InPageLink href='/about' children='About'></InPageLink>
-          <InPageLink href='/projects' children='Projects'></InPageLink>
-          <InPageLink href='/cv' children='CV'></InPageLink>
-          <InPageLink href='/contact' children='Contact'></InPageLink>
+          <InPageLink href='/about' >About</InPageLink>
+          <InPageLink href='/projects' >Projects</InPageLink>
+          <InPageLink href='/cv' > CV</InPageLink>
+          <InPageLink href='/contact' Cont >Contact</InPageLink>
         </LinkGrid>
       </Container>
 

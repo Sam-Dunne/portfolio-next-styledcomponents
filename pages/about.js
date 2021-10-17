@@ -16,10 +16,10 @@ export default function About() {
       <Container>
         <AboutContent />
         <LinkGrid>
-          <InPageLink href='/projects' children='Projects'></InPageLink>
-          <InPageLink href='/cv' children='CV'></InPageLink>
-          <InPageLink href='/contact' children='Contact'></InPageLink>
-          <InPageLink href='/' children='Home'></InPageLink>
+          <InPageLink href='/projects' >Projects</InPageLink>
+          <InPageLink href='/cv' >CV</InPageLink>
+          <InPageLink href='/contact' >Contact</InPageLink>
+          <InPageLink href='/' >Home</InPageLink>
         </LinkGrid>
       </Container>
 

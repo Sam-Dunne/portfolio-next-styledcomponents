@@ -36,10 +36,10 @@ const contact = ({ small }) => {
                     <HeaderTitle small>20 hour days in Event Production don&apos;t leave much time at the keys, but proves I&apos;m not lazy... I have to recoup 1.5 years income now that shows are back, so don&apos;t judge me by my github activity please. <br />Thanks for visiting! </HeaderTitle>
                 </ContactContainer>
                 <LinkGrid>
-                    <InPageLink href='/about' children='About'></InPageLink>
-                    <InPageLink href='/projects' children='Projects'></InPageLink>
-                    <InPageLink href='/cv' children='CV'></InPageLink>
-                    <InPageLink href='/' children='Home'></InPageLink>
+                    <InPageLink href='/about' >About</InPageLink>
+                    <InPageLink href='/projects' >Projects</InPageLink>
+                    <InPageLink href='/cv' >CV</InPageLink>
+                    <InPageLink href='/' >Home</InPageLink>
                 </LinkGrid>
             </Container>
 
