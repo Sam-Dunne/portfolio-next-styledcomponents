@@ -43,7 +43,7 @@ export default function CV() {
             <HeaderTitle>CV</HeaderTitle>
             <CVContainer>
                 <CVImageWrapper>
-                    <CVImage src="/resume2021-10-12.png" alt="Picture of upside down dog" width={647} height={687} objectFit="cover" layout='responsive' priority={true} />
+                    <CVImage src="/202203WebDevResume.png" alt="Resume" width={676} height={876} objectFit="cover" layout='responsive' priority={true} />
                 </CVImageWrapper>
             </CVContainer>
             <LinkGrid>
