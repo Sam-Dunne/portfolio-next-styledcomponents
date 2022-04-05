@@ -65,7 +65,7 @@ const Footer = () => {
                     </FooterImageWrapper>
                 </a>
                 <FooterCopy>This site is built with NextJS and Styled-Components</FooterCopy>
-                <a href='https://github.com/Sam-Dunne' rel='noopener noreferrer' target='_blank'>
+                <a href='https://github.com/Sam-Dunne/portfolio-next-styledcomponents' rel='noopener noreferrer' target='_blank'>
                     <FooterImageWrapper>
                         <FooterImage src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
                     </FooterImageWrapper>
