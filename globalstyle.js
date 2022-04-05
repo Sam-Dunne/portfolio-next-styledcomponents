@@ -36,22 +36,29 @@ export const Section = styled.section`
     flex-wrap: wrap;
     align-items: center;
     padding: 30px 12px;
-    width: 90vw;
+    width: 80vw;
     margin: 40px auto;
-    @media ${device.laptopL} {
-        margin: 80px auto;
+    @media ${device.tablet} {
+        width: 85vw;
+        justify-content: space-around;
+        padding: 30px 30px;
         flex-direction: ${props => props.picFirst ? 'row-reverse' : 'row'};
+    }
+    @media ${device.laptopL} {
+        margin: 50px auto;
+        padding: 30px 0;
+        width: 65vw;
     }
     `;
 
 export const ImageWrapper = styled.div`
-    margin: 0 auto;
+    margin: 0 0;
 
     @media ${device.tablet} {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50vw;
+        width: 25vw;
     }
 
     @media ${device.laptopL} {
@@ -67,6 +74,7 @@ export const SCImage = styled(Image)`
     object-fit: cover;
     margin: 0 auto;
     border-radius: 15px; 
+  
 `;
 
 export const Button = styled.button`
@@ -104,18 +112,18 @@ export const Button = styled.button`
 export const HeroH1 = styled.h1`
     font-family: arial, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;    
-    margin: 0 0 30px 0;
+    font-size: 1rem;    
+    margin: 20px 0 30px 0;
     text-align: ${props => props.centered ? 'center' : 'start'};
     
     @media ${device.tablet} {
-        font-size: 2rem;
+        font-size: 1.2rem;
         max-width: 50vw;
         padding-right: 0;
     }
 
     @media ${device.laptopL} {
-        max-width: 50vw;
+        max-width: 30vw;
         margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"};
     }
 `;
