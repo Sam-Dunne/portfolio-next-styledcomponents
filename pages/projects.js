@@ -5,15 +5,15 @@ import { Container, HeroH1, HeaderTitle, LinkGrid } from '../globalstyle';
 import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
 
-const ProjectsTitle = styled.h1`
+const ProjectsTitle = styled.h3`
     color: #fafafa;
     width: 90%;
     text-align: center;
-    margin: 20px auto 15px auto;
+    margin: 10px auto 10px auto;
     font-family: 'Oswald', sans-serif;
     
     @media ${device.tablet} {
-        font-size: 2.6rem;
+        font-size: 1.3rem;
     
     }
 
@@ -23,22 +23,52 @@ const ProjectsTitle = styled.h1`
 `;
 
 const ProjectsSection = styled.section`
-    padding: 20px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    padding: 0px 15px;
     margin-bottom: 50px;
-    `;
-
-const ProjectsCard = styled.div`
-    background: #8c1aff;
-    padding: 20px 0 40px 0;
-    border-radius: 15px;
-    box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
-    width: 90vw;
+    margin: 0 auto 20px auto;
 
     @media ${device.tablet} {
-        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        
+    }
+
+    @media ${device.laptopL} {
+        
+    }
+    `;
+
+const ProjectsCardWrapper = styled.div`
+
+    @media ${device.tablet} {
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        
+        
+    }
+
+    @media ${device.laptopL} {
+        
+    }
+`;
+
+const ProjectsCard = styled.div`
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: #8c1aff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
+    margin: 0px auto 20px auto;
+    width: 80vw;
+    height: 100%;
+
+    @media ${device.tablet} {
+        width: 40%;
     }
 
     @media ${device.laptopL} {
@@ -48,27 +78,29 @@ const ProjectsCard = styled.div`
 
 const ProjectsCardTextWrapper = styled.div`
     background: #fafafa;
-    width: 70vw;
-    margin: 20px auto;
-    padding: 25px;
+    /* width: 70vw; */
+    margin: 14px auto;
+    padding: 12px;
     border-radius: 8px;
+    
 
     @media ${device.tablet} {
-        width: 60vw;
-        margin: 20px auto 40px auto;
-        padding: 40px;
+        /* width: 75%; */
+        margin: auto;
+        /* margin: 20px auto 40px auto;
+        padding: 40px; */
     }
 
     @media ${device.laptopL} {
-        width: 512px;
-        margin: 20px auto 40px auto;
+        /* width: 512px;
+        margin: 20px auto 40px auto; */
     }
 `;
 
 const ProjectsCardText = styled.h5`
-
+        font-size: 0.7rem;
     @media ${device.tablet} {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     @media ${device.laptopL} {
@@ -77,43 +109,47 @@ const ProjectsCardText = styled.h5`
 `;
 
 const ProjectImageContainer = styled.div`
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
+    align-items: center; */
+    /* flex-direction: column; */
+    /* margin: auto;  */
+    
     
     @media ${device.tablet} {
-        width: 90%;
+        /* width: 20%; */
+        /* width: 90%; */
+        margin-bottom: 20px;
     }
     
     @media ${device.laptopL} {
-        flex-direction: row;
-        justify-content: space-around;
+        /* flex-direction: row;
+        justify-content: space-around; */
     }
 `;
 
 const ProjectImageWrapper = styled.div`
-    position: relative;
-    width: 70vw;
-    margin-bottom: 20px;
+    /* position: relative; */
+    /* margin-bottom: 20px; */
     box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.75);
     margin-top: 30px;
     transition:
-        transform 350ms ease-in;
-  
+    transform 150ms ease-in;
+    width: 100%;
+    
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     
     @media ${device.tablet} {
-        margin-bottom: 40px;
-        width: 60vw;
+        /* width: 30%; */
+        /* margin-bottom: 40px;
+        width: 60vw; */
         
     }
     
     @media ${device.laptopL} {
-        width: 512px;
+        /* width: 512px; */
     }
     `;
 
@@ -145,45 +181,49 @@ export default function Projects() {
                 <ProjectsSection>
                     <ProjectsCard>
                         <ProjectsTitle>Attack of the Clone</ProjectsTitle>
-                        <ProjectsCardTextWrapper>
-                            <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </ProjectsCardText>
-                        </ProjectsCardTextWrapper>
-                        <ProjectImageContainer>
-                            {/* <ProjectImageWrapper>
+                        <ProjectsCardWrapper>
+                            <ProjectImageContainer>
+                                {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/shiptCloneMobile.png' alt='shipt clone full view' width={397} height={705} objectFit='cover' priority={true} />
                             </ProjectImageWrapper> */}
-                            <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
-                                <ProjectImageWrapper>
-                                    <ProjectsImage src='/shiptCloneFull.png' alt='shipt clone full view' width={758} height={670} objectFit='cover' layout='responsive' priority={true} />
-                                </ProjectImageWrapper>
-                            </a>
-                            {/* <ProjectImageWrapper>
+                                <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                    <ProjectImageWrapper>
+                                        <ProjectsImage src='/shiptCloneFull.png' alt='shipt clone full view' width={758} height={670} objectFit='cover' layout='responsive' priority={true} />
+                                    </ProjectImageWrapper>
+                                </a>
+                                {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/ShiptCloneMobileNav.png' alt='shipt clone full view' width={393} height={705} objectFit='fill' priority={true} />
                                 </ProjectImageWrapper> */}
-                        </ProjectImageContainer>
+                            </ProjectImageContainer>
+                            <ProjectsCardTextWrapper>
+                                <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </ProjectsCardText>
+                            </ProjectsCardTextWrapper>
+                        </ProjectsCardWrapper>
                     </ProjectsCard>
-                </ProjectsSection>
-                <ProjectsSection>
+                    {/* </ProjectsSection>
+                <ProjectsSection> */}
                     <ProjectsCard>
                         <ProjectsTitle>
-                            Recipe Registry <br /> Full Stack App
+                            Recipe Registry
                         </ProjectsTitle>
-                        <ProjectsCardTextWrapper>
-                            <ProjectsCardText>MERN(ish) Web App. Featuring RESTful API, CRUD operations, Authentication, Authorization, Many-to-Many Relationships, Createable Multi-Select (was a doozy) and more.     </ProjectsCardText>
-                        </ProjectsCardTextWrapper>
-                        <ProjectImageContainer>
-                            {/* <ProjectImageWrapper>
+                        <ProjectsCardWrapper>
+                            <ProjectImageContainer>
+                                {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/recipeIngredients.png' alt='shipt clone full view' width={512} height={456} objectFit='fill' priority={true} />
                             </ProjectImageWrapper> */}
-                            <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
-                                <ProjectImageWrapper>
-                                    <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={723} objectFit='fill' layout='responsive' priority={true} />
-                                </ProjectImageWrapper>
-                            </a>
-                            {/* <ProjectImageWrapper>
+                                <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                    <ProjectImageWrapper>
+                                        <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={470} objectFit='fill' layout='responsive' priority={true} />
+                                    </ProjectImageWrapper>
+                                </a>
+                                {/* <ProjectImageWrapper>
                                 <ProjectsImage src='/addRecipe.png' alt='shipt clone full view' width={1062} height={742} objectFit='cover' priority={true} />
                             </ProjectImageWrapper> */}
-                        </ProjectImageContainer>
+                            </ProjectImageContainer>
+                            <ProjectsCardTextWrapper>
+                                <ProjectsCardText>MERN(ish) Web App. Featuring RESTful API, CRUD operations, Authentication, Authorization, Many-to-Many Relationships, Createable Multi-Select (was a doozy) and more.     </ProjectsCardText>
+                            </ProjectsCardTextWrapper>
+                        </ProjectsCardWrapper>
                     </ProjectsCard>
                 </ProjectsSection>
                 <LinkGrid>
