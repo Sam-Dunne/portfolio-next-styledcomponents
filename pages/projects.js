@@ -25,7 +25,7 @@ const ProjectsTitle = styled.h3`
 const ProjectsSection = styled.section`
     position: relative;
     padding: 0px 15px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     margin: 0 auto 20px auto;
 
     @media ${device.tablet} {
@@ -36,7 +36,7 @@ const ProjectsSection = styled.section`
     }
 
     @media ${device.laptopL} {
-        
+        display: inline;
     }
     `;
 
@@ -51,7 +51,9 @@ const ProjectsCardWrapper = styled.div`
     }
 
     @media ${device.laptopL} {
-        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 `;
 
@@ -72,7 +74,7 @@ const ProjectsCard = styled.div`
     }
 
     @media ${device.laptopL} {
-        width: 60vw;
+        width: 50%;
     }
 `;
 
@@ -92,8 +94,8 @@ const ProjectsCardTextWrapper = styled.div`
     }
 
     @media ${device.laptopL} {
-        /* width: 512px;
-        margin: 20px auto 40px auto; */
+        width: 60%;
+        margin: 0; 
     }
 `;
 
@@ -125,6 +127,8 @@ const ProjectImageContainer = styled.div`
     @media ${device.laptopL} {
         /* flex-direction: row;
         justify-content: space-around; */
+        margin-bottom: 0;
+
     }
 `;
 
@@ -149,7 +153,7 @@ const ProjectImageWrapper = styled.div`
     }
     
     @media ${device.laptopL} {
-        /* width: 512px; */
+        width: 150px;
     }
     `;
 
@@ -164,7 +168,7 @@ const ProjectsImage = styled(Image)`
     }
 
     @media ${device.laptopL} {
-        
+        display: inline;
     }
 
 `;
@@ -188,7 +192,7 @@ export default function Projects() {
                             </ProjectImageWrapper> */}
                                 <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
                                     <ProjectImageWrapper>
-                                        <ProjectsImage src='/shiptCloneFull.png' alt='shipt clone full view' width={758} height={670} objectFit='cover' layout='responsive' priority={true} />
+                                        <ProjectsImage src='/shipt_mobile_224x400.png' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
                                     </ProjectImageWrapper>
                                 </a>
                                 {/* <ProjectImageWrapper>
@@ -196,7 +200,7 @@ export default function Projects() {
                                 </ProjectImageWrapper> */}
                             </ProjectImageContainer>
                             <ProjectsCardTextWrapper>
-                                <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu and custom alert modal from scratch was good fun!  </ProjectsCardText>
+                                <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu from scratch was good fun!  </ProjectsCardText>
                             </ProjectsCardTextWrapper>
                         </ProjectsCardWrapper>
                     </ProjectsCard>
@@ -213,7 +217,7 @@ export default function Projects() {
                             </ProjectImageWrapper> */}
                                 <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
                                     <ProjectImageWrapper>
-                                        <ProjectsImage src='/recipeOverview.png' alt='shipt clone full view' width={512} height={470} objectFit='fill' layout='responsive' priority={true} />
+                                        <ProjectsImage src='/recipe_mobile_224x400.png' alt='recipe registry mobile view' width={224} height={400} objectFit='fill' layout='responsive' priority={true} />
                                     </ProjectImageWrapper>
                                 </a>
                                 {/* <ProjectImageWrapper>
