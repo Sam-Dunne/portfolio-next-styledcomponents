@@ -6,19 +6,19 @@ import {device} from '../device';
 const CustomLink = styled.a`
     background-color: #8c1aff;
     text-align: center;
-    padding: 1.3rem;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fafafa;
     transition:
         background-color 200ms ease-in,
         transform 200ms ease-in;
     
     @media ${device.laptopL} {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     
     &:hover {

@@ -35,6 +35,12 @@ const NavLink = styled.a`
       padding: 0 20px;   
       font-size: 2.3rem;
     }
+    
+    @media ${device.laptop} {  
+      padding: 0 20px;   
+      font-size: 1.3rem;
+    }
+
 
     &:hover{
         text-decoration: underline;

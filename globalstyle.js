@@ -24,7 +24,7 @@ export const Container = styled.div`
     padding-bottom: 10px 50px;
     min-height: 65vh;
     height: fit-content;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     position: relative;
     
 `;
@@ -37,7 +37,7 @@ export const Section = styled.section`
     align-items: center;
     padding: 30px 12px;
     width: 80vw;
-    margin: 40px auto;
+    margin: 20px auto;
     @media ${device.tablet} {
         width: 85vw;
         justify-content: space-around;
@@ -45,7 +45,7 @@ export const Section = styled.section`
         flex-direction: ${props => props.picFirst ? 'row-reverse' : 'row'};
     }
     @media ${device.laptopL} {
-        margin: 50px auto;
+        margin: 20px auto;
         padding: 30px 0;
         width: 65vw;
     }
@@ -131,14 +131,14 @@ export const HeroH1 = styled.h1`
 export const HeaderTitle = styled.h1`
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 2.5rem;   
+    font-size: 0.5rem;   
     color: #6600CC;
     font-size: ${props => props.small ? '1.3rem' : '2.2rem'}; 
-    margin: 40px 0 30px 0;
+    margin: 20px 0 10px 0;
     text-align: center;
     
     @media ${device.tablet} {
-        font-size: ${props => props.small ? '1.5rem' : '3.3rem'} ;
+        font-size: ${props => props.small ? '1.5rem' : '1.5rem'} ;
     }
 
     @media ${device.laptopL} {
