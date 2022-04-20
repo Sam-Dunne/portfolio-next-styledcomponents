@@ -36,7 +36,8 @@ const ProjectsSection = styled.section`
     }
 
     @media ${device.laptopL} {
-        display: inline;
+        /* display: inline-block; */
+        width: 1000px;
     }
     `;
 
@@ -66,15 +67,15 @@ const ProjectsCard = styled.div`
     border-radius: 15px;
     box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
     margin: 0px auto 20px auto;
-    width: 80vw;
+    width: 60vw;
     height: 100%;
 
     @media ${device.tablet} {
-        width: 40%;
+        width: 30%;
     }
 
     @media ${device.laptopL} {
-        width: 50%;
+        width: 15vw;
     }
 `;
 
@@ -136,7 +137,7 @@ const ProjectImageWrapper = styled.div`
     /* position: relative; */
     /* margin-bottom: 20px; */
     box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.75);
-    margin-top: 30px;
+    /* margin-top: 30px; */
     transition:
     transform 150ms ease-in;
     width: 100%;
@@ -179,19 +180,17 @@ const FooterImageWrapper2 = styled.div`
     height: 50px;
     background: #fafafa;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 12px;
     transition: 
         transform 200ms ease-in;
-    margin: 15px auto 0 auto;
+    margin: 20px auto 0 auto;
 
 
     @media ${device.tablet} {
-        width: 80px;
-        height: 80px;
     }
 
     &:hover {
-        transform: scale(1.05)
+        transform: scale(1.07)
     }
 
     `;
@@ -225,9 +224,9 @@ export default function Projects() {
                                 <ProjectsImage src='/ShiptCloneMobileNav.png' alt='shipt clone full view' width={393} height={705} objectFit='fill' priority={true} />
                                 </ProjectImageWrapper> */}
                             </ProjectImageContainer>
-                            <ProjectsCardTextWrapper>
+                            {/* <ProjectsCardTextWrapper>
                                 <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu from scratch was good fun!  </ProjectsCardText>
-                            </ProjectsCardTextWrapper>
+                            </ProjectsCardTextWrapper> */}
                         </ProjectsCardWrapper>
                         <a href='https://github.com/Sam-Dunne/shipt-home-clone-sc' rel='noopener noreferrer' target='_blank'>
                             <FooterImageWrapper2>
@@ -256,9 +255,9 @@ export default function Projects() {
                                 <ProjectsImage src='/addRecipe.png' alt='shipt clone full view' width={1062} height={742} objectFit='cover' priority={true} />
                             </ProjectImageWrapper> */}
                             </ProjectImageContainer>
-                            <ProjectsCardTextWrapper>
+                            {/* <ProjectsCardTextWrapper>
                                 <ProjectsCardText>MERN(ish) Web App. Featuring RESTful API, CRUD operations, Authentication, Authorization, Many-to-Many Relationships, Createable Multi-Select (was a doozy) and more.     </ProjectsCardText>
-                            </ProjectsCardTextWrapper>
+                            </ProjectsCardTextWrapper> */}
                         </ProjectsCardWrapper>
                         <a href='https://github.com/Sam-Dunne/recipe-mostly-mern' rel='noopener noreferrer' target='_blank'>
                             <FooterImageWrapper2>
