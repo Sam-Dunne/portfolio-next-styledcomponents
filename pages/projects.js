@@ -173,6 +173,32 @@ const ProjectsImage = styled(Image)`
 
 `;
 
+const FooterImageWrapper2 = styled.div`
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 
+        transform 200ms ease-in;
+    margin: 15px auto 0 auto;
+
+
+    @media ${device.tablet} {
+        width: 80px;
+        height: 80px;
+    }
+
+    &:hover {
+        transform: scale(1.05)
+    }
+
+    `;
+
+const FooterImage2 = styled(Image)`
+`;
+
 export default function Projects() {
     return (
         <>
@@ -203,6 +229,12 @@ export default function Projects() {
                                 <ProjectsCardText>A sandbox for learning Styled-Components, disguised as a mobile responsive partial clone of Shipt&apos;s homepage. Learning to make a mobile nav menu from scratch was good fun!  </ProjectsCardText>
                             </ProjectsCardTextWrapper>
                         </ProjectsCardWrapper>
+                        <a href='https://github.com/Sam-Dunne/shipt-home-clone-sc' rel='noopener noreferrer' target='_blank'>
+                            <FooterImageWrapper2>
+                                <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
+                            </FooterImageWrapper2>
+                        </a>
+
                     </ProjectsCard>
                     {/* </ProjectsSection>
                 <ProjectsSection> */}
@@ -228,6 +260,11 @@ export default function Projects() {
                                 <ProjectsCardText>MERN(ish) Web App. Featuring RESTful API, CRUD operations, Authentication, Authorization, Many-to-Many Relationships, Createable Multi-Select (was a doozy) and more.     </ProjectsCardText>
                             </ProjectsCardTextWrapper>
                         </ProjectsCardWrapper>
+                        <a href='https://github.com/Sam-Dunne/recipe-mostly-mern' rel='noopener noreferrer' target='_blank'>
+                            <FooterImageWrapper2>
+                                <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
+                            </FooterImageWrapper2>
+                        </a>
                     </ProjectsCard>
                 </ProjectsSection>
                 <LinkGrid>
