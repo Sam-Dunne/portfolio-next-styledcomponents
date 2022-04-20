@@ -76,6 +76,8 @@ const ProjectsCard = styled.div`
 
     @media ${device.laptopL} {
         width: 15vw;
+        margin: 0px 50px 20px 50px;
+
     }
 `;
 
