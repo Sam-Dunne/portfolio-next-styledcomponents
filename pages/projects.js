@@ -215,6 +215,25 @@ export default function Projects() {
                             </FooterImageWrapper2>
                         </a>
                     </ProjectsCard>
+                    <ProjectsCard>
+                        <ProjectsTitle>
+                            Subreddit Client
+                        </ProjectsTitle>
+                        <ProjectsCardWrapper>
+                            <ProjectImageContainer>
+                                <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                    <ProjectImageWrapper>
+                                        <ProjectsImage src='/subreddit_mobile.png' alt='subreddit client' width={350} height={625} objectFit='fill' layout='responsive' priority={true} />
+                                    </ProjectImageWrapper>
+                                </a>
+                            </ProjectImageContainer>
+                        </ProjectsCardWrapper>
+                        <a href='https://github.com/Sam-Dunne/recipe-mostly-mern' rel='noopener noreferrer' target='_blank'>
+                            <FooterImageWrapper2>
+                                <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
+                            </FooterImageWrapper2>
+                        </a>
+                    </ProjectsCard>
                 </ProjectsSection>
                 <LinkGrid>
                     <InPageLink href='/about' >About</InPageLink>
