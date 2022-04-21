@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { GiHamburger } from 'react-icons/gi';
+import Image from 'next/image';
+import { GiHamburger, GiJumpingDog } from 'react-icons/gi';
 import { FaTimesCircle } from 'react-icons/fa';
 import { device } from '../device';
 
@@ -26,7 +27,7 @@ const NavContainer = styled.nav`
 const NavLink = styled.a`
     text-decoration: none;
     padding: 0 0;
-    margin: ${props => props.mobile ? '0 0 50px 0': '0'};
+    margin: ${props => props.mobile ? '0 0 50px 0' : '0'};
     color: #fafafa;
     font-size: 1.5rem;
     font-weight: 500;
@@ -97,6 +98,16 @@ const MobileMenuContainer = styled.div`
         padding: 5rem;
     }
 `;
+const Icon = styled(Image)`
+    /* height: 80px;
+    width: 80px; */
+
+   
+
+    @media ${device.mobileL} {
+        
+    }
+`;
 
 
 const MobileNavBurgerWrapper = styled.div`
@@ -121,7 +132,7 @@ const Navbar = ({ isOpen, mobile }) => {
         <>
             {menuOpen ?
                 <>
-                {/* Mobile menu is Open */}
+                    {/* Mobile menu is Open */}
                     <MobileMenuContainer isOpen>
                         <MobileNavBurgerWrapper>
                             <MobileBurger tabIndex='0' onClick={handleNavClick}>
@@ -163,8 +174,8 @@ const Navbar = ({ isOpen, mobile }) => {
                 <>
                     <MobileMenuContainer ><FaTimesCircle onClick={handleNavClick} /></MobileMenuContainer>
                     <NavContainer>
-                        <Link href='/' passHref>
-                            <NavLink>Home</NavLink>
+                        <Link href='/' passHref>        
+                                <NavLink>Sam Dunne</NavLink>
                         </Link>
                         {/* Hamburger Icon */}
                         <MobileBurger ><GiHamburger tabIndex='0' onClick={handleNavClick}></GiHamburger></MobileBurger>
