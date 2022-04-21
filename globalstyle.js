@@ -40,19 +40,20 @@ export const Section = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    padding: 30px 12px;
+    /* padding: 30px 12px; */
     width: 80vw;
     margin: 20px auto;
     @media ${device.tablet} {
-        width: 85vw;
+        width: 70vw;
         justify-content: space-around;
         padding: 30px 30px;
         flex-direction: ${props => props.picFirst ? 'row-reverse' : 'row'};
     }
     @media ${device.laptopL} {
+        justify-content: space-evenly;
         margin: 20px auto;
         padding: 30px 0;
-        width: 65vw;
+        width: 60vw;
     }
     `;
 
@@ -125,12 +126,12 @@ export const HeroH1 = styled.h1`
     
     @media ${device.tablet} {
         font-size: 1.2rem;
-        max-width: 50vw;
+        max-width: 192px;
         padding-right: 0;
     }
 
     @media ${device.laptopL} {
-        max-width: 30vw;
+        max-width: 357px;
         margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"};
     }
 `;

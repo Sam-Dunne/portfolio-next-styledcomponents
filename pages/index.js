@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
       <Container>
         <Section>
-          <HeroH1>Hi, I&apos;m Sam!
+          <HeroH1 centered>Hi, I&apos;m Sam!
             <br />
             Thank you for visiting my site.
             <br />
