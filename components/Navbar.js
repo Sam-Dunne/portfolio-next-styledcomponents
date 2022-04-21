@@ -121,10 +121,11 @@ const Navbar = ({ isOpen, mobile }) => {
         <>
             {menuOpen ?
                 <>
+                {/* Mobile menu is Open */}
                     <MobileMenuContainer isOpen>
                         <MobileNavBurgerWrapper>
-                            <MobileBurger>
-                                <FaTimesCircle onClick={handleNavClick} />
+                            <MobileBurger tabIndex='0' onClick={handleNavClick}>
+                                <FaTimesCircle />
                             </MobileBurger>
                         </MobileNavBurgerWrapper>
                         <MobileNavLinkWrapper>
@@ -158,13 +159,15 @@ const Navbar = ({ isOpen, mobile }) => {
                     </StyledSvg>
                 </>
                 :
+                // Mobile menu is closed
                 <>
                     <MobileMenuContainer ><FaTimesCircle onClick={handleNavClick} /></MobileMenuContainer>
                     <NavContainer>
                         <Link href='/' passHref>
                             <NavLink>Home</NavLink>
                         </Link>
-                        <MobileBurger ><GiHamburger onClick={handleNavClick}></GiHamburger></MobileBurger>
+                        {/* Hamburger Icon */}
+                        <MobileBurger ><GiHamburger tabIndex='0' onClick={handleNavClick}></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
                             <Link href='/about' passHref>
                                 <NavLink>About</NavLink>

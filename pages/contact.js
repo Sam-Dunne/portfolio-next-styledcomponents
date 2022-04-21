@@ -29,9 +29,11 @@ const contact = ({ small }) => {
                 <HeaderTitle>Contact</HeaderTitle>
                 <ContactContainer>
                     <HeaderTitle small>Proper contact form coming soon...</HeaderTitle>
-                    <HeaderTitle small>In the meantime, I can be reached at: <br /> cras.sdunne@gmail.com,
+                    <HeaderTitle small>In the meantime, I can be reached at:
                         <br />
-                        at my <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>RecipeRegistryApp,</a> <br /> or via <a href='https://www.linkedin.com/in/samdunnewebdev/' rel='noopener noreferrer' target='_blank'>LinkedIn.</a>
+                        at my <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>RecipeRegistryApp,</a>
+                        <br /> via <a href='https://www.linkedin.com/in/samdunnewebdev/' rel='noopener noreferrer' target='_blank'>LinkedIn,</a>
+                        <br /> or at cras.sdunne@gmail.com,
                     </HeaderTitle>
                     {/* <HeaderTitle small>20 hour days in Event Production don&apos;t leave much time at the keys, but proves I&apos;m not lazy... I have to recoup 1.5 years income now that shows are back, so don&apos;t judge me by my github activity please. <br />Thanks for visiting! </HeaderTitle> */}
                 </ContactContainer>
