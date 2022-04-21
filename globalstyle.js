@@ -7,13 +7,18 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Source Sans Pro', sans-serif;
+        /* font-family: 'Source Sans Pro', sans-serif; */
     } 
     
     html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    background: #f3ecfa;
+        max-width: 100%;
+        overflow-x: hidden;
+        background: #f3ecfa;
+    }
+    
+    a, h3, h5 {
+        font-family: 'Nunito','Source Sans Pro', sans-serif;
+
     }
 `;
 
@@ -110,7 +115,9 @@ export const Button = styled.button`
 `;
 
 export const HeroH1 = styled.h1`
-    font-family: arial, sans-serif;
+    /* font-family: arial, sans-serif; */
+    font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+
     font-weight: 600;
     font-size: 1rem;    
     margin: 20px 0 30px 0;
@@ -129,7 +136,8 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeaderTitle = styled.h1`
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     font-weight: 600;
     font-size: 0.5rem;   
     color: #6600CC;

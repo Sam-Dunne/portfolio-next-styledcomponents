@@ -10,7 +10,7 @@ const ProjectsTitle = styled.h3`
     width: 90%;
     text-align: center;
     margin: 10px auto 10px auto;
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
     
     @media ${device.tablet} {
         font-size: 1.3rem;    
