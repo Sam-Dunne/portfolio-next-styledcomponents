@@ -236,9 +236,9 @@ export default function Projects() {
                     </ProjectsCard>
                 </ProjectsSection>
                 <LinkGrid>
+                    <InPageLink href='/contact' >Contact</InPageLink>
                     <InPageLink href='/about' >About</InPageLink>
                     <InPageLink href='/cv' >CV</InPageLink>
-                    <InPageLink href='/contact' >Contact</InPageLink>
                     <InPageLink href='/' >Home</InPageLink>
                 </LinkGrid>
             </Container>

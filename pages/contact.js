@@ -1,24 +1,99 @@
 import React, { useState } from 'react'
 import { device } from '../device';
-import { Container, HeaderTitle, LinkGrid } from '../globalstyle';
+import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../globalstyle';
 import Head from 'next/head';
 import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
+import { apiService } from '../utils/apiService';
 
-const ContactContainer = styled.div`
-    padding: 0 30px 0 30px;
-    margin-bottom: 60px;
+// import axios from 'axios';
+
+const FormItem = styled.div`
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin: 20px auto;
     
     @media ${device.tablet} {
-        padding: 0 50px 0 50px;
     } 
 
     @media ${device.laptopL} {
-        padding: 0 400px 0 400px;
+    } 
+`;
+
+const ContactForm = styled.form`  
+    margin: 20px auto;
+    width: 18em;
+    padding: 1em 2em;
+    border: 2px solid gray;
+    border-radius:15px;
+    background-color: #8c1aff;
+    @media ${device.tablet} {
+        width: 24em;
+    } 
+
+    @media ${device.laptopL} {
+        width: 42em;
+    } 
+`;
+
+const Submit = styled.button`
+    margin: 1em auto 0 auto;
+    background-color: #f3ecfa;
+    text-align: center;
+    outline: none;
+    padding: 1rem;
+    border-radius: 15px;
+    /* box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75); */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #6600CC;
+    transition:
+        background-color 100ms ease-in,
+        transform 100ms ease-in;
+
+    &:active {
+        transform: scale(0.9);
+    }
+
+    &:focus {
+        box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75);
+        transform: scale(1.04);
+    }
+
+    &:hover {
+        box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75);
+        transform: scale(1.04);
+    }
+    
+    @media ${device.tablet} {
+    } 
+
+    @media ${device.laptopL} {
     } 
 `;
 
 const contact = ({ small }) => {
+    const [from, setFrom] = useState('')
+    const [subject, setSubject] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!from || !subject || !message) {
+            // MyModal.fieldValidation(('Oops...'), ('All fields required'));
+            alert('All fields required')
+            return
+        }
+        apiService('/api/contact', 'POST', { from, subject, message })
+            .then(result => {
+                // MyModal.timeoutSuccess('Thanks for the Message!', `${result.newEmail.from}`)
+                setFrom('');
+                setSubject('');
+                setMessage('')
+            })
+    }
 
     return (
         <>
@@ -27,19 +102,30 @@ const contact = ({ small }) => {
             </Head>
             <Container>
                 <HeaderTitle>Contact</HeaderTitle>
-                <ContactContainer>
-                    <HeaderTitle small>Proper contact form coming soon...</HeaderTitle>
-                    <HeaderTitle small>In the meantime, I can be reached at:
-                        <br />
-                        at my <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>RecipeRegistryApp,</a>
-                        <br /> via <a href='https://www.linkedin.com/in/samdunnewebdev/' rel='noopener noreferrer' target='_blank'>LinkedIn,</a>
-                        <br /> or at cras.sdunne@gmail.com,
-                    </HeaderTitle>
-                    {/* <HeaderTitle small>20 hour days in Event Production don&apos;t leave much time at the keys, but proves I&apos;m not lazy... I have to recoup 1.5 years income now that shows are back, so don&apos;t judge me by my github activity please. <br />Thanks for visiting! </HeaderTitle> */}
-                </ContactContainer>
+                {/* <ContactContainer> */}
+                {/* <div> */}
+                <ContactForm>
+                    <FormItem>
+                        <Label htmlFor='Your Email'>Your Email</Label>
+                        <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
+                    </FormItem>
+                    <FormItem>
+                        <Label >Subject</Label>
+                        <Input name='subject' value={subject} onChange={(e) => { setSubject(e.target.value) }} />
+                    </FormItem>
+                    <FormItem>
+                        <Label htmlFor='message'>Message</Label>
+                        <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
+                    </FormItem>
+                    <FormItem>
+                        <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
+                    </FormItem>
+                </ContactForm >
+                {/* </div> */}
+                {/* </ContactContainer> */}
                 <LinkGrid>
-                    <InPageLink href='/about' >About</InPageLink>
                     <InPageLink href='/projects' >Projects</InPageLink>
+                    <InPageLink href='/about' >About</InPageLink>
                     <InPageLink href='/cv' >CV</InPageLink>
                     <InPageLink href='/' >Home</InPageLink>
                 </LinkGrid>

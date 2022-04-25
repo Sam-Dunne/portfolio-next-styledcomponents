@@ -47,9 +47,9 @@ export default function CV() {
                 </CVImageWrapper>
             </CVContainer>
             <LinkGrid>
-                <InPageLink href='/about' >About</InPageLink>
                 <InPageLink href='/projects' >Projects</InPageLink>
                 <InPageLink href='/contact' >Contact</InPageLink>
+                <InPageLink href='/about' >About</InPageLink>
                 <InPageLink href='/' >Home</InPageLink>
             </LinkGrid>
 
