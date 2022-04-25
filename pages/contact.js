@@ -139,4 +139,4 @@ const Contact = ({ small }) => {
     )
 }
 
-export default contact
+export default Contact
