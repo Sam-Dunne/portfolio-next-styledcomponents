@@ -74,7 +74,7 @@ const Submit = styled.button`
     } 
 `;
 
-const contact = ({ small }) => {
+const Contact = ({ small }) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
