@@ -140,11 +140,11 @@ const Navbar = ({ isOpen, mobile }) => {
                             </MobileBurger>
                         </MobileNavBurgerWrapper>
                         <MobileNavLinkWrapper>
-                            <Link href='/projects' passHref>
-                                <NavLink mobile onClick={handleNavClick}>Projects</NavLink>
-                            </Link>
                             <Link href='/about' passHref>
                                 <NavLink mobile onClick={handleNavClick}>About</NavLink>
+                            </Link>
+                            <Link href='/projects' passHref>
+                                <NavLink mobile onClick={handleNavClick}>Projects</NavLink>
                             </Link>
                             <Link href='/cv' passHref>
                                 <NavLink mobile onClick={handleNavClick}>CV</NavLink>
@@ -152,7 +152,9 @@ const Navbar = ({ isOpen, mobile }) => {
                             <Link href='/contact' passHref>
                                 <NavLink mobile onClick={handleNavClick}>Contact</NavLink>
                             </Link>
-                            
+                            <Link href='/' passHref>
+                                <NavLink mobile onClick={handleNavClick}>Home</NavLink>
+                            </Link>
                         </MobileNavLinkWrapper>
                     </MobileMenuContainer>
                     <NavContainer>
@@ -178,17 +180,17 @@ const Navbar = ({ isOpen, mobile }) => {
                         {/* Hamburger Icon */}
                         <MobileBurger ><GiHamburger tabIndex='0' onClick={handleNavClick}></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
-                            <Link href='/projects' passHref>
-                                <NavLink>Projects</NavLink>
-                            </Link>
-                            <Link href='/contact' passHref>
-                                <NavLink>Contact</NavLink>
-                            </Link>
                             <Link href='/about' passHref>
                                 <NavLink>About</NavLink>
                             </Link>
+                            <Link href='/projects' passHref>
+                                <NavLink>Projects</NavLink>
+                            </Link>
                             <Link href='/cv' passHref>
                                 <NavLink>CV</NavLink>
+                            </Link>
+                            <Link href='/contact' passHref>
+                                <NavLink>Contact</NavLink>
                             </Link>
                         </NonHomeViewLinks>
                     </NavContainer>
