@@ -4,7 +4,7 @@ import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../glo
 import Head from 'next/head';
 import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
-import { apiService } from '../utils/apiService';
+// import { apiService } from '../utils/apiService';
 
 // import axios from 'axios';
 
@@ -74,7 +74,7 @@ const Submit = styled.button`
     } 
 `;
 
-const contact = ({ small }) => {
+const Contact = ({ small }) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
@@ -139,4 +139,4 @@ const contact = ({ small }) => {
     )
 }
 
-export default contact
+export default Contact
