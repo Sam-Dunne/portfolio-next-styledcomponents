@@ -79,21 +79,21 @@ const contact = ({ small }) => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!from || !subject || !message) {
-            // MyModal.fieldValidation(('Oops...'), ('All fields required'));
-            alert('All fields required')
-            return
-        }
-        apiService('/api/contact', 'POST', { from, subject, message })
-            .then(result => {
-                // MyModal.timeoutSuccess('Thanks for the Message!', `${result.newEmail.from}`)
-                setFrom('');
-                setSubject('');
-                setMessage('')
-            })
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     if (!from || !subject || !message) {
+    //         // MyModal.fieldValidation(('Oops...'), ('All fields required'));
+    //         alert('All fields required')
+    //         return
+    //     }
+    //     apiService('/api/contact', 'POST', { from, subject, message })
+    //         .then(result => {
+    //             // MyModal.timeoutSuccess('Thanks for the Message!', `${result.newEmail.from}`)
+    //             setFrom('');
+    //             setSubject('');
+    //             setMessage('')
+    //         })
+    // }
 
     return (
         <>
