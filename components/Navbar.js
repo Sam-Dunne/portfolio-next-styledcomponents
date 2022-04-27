@@ -159,7 +159,7 @@ const Navbar = ({ isOpen, mobile }) => {
                     </MobileMenuContainer>
                     <NavContainer>
                         <Link href='/' passHref>
-                            <NavLink>Home</NavLink>
+                            <NavLink>Sam Dunne</NavLink>
                         </Link>
                         <MobileBurger ><GiHamburger onClick={handleNavClick}></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
