@@ -46,7 +46,6 @@ const Submit = styled.button`
     outline: none;
     padding: 1rem;
     border-radius: 15px;
-    /* box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75); */
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
