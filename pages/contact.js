@@ -105,7 +105,8 @@ const Contact = ({ small }) => {
                 })
             
         } catch (error) {
-            
+            console.log(error);
+                res.status(400);
         }
     }
     // const handleSubmit = (e) => {
