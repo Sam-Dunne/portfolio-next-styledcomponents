@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
     
     a, h3, h5 {
         font-family: 'Nunito','Source Sans Pro', sans-serif;
-
     }
 `;
 
@@ -59,19 +58,16 @@ export const Section = styled.section`
 
 export const ImageWrapper = styled.div`
     margin: 0 0;
-
     @media ${device.tablet} {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 25vw;
     }
-
     @media ${device.laptopL} {
       margin: 0;
       max-width: 30vw;
     }
-
   
 `;
 
@@ -99,14 +95,12 @@ export const Button = styled.button`
     border-radius: 10px;
     border-width: 1px;
     cursor: pointer;
-
     &:hover {
         transition: all 0.3s ease-out;
         background: #fff;
         background: ${({ primary }) => (primary ? '#0467FB' : 'rgb(36, 18, 57)')};
         color: #fff
     }
-
     @media screen and (max-width: 768px) {
         color: #fff;
         border-color: #fafafa;
@@ -118,7 +112,6 @@ export const Button = styled.button`
 export const HeroH1 = styled.h1`
     /* font-family: arial, sans-serif; */
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
-
     font-weight: 600;
     font-size: 1rem;    
     margin: 20px 0 30px 0;
@@ -129,10 +122,69 @@ export const HeroH1 = styled.h1`
         max-width: 192px;
         padding-right: 0;
     }
-
     @media ${device.laptopL} {
         max-width: 357px;
         margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"};
+    }
+`;
+export const Input = styled.input`
+    font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    padding: 1em 2em;
+    transition:
+        background-color 250ms ease-in,
+        transform 100ms ease-in;
+    
+    &:focus {
+        box-shadow: inset 0px 1px 8px 2px #8c1aff;
+        transform: scale(1.02);
+    }
+    
+    
+    @media ${device.tablet} {
+      
+    }
+    @media ${device.laptopL} {
+    }
+`;
+       
+export const Label = styled.label`
+    font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+    color: #fafafa;
+    display: block;
+    margin-bottom: 0.5em;
+    
+    
+    @media ${device.tablet} {
+      
+    }
+    @media ${device.laptopL} {
+       
+    }
+`;
+
+export const TextArea = styled.textarea`
+   font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    padding: 1em 2em;
+    transition:
+        background-color 250ms ease-in,
+        transform 100ms ease-in;
+    
+    &:focus {
+        box-shadow: inset 0px 1px 8px 2px #8c1aff;
+        transform: scale(1.02);
+    }
+    
+    
+    @media ${device.tablet} {
+      
+    }
+    @media ${device.laptopL} {
     }
 `;
 
@@ -149,7 +201,6 @@ export const HeaderTitle = styled.h1`
     @media ${device.tablet} {
         font-size: ${props => props.small ? '1.5rem' : '1.5rem'} ;
     }
-
     @media ${device.laptopL} {
     }
 `;
@@ -161,7 +212,6 @@ export const HeroH3 = styled.h6`
     margin-top: 30px;
     max-width: 311px;
     margin: 25px auto;
-
     @media ${device.tablet} {
         max-width: 450px;
         margin: 25px 0;
@@ -173,22 +223,19 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
 grid-gap: 35px;
-
+width: 18em;
 height: fit-content;
 min-width: fit-content;
-width: 75vw;
 margin: 0 auto 80px auto;
-
 @media ${device.tablet} {
     width: 50vw;
     grid-gap: 45px;
-
+    width: 24em;
 }
-
 @media ${device.laptopL} {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 50vw;
+    width: 42em;
     grid-gap: 45px;
 }
 `;
