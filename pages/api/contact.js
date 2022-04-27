@@ -14,14 +14,14 @@ export default async (req, res) => {
             try {
                 const newEmail = req.body;
                     try {
-                        const result = mailgun.messages.create(config.mailgun.domain, {
+                        const result = await mailgun.messages.create(config.mailgun.domain, {
                             to: config.mailgun.toEmail,
                             subject: newEmail.subject,
                             from: newEmail.from,
                             text: newEmail.message
                         })
                         res.json({result, newEmail})
-                        // console.log(res.json())
+                        console.log(result)
                     } catch (error) {
                         console.log(error.message);
                         res.status(500).json({ message: 'goof 500'})
