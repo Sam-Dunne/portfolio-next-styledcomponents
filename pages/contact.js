@@ -4,6 +4,9 @@ import { Container, HeaderTitle, LinkGrid } from '../globalstyle';
 import Head from 'next/head';
 import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
+import 'isomorphic-fetch';
+
+// import { apiService } from '../utils/apiService';
 
 const ContactContainer = styled.div`
     padding: 0 30px 0 30px;
@@ -18,7 +21,54 @@ const ContactContainer = styled.div`
     } 
 `;
 
-const contact = ({ small }) => {
+const Contact = ({ small }) => {
+    const [from, setFrom] = useState('')
+    const [subject, setSubject] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!from || !subject || !message) {
+            // MyModal.fieldValidation(('Oops...'), ('All fields required'));
+            alert('All fields required')
+            return
+        }
+        try {
+            fetch('/api/contact', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify({from, subject, message})
+            })
+                .then(res => {
+                    // alert('Thanks for the Message!', `${result.newEmail.from}`)
+                    // console.log(res)
+                    setFrom('');
+                    setSubject('');
+                    setMessage('')
+                })
+            
+        } catch (error) {
+            console.log(error);
+                res.status(400);
+        }
+    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     if (!from || !subject || !message) {
+    //         // MyModal.fieldValidation(('Oops...'), ('All fields required'));
+    //         alert('All fields required')
+    //         return
+    //     }
+    //     apiService('/api/contact', 'POST', { from, subject, message })
+    //         .then(result => {
+    //             // MyModal.timeoutSuccess('Thanks for the Message!', `${result.newEmail.from}`)
+    //             setFrom('');
+    //             setSubject('');
+    //             setMessage('')
+    //         })
+    // }
 
     return (
         <>
@@ -53,4 +103,4 @@ const contact = ({ small }) => {
     )
 }
 
-export default contact
+export default Contact
