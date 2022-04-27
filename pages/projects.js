@@ -9,11 +9,11 @@ const ProjectsTitle = styled.h3`
     color: #fafafa;
     width: 90%;
     text-align: center;
-    margin: 10px auto 10px auto;
+    margin: 0px auto 10px auto;
     /* font-family: 'Oswald', sans-serif; */
     
     @media ${device.tablet} {
-        font-size: 1.3rem;    
+        font-size: 1rem;    
     }
 
     @media ${device.laptopL} {
@@ -52,7 +52,9 @@ const ProjectsCardWrapper = styled.div`
 `;
 
 const ProjectsCard = styled.div`
-    background: #8c1aff;
+    /* background: #8c1aff; */
+    background: rgb(140,26,255);
+background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     padding: 20px 40px;
     border-radius: 15px;
     box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
@@ -95,7 +97,7 @@ const ProjectsCardText = styled.h5`
     }
 
     @media ${device.laptopL} {
-       font-size: 1.5rem;
+       font-size: 1.2rem;
     }
 `;
 
@@ -126,7 +128,7 @@ const ProjectImageWrapper = styled.div`
     }
     
     @media ${device.laptopL} {
-        width: 150px;
+        width: 120px;
     }
     `;
 
@@ -175,8 +177,8 @@ export default function Projects() {
                 <title>Projects</title>
 
             </Head>
+            <HeaderTitle>Projects</HeaderTitle>
             <Container>
-                <HeaderTitle>Projects</HeaderTitle>
                 <ProjectsSection>
                     <ProjectsCard>
                         <ProjectsTitle>Attack of the Clone</ProjectsTitle>
@@ -195,7 +197,7 @@ export default function Projects() {
                             </FooterImageWrapper2>
                         </a>
                     </ProjectsCard>
-                  
+
                     <ProjectsCard>
                         <ProjectsTitle>
                             Recipe Registry
@@ -235,13 +237,13 @@ export default function Projects() {
                         </a>
                     </ProjectsCard>
                 </ProjectsSection>
-                <LinkGrid>
-                    <InPageLink href='/about' >About</InPageLink>
-                    <InPageLink href='/cv' >CV</InPageLink>
-                    <InPageLink href='/contact' >Contact</InPageLink>
-                    <InPageLink href='/' >Home</InPageLink>
-                </LinkGrid>
             </Container>
+            <LinkGrid>
+                {/* <InPageLink href='/about' >About</InPageLink> */}
+                <InPageLink href='/cv' >CV</InPageLink>
+                <InPageLink href='/contact' >Contact</InPageLink>
+                <InPageLink href='/' >Home</InPageLink>
+            </LinkGrid>
         </>
     )
 }

@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
-        <Section>
+        <Section landing>
           <HeroH1 centered>Hi, I&apos;m Sam!
             <br />
             Thank you for visiting my site.
@@ -39,13 +39,13 @@ export default function Home() {
             <SCImage src="/samDataObject.png" alt="Picture of upside down dog" width={400} height={300} objectFit='cover' priority={true} />
           </ImageWrapper>
         </Section>
-        <LinkGrid>
-          <InPageLink href='/about' >About</InPageLink>
-          <InPageLink href='/projects' >Projects</InPageLink>
-          <InPageLink href='/cv' > CV</InPageLink>
-          <InPageLink href='/contact' Cont >Contact</InPageLink>
-        </LinkGrid>
       </Container>
+      <LinkGrid>
+        {/* <InPageLink href='/about' >About</InPageLink> */}
+        <InPageLink href='/projects' >Projects</InPageLink>
+        <InPageLink href='/cv' > CV</InPageLink>
+        <InPageLink href='/contact' Cont >Contact</InPageLink>
+      </LinkGrid>
 
     </>
   );

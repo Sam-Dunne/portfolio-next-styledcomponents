@@ -26,7 +26,7 @@ const CVImageWrapper = styled.div`
         width: 80vw;
     }
     @media ${device.laptop} {
-        width: 60vw;
+        width: 40vw;
     }
     `;
 
@@ -47,7 +47,7 @@ export default function CV() {
                 </CVImageWrapper>
             </CVContainer>
             <LinkGrid>
-                <InPageLink href='/about' >About</InPageLink>
+                {/* <InPageLink href='/about' >About</InPageLink> */}
                 <InPageLink href='/projects' >Projects</InPageLink>
                 <InPageLink href='/contact' >Contact</InPageLink>
                 <InPageLink href='/' >Home</InPageLink>

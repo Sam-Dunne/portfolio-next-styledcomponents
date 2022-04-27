@@ -18,7 +18,7 @@ const FooterImagesContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 
 `;
 
@@ -33,8 +33,8 @@ const FooterImageWrapper = styled.div`
 
 
     @media ${device.tablet} {
-        width: 80px;
-        height: 80px;
+        /* width: 80px;
+        height: 80px; */
     }
 
     &:hover {

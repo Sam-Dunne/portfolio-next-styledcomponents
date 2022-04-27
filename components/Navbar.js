@@ -140,9 +140,9 @@ const Navbar = ({ isOpen, mobile }) => {
                             </MobileBurger>
                         </MobileNavBurgerWrapper>
                         <MobileNavLinkWrapper>
-                            <Link href='/about' passHref>
+                            {/* <Link href='/about' passHref>
                                 <NavLink mobile onClick={handleNavClick}>About</NavLink>
-                            </Link>
+                            </Link> */}
                             <Link href='/projects' passHref>
                                 <NavLink mobile onClick={handleNavClick}>Projects</NavLink>
                             </Link>
@@ -180,9 +180,9 @@ const Navbar = ({ isOpen, mobile }) => {
                         {/* Hamburger Icon */}
                         <MobileBurger ><GiHamburger tabIndex='0' onClick={handleNavClick}></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
-                            <Link href='/about' passHref>
+                            {/* <Link href='/about' passHref>
                                 <NavLink>About</NavLink>
-                            </Link>
+                            </Link> */}
                             <Link href='/projects' passHref>
                                 <NavLink>Projects</NavLink>
                             </Link>

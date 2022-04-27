@@ -14,7 +14,7 @@ const FormItem = styled.div`
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
-    margin: 20px auto;
+    margin: 0px auto 10px auto;
     
     @media ${device.tablet} {
     } 
@@ -28,12 +28,16 @@ const ContactForm = styled.form`
     padding: 1em 2em;
     border: 2px solid gray;
     border-radius:15px;
-    background-color: #8c1aff;
+    /* background-color: #8c1aff; */
+    background: rgb(140,26,255);
+background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     @media ${device.tablet} {
         width: 24em;
+
     } 
     @media ${device.laptopL} {
-        width: 42em;
+        width: 36em;
+        height: 30em;
     } 
 `;
 
@@ -48,6 +52,8 @@ const Submit = styled.button`
     font-weight: 600;
     font-size: 1rem;
     color: #6600CC;
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+
     transition:
         background-color 100ms ease-in,
         transform 100ms ease-in;
@@ -85,9 +91,9 @@ const Contact = ({ small }) => {
             fetch('/api/contact', {
                 method: 'PUT',
                 headers: {
-                    'Content-Type' : 'application/json'
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({from, subject, message})
+                body: JSON.stringify({ from, subject, message })
             })
                 .then(res => {
                     // alert('Thanks for the Message!', `${result.newEmail.from}`)
@@ -96,10 +102,10 @@ const Contact = ({ small }) => {
                     setSubject('');
                     setMessage('')
                 })
-            
+
         } catch (error) {
             console.log(error);
-                res.status(400);
+            res.status(400);
         }
     }
     // const handleSubmit = (e) => {
@@ -123,8 +129,8 @@ const Contact = ({ small }) => {
             <Head>
                 <title>Contact</title>
             </Head>
+            <HeaderTitle>Contact</HeaderTitle>
             <Container>
-                <HeaderTitle>Contact</HeaderTitle>
                 {/* <ContactContainer> */}
                 {/* <div> */}
                 <ContactForm>
@@ -146,13 +152,13 @@ const Contact = ({ small }) => {
                 </ContactForm >
                 {/* </div> */}
                 {/* </ContactContainer> */}
-                <LinkGrid>
-                    <InPageLink href='/projects' >Projects</InPageLink>
-                    <InPageLink href='/about' >About</InPageLink>
-                    <InPageLink href='/cv' >CV</InPageLink>
-                    <InPageLink href='/' >Home</InPageLink>
-                </LinkGrid>
             </Container>
+            <LinkGrid>
+                <InPageLink href='/projects' >Projects</InPageLink>
+                {/* <InPageLink href='/about' >About</InPageLink> */}
+                <InPageLink href='/cv' >CV</InPageLink>
+                <InPageLink href='/' >Home</InPageLink>
+            </LinkGrid>
 
 
 

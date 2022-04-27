@@ -26,10 +26,21 @@ export const Container = styled.div`
     z-index: 1;
     width: 100%;
     padding-bottom: 10px 50px;
-    min-height: 65vh;
+    min-height: 72vh;
     height: fit-content;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+
+    @media ${device.tablet} {
+        
+    }
+    @media ${device.laptopL} {
+    
+    }
     
 `;
 
@@ -47,10 +58,12 @@ export const Section = styled.section`
         justify-content: space-around;
         padding: 30px 30px;
         flex-direction: ${props => props.picFirst ? 'row-reverse' : 'row'};
+        margin: 40px auto 80px auto;
     }
     @media ${device.laptopL} {
         justify-content: space-evenly;
-        margin: 20px auto;
+        /* margin: 40px auto 0px auto; */
+
         padding: 30px 0;
         width: 60vw;
     }
@@ -194,7 +207,7 @@ export const HeaderTitle = styled.h1`
     font-weight: 600;
     font-size: 0.5rem;   
     color: #6600CC;
-    font-size: ${props => props.small ? '1.3rem' : '2.2rem'}; 
+    font-size: ${props => props.small ? '1.3rem' : '1.5rem'}; 
     margin: 20px 0 10px 0;
     text-align: center;
     
@@ -220,8 +233,8 @@ export const HeroH3 = styled.h6`
 
 export const LinkGrid = styled.div`
 display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
 grid-gap: 35px;
 width: 18em;
 height: fit-content;
@@ -233,10 +246,11 @@ margin: 0 auto 80px auto;
     width: 24em;
 }
 @media ${device.laptopL} {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: none;
+    /* grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     width: 42em;
-    grid-gap: 45px;
+    grid-gap: 45px; */
 }
 `;
 
