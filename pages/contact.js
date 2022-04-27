@@ -4,6 +4,8 @@ import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../glo
 import Head from 'next/head';
 import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
+import 'isomorphic-fetch';
+
 // import { apiService } from '../utils/apiService';
 
 // import axios from 'axios';
@@ -79,6 +81,33 @@ const Contact = ({ small }) => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!from || !subject || !message) {
+            // MyModal.fieldValidation(('Oops...'), ('All fields required'));
+            alert('All fields required')
+            return
+        }
+        try {
+            fetch('/api/contact', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify({from, subject, message})
+            })
+                .then(res => {
+                    // alert('Thanks for the Message!', `${result.newEmail.from}`)
+                    console.log(res)
+                    // setFrom('');
+                    // setSubject('');
+                    // setMessage('')
+                })
+            
+        } catch (error) {
+            
+        }
+    }
     // const handleSubmit = (e) => {
     //     e.preventDefault();
     //     if (!from || !subject || !message) {
