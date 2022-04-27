@@ -98,7 +98,7 @@ const Contact = ({ small }) => {
             })
                 .then(res => {
                     // alert('Thanks for the Message!', `${result.newEmail.from}`)
-                    console.log(res)
+                    // console.log(res)
                     setFrom('');
                     setSubject('');
                     setMessage('')
