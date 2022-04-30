@@ -223,7 +223,7 @@ export default function Projects() {
                         </ProjectsTitle>
                         <ProjectsCardWrapper>
                             <ProjectImageContainer>
-                                <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                <a href='https://sub-reddit-samd.vercel.app' rel='noopener noreferrer' target='_blank'>
                                     <ProjectImageWrapper>
                                         <ProjectsImage src='/subreddit_mobile.png' alt='subreddit client' width={350} height={625} objectFit='fill' layout='responsive' priority={true} />
                                     </ProjectImageWrapper>
