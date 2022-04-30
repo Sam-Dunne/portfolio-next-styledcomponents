@@ -230,7 +230,7 @@ export default function Projects() {
                                 </a>
                             </ProjectImageContainer>
                         </ProjectsCardWrapper>
-                        <a href='https://github.com/Sam-Dunne/recipe-mostly-mern' rel='noopener noreferrer' target='_blank'>
+                        <a href='https://github.com/Sam-Dunne/reddit' rel='noopener noreferrer' target='_blank'>
                             <FooterImageWrapper2>
                                 <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
                             </FooterImageWrapper2>
