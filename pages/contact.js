@@ -96,8 +96,8 @@ const Contact = ({ small }) => {
                 body: JSON.stringify({ from, subject, message })
             })
                 .then(res => {
-                    // alert('Thanks for the Message!', `${result.newEmail.from}`)
-                    // console.log(res)
+                    // alert('Thanks for the Message!', `${res.newEmail.from}`)
+                    console.log(res.json())
                     setFrom('');
                     setSubject('');
                     setMessage('')

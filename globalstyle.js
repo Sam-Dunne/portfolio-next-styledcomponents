@@ -126,12 +126,12 @@ export const HeroH1 = styled.h1`
     /* font-family: arial, sans-serif; */
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     font-weight: 600;
-    font-size: 1rem;    
+    font-size: 0.8rem;    
     margin: 20px 0 30px 0;
     text-align: ${props => props.centered ? 'center' : 'start'};
     
     @media ${device.tablet} {
-        font-size: 1.2rem;
+        font-size: 1rem;
         max-width: 192px;
         padding-right: 0;
     }

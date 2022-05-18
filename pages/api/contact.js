@@ -20,8 +20,9 @@ export default async (req, res) => {
                             from: newEmail.from,
                             text: newEmail.message
                         })
-                        res.json({result, newEmail})
-                        console.log(result)
+                        
+                        return res.json({result, newEmail})
+                        // console.log(newEmail)
                     } catch (error) {
                         console.log(error.message);
                         res.status(500).json({ message: 'goof 500'})

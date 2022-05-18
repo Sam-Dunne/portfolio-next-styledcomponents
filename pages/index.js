@@ -26,7 +26,12 @@ export default function Home() {
       </Head>
       <Container>
         <Section landing>
-          <HeroH1 centered>Hi, I&apos;m Sam!
+          <div>
+            <HeroH1 centered>
+            Hi, I&apos;m Sam. A developer seeking opportunities to learn and grow in a professional environment.
+            </HeroH1>
+          </div>
+          {/* <HeroH1 centered>Hi, I&apos;m Sam!
             <br />
             Thank you for visiting my site.
             <br />
@@ -34,7 +39,7 @@ export default function Home() {
               #OPENTOWORK
             </strong>
 
-          </HeroH1>
+          </HeroH1> */}
           <ImageWrapper>
             <SCImage src="/samDataObject.png" alt="Picture of upside down dog" width={400} height={300} objectFit='cover' priority={true} />
           </ImageWrapper>
