@@ -6,7 +6,7 @@ import { device } from '../device';
 
 const FooterContainer = styled.footer`
     background: #6600CC;
-    height: fit-content;
+    height: 10vh;
     padding: 30px;
     color: #fafafa;
     @media ${device.laptopL} {
@@ -58,7 +58,7 @@ const FooterCopy = styled.h5`
 const Footer = () => {
     return (
         <FooterContainer>
-            <FooterImagesContainer>
+            {/* <FooterImagesContainer>
                 <a href='https://www.linkedin.com/in/samdunnewebdev/' rel='noopener noreferrer' target='_blank'>
                     <FooterImageWrapper>
                         <FooterImage src="/LI-In-Bug.png" alt="linkedIn logo" width={635} height={540} objectFit="cover" layout='responsive' />
@@ -70,7 +70,7 @@ const Footer = () => {
                         <FooterImage src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
                     </FooterImageWrapper>
                 </a>
-            </FooterImagesContainer>
+            </FooterImagesContainer> */}
         </FooterContainer>
     )
 }

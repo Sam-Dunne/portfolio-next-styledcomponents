@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import styled from 'styled-components';
-import { Container, Section, HeroH1, ImageWrapper, SCImage, LinkGrid } from "../globalstyle";
+import { Container, Section, HeroH1, ImageWrapper, SCImage, LinkGrid, H2 } from "../globalstyle";
 import InPageLink from "../components/InPageLink";
 
 const Header = styled.h1`
@@ -25,32 +25,27 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
-        <Section landing>
-          <div>
-            <HeroH1 centered>
-            Hi, I&apos;m Sam. A developer seeking opportunities to learn and grow in a professional environment.
-            </HeroH1>
-          </div>
-          {/* <HeroH1 centered>Hi, I&apos;m Sam!
-            <br />
-            Thank you for visiting my site.
-            <br />
-            <strong>
-              #OPENTOWORK
-            </strong>
+        <LinkGrid>
+          <InPageLink href='/projects' >Projects</InPageLink>
+          <InPageLink href='/cv' > CV</InPageLink>
+          <InPageLink href='/contact' Cont >Contact</InPageLink>
+        </LinkGrid>
 
-          </HeroH1> */}
-          <ImageWrapper>
+        <Section>
+
+          <HeroH1 centered>
+            Hi, I&apos;m Sam Dunne
+          </HeroH1>
+          <H2>
+            A developer seeking opportunities to learn and grow in a professional environment.
+          </H2>
+
+
+          {/* <ImageWrapper>
             <SCImage src="/samDataObject.png" alt="Picture of upside down dog" width={400} height={300} objectFit='cover' priority={true} />
-          </ImageWrapper>
+          </ImageWrapper> */}
         </Section>
       </Container>
-      <LinkGrid>
-        {/* <InPageLink href='/about' >About</InPageLink> */}
-        <InPageLink href='/projects' >Projects</InPageLink>
-        <InPageLink href='/cv' > CV</InPageLink>
-        <InPageLink href='/contact' Cont >Contact</InPageLink>
-      </LinkGrid>
 
     </>
   );

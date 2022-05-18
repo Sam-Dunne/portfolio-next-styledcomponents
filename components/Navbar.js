@@ -7,7 +7,7 @@ import { FaTimesCircle } from 'react-icons/fa';
 import { device } from '../device';
 
 const NavContainer = styled.nav`
-    height: 90px;
+    min-height: 10vh;
     padding: 20px 30px 0 30px;
     display: flex;
     justify-content: space-between;
@@ -16,11 +16,11 @@ const NavContainer = styled.nav`
     margin-bottom: -4px;
 
     @media ${device.mobileL} {
-        padding: 10px 60px 0 60px;
+        /* padding: 10px 60px 0 60px; */
     }
 
     @media ${device.laptopL} {
-        padding: 10px 90px 0 90px;
+        /* padding: 10px 90px 0 90px; */
     }
 `;
 
@@ -140,7 +140,7 @@ const Navbar = ({ isOpen, mobile }) => {
                             </MobileBurger>
                         </MobileNavBurgerWrapper>
                         <MobileNavLinkWrapper>
-                        
+
                             <Link href='/projects' passHref>
                                 <NavLink mobile onClick={handleNavClick}>Projects</NavLink>
                             </Link>
@@ -162,23 +162,23 @@ const Navbar = ({ isOpen, mobile }) => {
                         <MobileBurger ><GiHamburger onClick={handleNavClick}></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
                         </NonHomeViewLinks>
+                        <StyledSvg>
+                            <ellipse cx="50%" cy="-5" rx="52%" ry="40" fill="#6600CC"></ellipse>
+                        </StyledSvg>
                     </NavContainer>
-                    <StyledSvg>
-                        <ellipse cx="50%" cy="-5" rx="52%" ry="40" fill="#6600CC"></ellipse>
-                    </StyledSvg>
                 </>
                 :
                 // Mobile menu is closed
                 <>
                     <MobileMenuContainer ><FaTimesCircle onClick={handleNavClick} /></MobileMenuContainer>
                     <NavContainer>
-                        <Link href='/' passHref>        
-                                <NavLink>Sam Dunne</NavLink>
+                        <Link href='/' passHref>
+                            <NavLink>Sam Dunne</NavLink>
                         </Link>
                         {/* Hamburger Icon */}
                         <MobileBurger ><GiHamburger tabIndex='0' onClick={handleNavClick}></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
-                            
+
                             <Link href='/projects' passHref>
                                 <NavLink>Projects</NavLink>
                             </Link>

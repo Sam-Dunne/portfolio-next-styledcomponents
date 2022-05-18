@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { device } from './device';
+import { layout } from './layoutSize';
 import Image from 'next/image'
 
 export const GlobalStyle = createGlobalStyle`
@@ -13,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     html, body {
         max-width: 100%;
         overflow-x: hidden;
-        background: #f3ecfa;
+        background: #F4EDFA;
     }
     
     a, h3, h5 {
@@ -22,21 +23,22 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 
-export const Container = styled.div`
+export const Container = styled.main`
     z-index: 1;
     width: 100%;
-    padding-bottom: 10px 50px;
-    min-height: 72vh;
-    height: fit-content;
-    /* margin-bottom: 20px; */
+    padding: 10px 20px;
+    min-height: 75vh;
     position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap:wrap;
-    align-items: center;
+    /* height: fit-content; */
+    /* margin-bottom: 20px; */
+    /*display: flex;
+    justify-content: center; */
+    /* flex-wrap:wrap; */
+    /* align-items: center; */
 
     @media ${device.tablet} {
-        
+    min-height: 77vh;
+        padding: 1em 3em;
     }
     @media ${device.laptopL} {
     
@@ -46,26 +48,26 @@ export const Container = styled.div`
 
 export const Section = styled.section`
     position: relative;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    /* padding: 30px 12px; */
-    width: 80vw;
-    margin: 20px auto;
+    align-items: center; */
+    /* flex-wrap: wrap;  */
+    padding: 2em 2em;
+    /* width: 100%; */
+    /* margin: 20px auto; */
     @media ${device.tablet} {
-        width: 70vw;
+        padding: 3em 3em;
+        /* width: 70vw;
         justify-content: space-around;
         padding: 30px 30px;
-        flex-direction: ${props => props.picFirst ? 'row-reverse' : 'row'};
-        margin: 40px auto 80px auto;
+        margin: 40px auto 80px auto; */
     }
     @media ${device.laptopL} {
-        justify-content: space-evenly;
+        /* justify-content: space-evenly; */
         /* margin: 40px auto 0px auto; */
 
-        padding: 30px 0;
-        width: 60vw;
+        /* padding: 30px 0;
+        width: 60vw; */
     }
     `;
 
@@ -125,19 +127,20 @@ export const Button = styled.button`
 export const HeroH1 = styled.h1`
     /* font-family: arial, sans-serif; */
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+    color: #6600CC;
     font-weight: 600;
-    font-size: 0.8rem;    
-    margin: 20px 0 30px 0;
+    /* font-size: 1.2em;     */
+    /* margin: 20px 0 30px 0; */
     text-align: ${props => props.centered ? 'center' : 'start'};
     
     @media ${device.tablet} {
-        font-size: 1rem;
+        /* font-size: 1rem;
         max-width: 192px;
-        padding-right: 0;
+        padding-right: 0; */
     }
     @media ${device.laptopL} {
-        max-width: 357px;
-        margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"};
+        /* max-width: 357px;
+        margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"}; */
     }
 `;
 export const Input = styled.input`
@@ -218,16 +221,18 @@ export const HeaderTitle = styled.h1`
     }
 `;
 
-export const HeroH3 = styled.h6`
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 1.1;
-    margin-top: 30px;
-    max-width: 311px;
-    margin: 25px auto;
+export const H2 = styled.h2`
+    font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+    color: #6600CC;
+    font-size: 1em;
+    /* font-weight: 200; */
+    line-height: 1.2;
+    margin-top: 1em;
+    /* max-width: 311px; */
+    /* margin: 25px auto; */
     @media ${device.tablet} {
-        max-width: 450px;
-        margin: 25px 0;
+        /* max-width: 450px;
+        margin: 25px 0; */
     }
 `;
 
@@ -236,10 +241,10 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 grid-gap: 35px;
-width: 18em;
+/* width: 18em; */
 height: fit-content;
 min-width: fit-content;
-margin: 0 auto 80px auto;
+margin: 0 auto 0 auto;
 @media ${device.tablet} {
     width: 50vw;
     grid-gap: 45px;
