@@ -43,16 +43,16 @@ export default function Home() {
             Thanks for visiting the site!
           </H2>
           <H2>
-            I'd love to see some production code.
+            I&apos;'d love to see some production code.
           </H2>
           <H2>
-            I'd love to learn how to build well, not just get stuff to work.
+            I&apos;'d love to learn how to build well, not just get stuff to work.
           </H2>
           <H2>
-            I'd love to contribute to a team, and not just code in a vaccuum.
+            I&apos;'d love to contribute to a team, and not just code in a vaccuum.
           </H2>
           <H2>
-            I'd love the chance to interview. Even if I fail, I will learn something along the way. 
+            I&apos;'d love the chance to interview. Even if I fail, I will learn something along the way. 
           </H2>
 
 
