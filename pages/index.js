@@ -40,7 +40,7 @@ export default function Home() {
             A developer seeking opportunities to learn and grow in a professional environment.
           </H2>
           <H2>
-            Thanks for visiting the site!
+            Thanks for visiting this site!
           </H2>
           <H2>
             I&apos;'d love to see some production code.
