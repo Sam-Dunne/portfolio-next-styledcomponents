@@ -25,11 +25,11 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
-        <LinkGrid>
+        {/* <LinkGrid>
           <InPageLink href='/projects' >Projects</InPageLink>
           <InPageLink href='/cv' > CV</InPageLink>
           <InPageLink href='/contact' Cont >Contact</InPageLink>
-        </LinkGrid>
+        </LinkGrid> */}
 
         <Section>
 
@@ -38,6 +38,21 @@ export default function Home() {
           </HeroH1>
           <H2>
             A developer seeking opportunities to learn and grow in a professional environment.
+          </H2>
+          <H2>
+            Thanks for visiting the site!
+          </H2>
+          <H2>
+            I'd love to see some production code.
+          </H2>
+          <H2>
+            I'd love to learn how to build well, not just get stuff to work.
+          </H2>
+          <H2>
+            I'd love to contribute to a team, and not just code in a vaccuum.
+          </H2>
+          <H2>
+            I'd love the chance to interview. Even if I fail, I will learn something along the way. 
           </H2>
 
 

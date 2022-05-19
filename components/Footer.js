@@ -5,16 +5,20 @@ import Link from 'next/link';
 import { device } from '../device';
 
 const FooterContainer = styled.footer`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background: #6600CC;
     height: 10vh;
-    padding: 30px;
+    /* padding: 30px; */
     color: #fafafa;
     @media ${device.laptopL} {
-        padding: 30px 150px;
+        /* padding: 30px 150px; */
     }
     `;
 
 const FooterImagesContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -23,11 +27,11 @@ const FooterImagesContainer = styled.div`
 `;
 
 const FooterImageWrapper = styled.div`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: #fafafa;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 10px;
     transition: 
         transform 200ms ease-in;
 
@@ -46,31 +50,37 @@ const FooterImageWrapper = styled.div`
 const FooterImage = styled(Image)`
 `;
 
-const FooterCopy = styled.h5`
+const FooterCopy = styled.p`
     text-align: center;
-    margin: 0 15px 0 15px;
-
+    font-size: 0.6em;
+    margin: 0 3em 0 3em;
+    
     @media ${device.tablet} {
-        font-size: 1.2rem;
+        font-size: 0.9em;
+        margin: 0 10em 0 10em;
+    }
+    @media ${device.laptop} {
+        font-size: 0.9em;
+        margin: 0 10em 0 10em;
     }
 `;
 
 const Footer = () => {
     return (
         <FooterContainer>
-            {/* <FooterImagesContainer>
+            <FooterImagesContainer>
                 <a href='https://www.linkedin.com/in/samdunnewebdev/' rel='noopener noreferrer' target='_blank'>
                     <FooterImageWrapper>
                         <FooterImage src="/LI-In-Bug.png" alt="linkedIn logo" width={635} height={540} objectFit="cover" layout='responsive' />
                     </FooterImageWrapper>
                 </a>
-                <FooterCopy>This site is built with NextJS and Styled-Components</FooterCopy>
+                <FooterCopy>This site is built with NextJS<br></br> and Styled-Components</FooterCopy>
                 <a href='https://github.com/Sam-Dunne/portfolio-next-styledcomponents' rel='noopener noreferrer' target='_blank'>
                     <FooterImageWrapper>
                         <FooterImage src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
                     </FooterImageWrapper>
                 </a>
-            </FooterImagesContainer> */}
+            </FooterImagesContainer>
         </FooterContainer>
     )
 }

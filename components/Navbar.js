@@ -57,7 +57,7 @@ const NonHomeViewLinks = styled.div`
     }
 `;
 
-const MobileBurger = styled.div`
+const MobileBurger = styled.a`
     color: #fafafa;
     font-size: 2rem;
     height: 30px;
@@ -135,7 +135,7 @@ const Navbar = ({ isOpen, mobile }) => {
                     {/* Mobile menu is Open */}
                     <MobileMenuContainer isOpen>
                         <MobileNavBurgerWrapper>
-                            <MobileBurger tabIndex='0' onClick={handleNavClick}>
+                            <MobileBurger href='' onClick={handleNavClick}>
                                 <FaTimesCircle />
                             </MobileBurger>
                         </MobileNavBurgerWrapper>
@@ -159,24 +159,24 @@ const Navbar = ({ isOpen, mobile }) => {
                         <Link href='/' passHref>
                             <NavLink>Sam Dunne</NavLink>
                         </Link>
-                        <MobileBurger ><GiHamburger onClick={handleNavClick}></GiHamburger></MobileBurger>
+                        <MobileBurger onClick={handleNavClick}  ><GiHamburger ></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
                         </NonHomeViewLinks>
+                    </NavContainer>
                         <StyledSvg>
                             <ellipse cx="50%" cy="-5" rx="52%" ry="40" fill="#6600CC"></ellipse>
                         </StyledSvg>
-                    </NavContainer>
                 </>
                 :
                 // Mobile menu is closed
                 <>
-                    <MobileMenuContainer ><FaTimesCircle onClick={handleNavClick} /></MobileMenuContainer>
+                    <MobileMenuContainer href='' onClick={handleNavClick}><FaTimesCircle /></MobileMenuContainer>
                     <NavContainer>
                         <Link href='/' passHref>
                             <NavLink>Sam Dunne</NavLink>
                         </Link>
                         {/* Hamburger Icon */}
-                        <MobileBurger ><GiHamburger tabIndex='0' onClick={handleNavClick}></GiHamburger></MobileBurger>
+                        <MobileBurger href='' onClick={handleNavClick} ><GiHamburger ></GiHamburger></MobileBurger>
                         <NonHomeViewLinks>
 
                             <Link href='/projects' passHref>

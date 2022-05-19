@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         background: #F4EDFA;
     }
     
-    a, h3, h5 {
+    a, h3, h5, p {
         font-family: 'Nunito','Source Sans Pro', sans-serif;
     }
 `;
@@ -37,10 +37,11 @@ export const Container = styled.main`
     /* align-items: center; */
 
     @media ${device.tablet} {
-    min-height: 77vh;
         padding: 1em 3em;
+        min-height: 77vh;
     }
     @media ${device.laptopL} {
+        min-height: 76vh;
     
     }
     
@@ -68,6 +69,7 @@ export const Section = styled.section`
 
         /* padding: 30px 0;
         width: 60vw; */
+        
     }
     `;
 
@@ -138,7 +140,8 @@ export const HeroH1 = styled.h1`
         max-width: 192px;
         padding-right: 0; */
     }
-    @media ${device.laptopL} {
+    @media ${device.laptop} {
+        font-size: 1.8em;
         /* max-width: 357px;
         margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"}; */
     }
@@ -225,14 +228,15 @@ export const H2 = styled.h2`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #6600CC;
     font-size: 1em;
-    /* font-weight: 200; */
     line-height: 1.2;
-    margin-top: 1em;
-    /* max-width: 311px; */
-    /* margin: 25px auto; */
+    margin: 1em auto 0 auto;
     @media ${device.tablet} {
-        /* max-width: 450px;
-        margin: 25px 0; */
+        width: 60%;
+    }
+    @media ${device.laptop} {
+        font-size: 1.2em;
+        margin: 2em auto 0 auto;
+        width: 30%;
     }
 `;
 
