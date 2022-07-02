@@ -2,10 +2,27 @@ import { useEffect } from "react";
 import Head from "next/head";
 import styled from 'styled-components';
 import { Container, Section, HeroH1, ImageWrapper, SCImage, LinkGrid, H2 } from "../globalstyle";
+import { device } from "../device";
 import InPageLink from "../components/InPageLink";
 
 const Header = styled.h1`
   color: blue;
+`;
+
+const Headshot = styled.img`
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+
+  @media ${device.tablet} {
+      width: 200px;
+      height: 200px;
+    }
+    @media ${device.laptopL} {
+      width: 200px;
+      height: 200px;
+    }
 `;
 
 export default function Home() {
@@ -32,10 +49,10 @@ export default function Home() {
         </LinkGrid> */}
 
         <Section>
-
           <HeroH1 centered>
             Hi, I&apos;m Sam Dunne
           </HeroH1>
+          <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
           <H2>
             A developer seeking opportunities to learn and grow in a professional environment.
           </H2>
@@ -52,7 +69,7 @@ export default function Home() {
             I would love to contribute to a team, and not just code in a vaccuum.
           </H2>
           <H2>
-            I would love the chance to interview. Even if I fail, I will learn something along the way. 
+            I would love the chance to interview. Even if I fail, I will learn something along the way.
           </H2>
 
 

@@ -235,7 +235,7 @@ export const H2 = styled.h2`
     }
     @media ${device.laptop} {
         font-size: 1.2em;
-        margin: 2em auto 0 auto;
+        margin: 1em auto 0 auto;
         width: 30%;
     }
 `;
