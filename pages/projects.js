@@ -35,6 +35,7 @@ const ProjectsSection = styled.section`
 
     @media ${device.laptopL} {
         width: 1000px;
+        height: 55vh;
     }
     `;
 
@@ -57,7 +58,7 @@ const ProjectsCard = styled.div`
 background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     padding: 20px 40px;
     border-radius: 15px;
-    box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75); */
     margin: 0px auto 20px auto;
     width: 60vw;
     height: 100%;
@@ -67,8 +68,9 @@ background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.958
     }
 
     @media ${device.laptopL} {
-        width: 15vw;
-        margin: 0px 50px 20px 50px;
+        /* width: 15vw; */
+        margin: 30px 50px 20px 50px;
+        height: 80%;
 
     }
 `;
@@ -128,7 +130,7 @@ const ProjectImageWrapper = styled.div`
     }
     
     @media ${device.laptopL} {
-        width: 120px;
+        width: 150px;
     }
     `;
 
@@ -182,6 +184,7 @@ export default function Projects() {
                 <ProjectsSection>
                     <ProjectsCard>
                         <ProjectsTitle>`Styled Clone</ProjectsTitle>
+                        <br></br>
                         <ProjectsCardWrapper>
                             <ProjectImageContainer>
                                 <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
@@ -225,7 +228,7 @@ export default function Projects() {
                             <ProjectImageContainer>
                                 <a href='https://sub-reddit-samd.vercel.app' rel='noopener noreferrer' target='_blank'>
                                     <ProjectImageWrapper>
-                                        <ProjectsImage src='/subreddit_mobile.png' alt='subreddit client' width={350} height={625} objectFit='fill' layout='responsive' priority={true} />
+                                        <ProjectsImage src='/subreddit_mobile_sqooshed1.png' alt='subreddit client' width={350} height={625} objectFit='fill' layout='responsive' priority={true} />
                                     </ProjectImageWrapper>
                                 </a>
                             </ProjectImageContainer>
