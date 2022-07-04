@@ -42,7 +42,6 @@ const PDFLinkWrapper = styled.div`
 `;
 
 const DownloadPDF = styled.a`
-    /* margin: 0 auto; */
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #6600CC;
     font-size: 0.6em;
@@ -70,7 +69,6 @@ export default function CV() {
                 </CVImageWrapper>
             </CVContainer>
             <LinkGrid>
-                {/* <InPageLink href='/about' >About</InPageLink> */}
                 <InPageLink href='/projects' >Projects</InPageLink>
                 <InPageLink href='/contact' >Contact</InPageLink>
                 <InPageLink href='/' >Home</InPageLink>

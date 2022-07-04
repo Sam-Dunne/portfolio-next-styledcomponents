@@ -10,7 +10,6 @@ const ProjectsTitle = styled.h3`
     width: 90%;
     text-align: center;
     margin: 0px auto 10px auto;
-    /* font-family: 'Oswald', sans-serif; */
     
     @media ${device.tablet} {
         font-size: 1rem;    
@@ -53,12 +52,10 @@ const ProjectsCardWrapper = styled.div`
 `;
 
 const ProjectsCard = styled.div`
-    /* background: #8c1aff; */
     background: rgb(140,26,255);
-background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     padding: 20px 40px;
     border-radius: 15px;
-    /* box-shadow: 5px 6px 5px 0px rgba(0,0,0,0.75); */
     margin: 0px auto 20px auto;
     width: 60vw;
     height: 100%;
@@ -68,9 +65,8 @@ background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.958
     }
 
     @media ${device.laptopL} {
-        /* width: 15vw; */
         margin: 0px 50px 20px 50px;
-        height: 60%;
+        height: 65%;
 
     }
 `;
@@ -200,11 +196,6 @@ export default function Projects() {
                                 </a>
                             </ProjectImageContainer>
                         </ProjectsCardWrapper>
-                        {/* <a href='https://github.com/Sam-Dunne/shipt-home-clone-sc' rel='noopener noreferrer' target='_blank'>
-                            <FooterImageWrapper2>
-                                <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
-                            </FooterImageWrapper2>
-                        </a> */}
                     </ProjectsCard>
 
                     <ProjectsCard>
@@ -220,12 +211,8 @@ export default function Projects() {
                                 </a>
                             </ProjectImageContainer>
                         </ProjectsCardWrapper>
-                        {/* <a href='https://github.com/Sam-Dunne/recipe-mostly-mern' rel='noopener noreferrer' target='_blank'>
-                            <FooterImageWrapper2>
-                                <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
-                            </FooterImageWrapper2>
-                        </a> */}
                     </ProjectsCard>
+
                     <ProjectsCard>
                         <ProjectsTitle>
                             Subreddit Client
@@ -239,16 +226,10 @@ export default function Projects() {
                                 </a>
                             </ProjectImageContainer>
                         </ProjectsCardWrapper>
-                        {/* <a href='https://github.com/Sam-Dunne/reddit' rel='noopener noreferrer' target='_blank'>
-                            <FooterImageWrapper2>
-                                <FooterImage2 src="/GitHub-Mark-120px-plus.png" alt="github logo" width={120} height={120} objectFit="cover" layout='responsive' />
-                            </FooterImageWrapper2>
-                        </a> */}
                     </ProjectsCard>
                 </ProjectsSection>
             </Container>
             <LinkGrid>
-                {/* <InPageLink href='/about' >About</InPageLink> */}
                 <InPageLink href='/cv' >CV</InPageLink>
                 <InPageLink href='/contact' >Contact</InPageLink>
                 <InPageLink href='/' >Home</InPageLink>

@@ -5,7 +5,6 @@ import { Section, HeroH1, ImageWrapper, SCImage, HeaderTitle } from "../globalst
 const AboutContent = ({ }) => {
     return (
         <>
-
             <HeaderTitle>About</HeaderTitle>
             <Section>
                 <HeroH1>Hi, I&apos;m Sam! This is my dog, Goof. <br /> I&apos;m seeking a workplace to grow and be challenged.</HeroH1>
@@ -19,13 +18,6 @@ const AboutContent = ({ }) => {
                     <SCImage src="/goof-in-grass.jpg" alt="dog chewing stick in the grass" width={600} height={400} objectFit="cover" priority={true} />
                 </ImageWrapper>
             </Section>
-            {/* <Section>
-                <HeroH1>My experience in Live Event Production getting along with widely diverse peoples and personalities.</HeroH1>
-                <ImageWrapper>
-                    <SCImage src="/dliveConsole.png" alt="audio mixing console" width={600} height={400} objectFit="cover" priority={true} />
-                </ImageWrapper>
-            </Section> */}
-            
         </>
             )
 }

@@ -6,14 +6,7 @@ import InPageLink from '../components/InPageLink';
 import styled from 'styled-components';
 import 'isomorphic-fetch';
 
-// import { apiService } from '../utils/apiService';
-
-// import axios from 'axios';
-
 const FormItem = styled.div`
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
     margin: 0px auto 10px auto;
     
     @media ${device.tablet} {
@@ -28,9 +21,8 @@ const ContactForm = styled.form`
     padding: 1em 2em;
     border: 2px solid gray;
     border-radius:15px;
-    /* background-color: #8c1aff; */
     background: rgb(140,26,255);
-background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     @media ${device.tablet} {
         width: 24em;
 
@@ -83,7 +75,6 @@ const Contact = ({ small }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!from || !subject || !message) {
-            // MyModal.fieldValidation(('Oops...'), ('All fields required'));
             alert('All fields required')
             return
         }
@@ -108,21 +99,6 @@ const Contact = ({ small }) => {
             res.status(400);
         }
     }
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     if (!from || !subject || !message) {
-    //         // MyModal.fieldValidation(('Oops...'), ('All fields required'));
-    //         alert('All fields required')
-    //         return
-    //     }
-    //     apiService('/api/contact', 'POST', { from, subject, message })
-    //         .then(result => {
-    //             // MyModal.timeoutSuccess('Thanks for the Message!', `${result.newEmail.from}`)
-    //             setFrom('');
-    //             setSubject('');
-    //             setMessage('')
-    //         })
-    // }
 
     return (
         <>
@@ -131,8 +107,6 @@ const Contact = ({ small }) => {
             </Head>
             <HeaderTitle>Contact</HeaderTitle>
             <Container>
-                {/* <ContactContainer> */}
-                {/* <div> */}
                 <ContactForm>
                     <FormItem>
                         <Label htmlFor='Your Email'>Your Email</Label>
@@ -150,12 +124,9 @@ const Contact = ({ small }) => {
                         <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
                     </FormItem>
                 </ContactForm >
-                {/* </div> */}
-                {/* </ContactContainer> */}
             </Container>
             <LinkGrid>
                 <InPageLink href='/projects' >Projects</InPageLink>
-                {/* <InPageLink href='/about' >About</InPageLink> */}
                 <InPageLink href='/cv' >CV</InPageLink>
                 <InPageLink href='/' >Home</InPageLink>
             </LinkGrid>

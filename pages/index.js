@@ -58,12 +58,6 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
-        {/* <LinkGrid>
-          <InPageLink href='/projects' >Projects</InPageLink>
-          <InPageLink href='/cv' > CV</InPageLink>
-          <InPageLink href='/contact' Cont >Contact</InPageLink>
-        </LinkGrid> */}
-
         <LandingWrapper>
           <HeroH1 centered>
             Hi, I&apos;m Sam Dunne
@@ -87,11 +81,6 @@ export default function Home() {
           <H2>
             I would love the chance to interview. Even if I fail, I will learn something along the way.
           </H2>
-
-
-          {/* <ImageWrapper>
-            <SCImage src="/samDataObject.png" alt="Picture of upside down dog" width={400} height={300} objectFit='cover' priority={true} />
-          </ImageWrapper> */}
         </LandingWrapper>
       </Container>
 

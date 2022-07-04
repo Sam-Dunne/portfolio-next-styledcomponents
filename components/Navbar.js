@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import { GiHamburger, GiJumpingDog } from 'react-icons/gi';
+import { GiHamburger } from 'react-icons/gi';
 import { FaTimesCircle } from 'react-icons/fa';
 import { device } from '../device';
 import PDFLink from './PDFLink';
@@ -17,11 +17,9 @@ const NavContainer = styled.nav`
     margin-bottom: -4px;
 
     @media ${device.mobileL} {
-        /* padding: 10px 60px 0 60px; */
     }
 
     @media ${device.laptopL} {
-        /* padding: 10px 90px 0 90px; */
     }
 `;
 
@@ -42,7 +40,6 @@ const NavLink = styled.a`
       padding: 0 20px;   
       font-size: 1.3rem;
     }
-
 
     &:hover{
         text-decoration: underline;
@@ -100,11 +97,7 @@ const MobileMenuContainer = styled.div`
     }
 `;
 const Icon = styled(Image)`
-    /* height: 80px;
-    width: 80px; */
-
-   
-
+ 
     @media ${device.mobileL} {
         
     }

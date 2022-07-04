@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        /* font-family: 'Source Sans Pro', sans-serif; */
     } 
     
     html, body {
@@ -109,25 +108,19 @@ export const Button = styled.button`
 `;
 
 export const HeroH1 = styled.h1`
-    /* font-family: arial, sans-serif; */
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #6600CC;
     font-weight: 600;
-    /* font-size: 1.2em;     */
-    /* margin: 20px 0 30px 0; */
     text-align: ${props => props.centered ? 'center' : 'start'};
     
     @media ${device.tablet} {
-        /* font-size: 1rem;
-        max-width: 192px;
-        padding-right: 0; */
+       
     }
     @media ${device.laptop} {
         font-size: 1.8em;
-        /* max-width: 357px;
-        margin: ${props => props.mrgnLeftLG ? "0 0 0 80px" : "0 80px 0 0"}; */
     }
 `;
+
 export const Input = styled.input`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     border-radius: 10px;
@@ -190,7 +183,6 @@ export const TextArea = styled.textarea`
 `;
 
 export const HeaderTitle = styled.h1`
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     font-weight: 600;
     font-size: 0.5rem;   
@@ -228,7 +220,6 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 grid-gap: 35px;
-/* width: 18em; */
 height: fit-content;
 width: 90%;
 min-width: fit-content;
@@ -241,10 +232,7 @@ margin: 0 auto 1em auto;
 }
 @media ${device.laptopL} {
     display: none;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: 42em;
-    grid-gap: 45px; */
+
 }
 `;
 

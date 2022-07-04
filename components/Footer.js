@@ -10,10 +10,8 @@ const FooterContainer = styled.footer`
     align-items: center;
     background: #6600CC;
     height: 10vh;
-    /* padding: 30px; */
     color: #fafafa;
     @media ${device.laptopL} {
-        /* padding: 30px 150px; */
     }
     `;
 
@@ -22,8 +20,6 @@ const FooterImagesContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* margin-bottom: 15px; */
-
 `;
 
 const FooterImageWrapper = styled.div`
@@ -37,8 +33,7 @@ const FooterImageWrapper = styled.div`
 
 
     @media ${device.tablet} {
-        /* width: 80px;
-        height: 80px; */
+       
     }
 
     &:hover {
