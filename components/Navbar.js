@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { GiHamburger, GiJumpingDog } from 'react-icons/gi';
 import { FaTimesCircle } from 'react-icons/fa';
 import { device } from '../device';
+import PDFLink from './PDFLink';
 
 const NavContainer = styled.nav`
     min-height: 10vh;
@@ -153,6 +154,7 @@ const Navbar = ({ isOpen, mobile }) => {
                             <Link href='/' passHref>
                                 <NavLink mobile onClick={handleNavClick}>Home</NavLink>
                             </Link>
+                            <PDFLink textWhite></PDFLink>
                         </MobileNavLinkWrapper>
                     </MobileMenuContainer>
                     <NavContainer>

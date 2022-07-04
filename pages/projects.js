@@ -24,7 +24,7 @@ const ProjectsTitle = styled.h3`
 const ProjectsSection = styled.section`
     position: relative;
     padding: 0px 15px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 0 auto;
 
     @media ${device.tablet} {
         display: flex;
@@ -69,8 +69,8 @@ background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.958
 
     @media ${device.laptopL} {
         /* width: 15vw; */
-        margin: 30px 50px 20px 50px;
-        height: 80%;
+        margin: 0px 50px 20px 50px;
+        height: 60%;
 
     }
 `;
@@ -172,6 +172,12 @@ const FooterImageWrapper2 = styled.div`
 const FooterImage2 = styled(Image)`
 `;
 
+const Fudge = styled.br`
+  @media ${device.laptop} {
+      display: none;
+  }
+`;
+
 export default function Projects() {
     return (
         <>
@@ -184,7 +190,7 @@ export default function Projects() {
                 <ProjectsSection>
                     <ProjectsCard>
                         <ProjectsTitle>`Styled Clone</ProjectsTitle>
-                        <br></br>
+                        <Fudge></Fudge>
                         <ProjectsCardWrapper>
                             <ProjectImageContainer>
                                 <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>

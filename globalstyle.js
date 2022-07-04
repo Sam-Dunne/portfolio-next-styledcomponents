@@ -29,17 +29,12 @@ export const Container = styled.main`
     padding: 10px 20px;
     min-height: 75vh;
     position: relative;
-    /* height: fit-content; */
-    /* margin-bottom: 20px; */
-    /*display: flex;
-    justify-content: center; */
-    /* flex-wrap:wrap; */
-    /* align-items: center; */
 
     @media ${device.tablet} {
         padding: 1em 3em;
-        min-height: 77vh;
+        min-height: 60vh;
     }
+
     @media ${device.laptopL} {
         min-height: 76vh;
     
@@ -49,26 +44,13 @@ export const Container = styled.main`
 
 export const Section = styled.section`
     position: relative;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* flex-wrap: wrap;  */
     padding: 2em 2em;
-    /* width: 100%; */
-    /* margin: 20px auto; */
+
     @media ${device.tablet} {
         padding: 3em 3em;
-        /* width: 70vw;
-        justify-content: space-around;
-        padding: 30px 30px;
-        margin: 40px auto 80px auto; */
     }
-    @media ${device.laptopL} {
-        /* justify-content: space-evenly; */
-        /* margin: 40px auto 0px auto; */
 
-        /* padding: 30px 0;
-        width: 60vw; */
+    @media ${device.laptopL} {
         
     }
     `;
@@ -168,7 +150,7 @@ export const Input = styled.input`
     @media ${device.laptopL} {
     }
 `;
-       
+
 export const Label = styled.label`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #fafafa;
@@ -227,10 +209,11 @@ export const HeaderTitle = styled.h1`
 export const H2 = styled.h2`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #6600CC;
-    font-size: 1em;
+    font-size: 0.6em;
     line-height: 1.2;
     margin: 1em auto 0 auto;
     @media ${device.tablet} {
+        font-size: 1em;
         width: 60%;
     }
     @media ${device.laptop} {
@@ -247,12 +230,14 @@ grid-template-rows: 1fr;
 grid-gap: 35px;
 /* width: 18em; */
 height: fit-content;
+width: 90%;
 min-width: fit-content;
-margin: 0 auto 0 auto;
+margin: 0 auto 1em auto;
 @media ${device.tablet} {
     width: 50vw;
     grid-gap: 45px;
     width: 24em;
+    margin-bottom: 3em;
 }
 @media ${device.laptopL} {
     display: none;

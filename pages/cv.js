@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import InPageLink from "../components/InPageLink";
 import { device } from '../device';
 import { HeaderTitle, LinkGrid } from "../globalstyle";
+import PDFLink from '../components/PDFLink'
 
 
 const Header = styled.h1`
@@ -20,7 +21,7 @@ const CVImageWrapper = styled.div`
     padding: 10px;
     border-radius: 12px;
     width: 95vw;
-    margin-bottom: 100px;
+    margin-bottom: 26px;
     
     @media ${device.tablet} {
         width: 80vw;
@@ -34,6 +35,26 @@ const CVImage = styled(Image)`
 
 `;
 
+const PDFLinkWrapper = styled.div`
+    text-align: center;
+    margin: 1em auto 1em auto;
+
+`;
+
+const DownloadPDF = styled.a`
+    /* margin: 0 auto; */
+    font-family: 'Nunito', 'Source Sans Pro',sans-serif;
+    color: #6600CC;
+    font-size: 0.6em;
+    line-height: 1.2;
+    @media ${device.tablet} {
+        font-size: 1em;
+    }
+    @media ${device.laptop} {
+        font-size: 1.2em;
+    }
+`;
+
 export default function CV() {
     return (
         <>
@@ -41,6 +62,8 @@ export default function CV() {
                 <title>CV</title>
             </Head>
             <HeaderTitle>CV</HeaderTitle>
+            
+            <PDFLink></PDFLink>
             <CVContainer>
                 <CVImageWrapper>
                     <CVImage src="/20220702_Resume-538x690.jpg" alt="Resume" width={538} height={690} objectFit="cover" layout='responsive' priority={true} />

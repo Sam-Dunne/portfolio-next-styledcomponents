@@ -5,6 +5,21 @@ import { Container, Section, HeroH1, ImageWrapper, SCImage, LinkGrid, H2 } from 
 import { device } from "../device";
 import InPageLink from "../components/InPageLink";
 
+const LandingWrapper = styled.main`
+    position: relative;
+    padding: 2em 2em;
+
+    @media ${device.tablet} {
+        padding: 3em 3em;
+        margin-bottom: 130px;
+    }
+
+    @media ${device.laptopL} {
+       margin-bottom: 80px;
+        
+    }
+    `;
+
 const Header = styled.h1`
   color: blue;
 `;
@@ -16,6 +31,7 @@ const Headshot = styled.img`
   height: 200px;
 
   @media ${device.tablet} {
+      margin: 1em auto 1.2em auto;
       width: 200px;
       height: 200px;
     }
@@ -48,7 +64,7 @@ export default function Home() {
           <InPageLink href='/contact' Cont >Contact</InPageLink>
         </LinkGrid> */}
 
-        <Section>
+        <LandingWrapper>
           <HeroH1 centered>
             Hi, I&apos;m Sam Dunne
           </HeroH1>
@@ -76,7 +92,7 @@ export default function Home() {
           {/* <ImageWrapper>
             <SCImage src="/samDataObject.png" alt="Picture of upside down dog" width={400} height={300} objectFit='cover' priority={true} />
           </ImageWrapper> */}
-        </Section>
+        </LandingWrapper>
       </Container>
 
     </>
