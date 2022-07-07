@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import InPageLink from "../components/InPageLink";
 import { device } from '../device';
 import { HeaderTitle, LinkGrid } from "../globalstyle";
-import PDFLink from '../components/PDFLink'
+import DownloadPDFLink from '../components/DownloadPDFLink/DownloadPDFLink';
 
 
 const Header = styled.h1`
@@ -62,7 +62,7 @@ export default function CV() {
             </Head>
             <HeaderTitle>CV</HeaderTitle>
             
-            <PDFLink></PDFLink>
+            <DownloadPDFLink></DownloadPDFLink>
             <CVContainer>
                 <CVImageWrapper>
                     <CVImage src="/20220702_Resume-538x690.jpg" alt="Resume" width={538} height={690} objectFit="cover" layout='responsive' priority={true} />

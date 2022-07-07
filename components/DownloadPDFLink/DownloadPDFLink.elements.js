@@ -1,19 +1,20 @@
 import styled from 'styled-components';
-import { device } from '../device';
+import { device } from '../../device';
 
-const PDFLinkWrapper = styled.div`
+export const PDFLinkWrapper = styled.div`
     text-align: center;
     margin: 1em auto 2em auto;
 
 `;
 
-const DownloadPDF = styled.a`
+export const DownloadPDF = styled.a`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: ${({ textWhite }) => (textWhite ? '#fafafa' : '#6600CC')};
+    border: 3px solid #6600CC;
     background-color: #fafafa;
-    padding: 0.8rem;
+    padding: 0.4rem;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.35);
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.35);
     text-decoration: none;
     font-size: 0.6em;
     line-height: 1.2;
@@ -38,14 +39,3 @@ const DownloadPDF = styled.a`
         font-size: 1.2em;
     }
 `;
-
-
-const PDFLink = ({ }) => {
-    return (
-        <PDFLinkWrapper>
-            <DownloadPDF href="/2022-07-04 SD Resume.pdf" download="Sam Dunne Resume">Download Resume</DownloadPDF>
-        </PDFLinkWrapper>
-    )
-}
-
-export default PDFLink
