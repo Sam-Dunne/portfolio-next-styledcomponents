@@ -1,9 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
-import {device} from '../device';
+import {device} from '../../device';
 
-const CustomLink = styled.a`
+export const CustomLink = styled.a`
     background-color: #8c1aff;
     text-align: center;
     padding: 1rem;
@@ -31,17 +29,3 @@ const CustomLink = styled.a`
         background-color: green;
     }
     `;
-
-
-
-const InPageLink = ({ href, children }) => {
-    return (
-        <>
-            <Link href={href} passHref>
-                <CustomLink >{children}</CustomLink>
-            </Link>
-        </>
-    )
-}
-
-export default InPageLink

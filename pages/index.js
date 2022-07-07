@@ -3,7 +3,7 @@ import Head from "next/head";
 import styled from 'styled-components';
 import { Container, Section, HeroH1, ImageWrapper, SCImage, LinkGrid, H2 } from "../globalstyle";
 import { device } from "../device";
-import InPageLink from "../components/InPageLink";
+import InPageLink from "../components/InPageLink/InPageLink";
 
 const LandingWrapper = styled.main`
     position: relative;
@@ -82,6 +82,11 @@ export default function Home() {
             I would love the chance to interview. Even if I fail, I will learn something along the way.
           </H2>
         </LandingWrapper>
+        <LinkGrid>
+                <InPageLink href='/projects' >Projects</InPageLink>
+                <InPageLink href='/contact' >Contact</InPageLink>
+                <InPageLink href='/cv' >CV</InPageLink>
+            </LinkGrid>
       </Container>
 
     </>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { device } from '../device';
 import { Container, HeaderTitle, LinkGrid } from '../globalstyle';
-import InPageLink from '../components/InPageLink';
+import InPageLink from '../components/InPageLink/InPageLink';
 import styled from 'styled-components';
 
 const ProjectsTitle = styled.h3`

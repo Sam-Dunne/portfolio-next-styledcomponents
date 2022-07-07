@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { device } from '../device';
 import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../globalstyle';
 import Head from 'next/head';
-import InPageLink from '../components/InPageLink';
+import InPageLink from '../components/InPageLink/InPageLink';
 import styled from 'styled-components';
 import 'isomorphic-fetch';
 
