@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { device } from '../device';
 import { Container, HeaderTitle, LinkGrid } from '../globalstyle';
