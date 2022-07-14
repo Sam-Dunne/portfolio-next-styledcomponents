@@ -186,6 +186,21 @@ export default function Projects() {
             <Container>
                 <ProjectsSection>
                     <ProjectsCard>
+                        <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                        <Fudge></Fudge>
+                        <ProjectsCardWrapper>
+                            <ProjectImageContainer>
+                                <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
+                                    <ProjectImageWrapper>
+                                        <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                    </ProjectImageWrapper>
+                                </a>
+                            </ProjectImageContainer>
+                        </ProjectsCardWrapper>
+                    </ProjectsCard>
+                </ProjectsSection>
+                <ProjectsSection>
+                    <ProjectsCard>
                         <ProjectsTitle>`Styled Clone</ProjectsTitle>
                         <Fudge></Fudge>
                         <ProjectsCardWrapper>

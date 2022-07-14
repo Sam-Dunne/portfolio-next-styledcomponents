@@ -46,6 +46,7 @@ export default function Home() {
   useEffect(() => {
     fetch('https://recipe-registry.herokuapp.com', { mode: 'no-cors' })
     fetch('https://blooming-wave-03926.herokuapp.com/', { mode: 'no-cors' })
+    fetch('https://learning-redux.herokuapp.com/', { mode: 'no-cors' })
   }, [])
 
   return (
