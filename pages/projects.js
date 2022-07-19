@@ -297,6 +297,7 @@ const GoTo = styled.h3`
     padding: 1vw;
     border-radius: 10px;
     margin-top: 8px;
+    letter-spacing: 1px;
 `;
 
 export default function Projects() {
@@ -304,7 +305,6 @@ export default function Projects() {
         <>
             <Head>
                 <title>Projects</title>
-
             </Head>
             <Container>
                 <HeaderTitle>Projects</HeaderTitle>
@@ -324,183 +324,54 @@ export default function Projects() {
                             <GoTo>Go to Project</GoTo>
                         </Anchor>
                     </ProjectsCardWrapper>
-           
+
                     <ProjectsCardWrapper>
                         <ProjectsCard>
                             <Anchor href="">
-                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <ProjectsImage src='/shipt_mobile_224x400.png' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
                                 <Middle>
-                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    <ProjectsTitle>`Styled Clone</ProjectsTitle>
+                                    <CardOverlayCopy>Focused sandbox for applying Styled Components.
                                     </CardOverlayCopy>
                                 </Middle>
                             </Anchor>
                         </ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
-                            <GoTo>Go to Project</GoTo>
-                        </Anchor>
-                    </ProjectsCardWrapper>
-                    <ProjectsCardWrapper>
-                        <ProjectsCard>
-                            <Anchor href="">
-                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                                <Middle>
-                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                    </CardOverlayCopy>
-                                </Middle>
-                            </Anchor>
-                        </ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
-                            <GoTo>Go to Project</GoTo>
-                        </Anchor>
-                    </ProjectsCardWrapper>
-               
-                    <ProjectsCardWrapper>
-                        <ProjectsCard>
-                            <Anchor href="">
-                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                                <Middle>
-                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                    </CardOverlayCopy>
-                                </Middle>
-                            </Anchor>
-                        </ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
+                        <Anchor href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
                             <GoTo>Go to Project</GoTo>
                         </Anchor>
                     </ProjectsCardWrapper>
 
-                    {/* <ProjectsCardWrapper>
+                    <ProjectsCardWrapper>
                         <ProjectsCard>
                             <Anchor href="">
-                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <ProjectsImage src='/recipe_mobile_224x400.png' alt='recipe registry mobile view' width={224} height={400} objectFit='fill' layout='responsive' priority={true} />
                                 <Middle>
-                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    <ProjectsTitle>Recipe Registry</ProjectsTitle>
+                                    <CardOverlayCopy>Full stack React/TS/Express/MySQL app with RESTful Api and Auth.
                                     </CardOverlayCopy>
                                 </Middle>
                             </Anchor>
                         </ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/">
-                            <span>Go to Project</span>
+                        <Anchor href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='blank'>
+                            <GoTo>Go to Project</GoTo>
                         </Anchor>
                     </ProjectsCardWrapper>
-                    <ProjectsCardWrapper>
 
+                    <ProjectsCardWrapper>
                         <ProjectsCard>
                             <Anchor href="">
-                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <ProjectsImage src='/subreddit_mobile_sqooshed1.png' alt='subreddit client' width={350} height={625} objectFit='fill' layout='responsive' priority={true} />
                                 <Middle>
-                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    <ProjectsTitle>Subreddit Client</ProjectsTitle>
+                                    <CardOverlayCopy>Fetches and paginates data from Subreddit API. Built in NextJS. Styled with Tailwind.
                                     </CardOverlayCopy>
                                 </Middle>
                             </Anchor>
                         </ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/">
-                            <span>Go to Project</span>
+                        <Anchor href='https://sub-reddit-samd.vercel.app' rel='noopener noreferrer' target='_blank'>
+                            <GoTo>Go to Project</GoTo>
                         </Anchor>
-                    </ProjectsCardWrapper> */}
-                    {/* <ProjectsCard>
-                        <Anchor href="">
-                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                            <Middle>
-                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                </CardOverlayCopy>
-                            </Middle>
-                        </Anchor>
-                    </ProjectsCard>
-                    <ProjectsCard>
-                        <Anchor href="">
-                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                            <Middle>
-                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                </CardOverlayCopy>
-                            </Middle>
-                        </Anchor>
-                    </ProjectsCard>
-                    <ProjectsCard>
-                        <Anchor href="">
-                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                            <Middle>
-                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                </CardOverlayCopy>
-                            </Middle>
-                        </Anchor>
-                    </ProjectsCard> */}
-                    {/* <ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
-                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                            <Middle>
-                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                </CardOverlayCopy>
-                            </Middle>
-                        </Anchor>
-                    </ProjectsCard> */}
-                    {/* <ProjectsCard>
-                        <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                        <Fudge></Fudge>
-                        <ProjectsCardWrapper>
-                            <ProjectImageContainer>
-                                <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
-                                    <ProjectImageWrapper>
-                                        <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                                    </ProjectImageWrapper>
-                                </a>
-                            </ProjectImageContainer>
-                        </ProjectsCardWrapper>
-                    </ProjectsCard>
-                </ProjectsSection>
-                <ProjectsSection>
-                    <ProjectsCard>
-                        <ProjectsTitle>`Styled Clone</ProjectsTitle>
-                        <Fudge></Fudge>
-                        <ProjectsCardWrapper>
-                            <ProjectImageContainer>
-                                <a href='https://blooming-wave-03926.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
-                                    <ProjectImageWrapper>
-                                        <ProjectsImage src='/shipt_mobile_224x400.png' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                                    </ProjectImageWrapper>
-                                </a>
-                            </ProjectImageContainer>
-                        </ProjectsCardWrapper>
-                    </ProjectsCard>
-
-                    <ProjectsCard>
-                        <ProjectsTitle>
-                            Recipe Registry
-                        </ProjectsTitle>
-                        <ProjectsCardWrapper>
-                            <ProjectImageContainer>
-                                <a href='https://recipe-registry.herokuapp.com/' rel='noopener noreferrer' target='_blank'>
-                                    <ProjectImageWrapper>
-                                        <ProjectsImage src='/recipe_mobile_224x400.png' alt='recipe registry mobile view' width={224} height={400} objectFit='fill' layout='responsive' priority={true} />
-                                    </ProjectImageWrapper>
-                                </a>
-                            </ProjectImageContainer>
-                        </ProjectsCardWrapper>
-                    </ProjectsCard>
-
-                    <ProjectsCard>
-                        <ProjectsTitle>
-                            Subreddit Client
-                        </ProjectsTitle>
-                        <ProjectsCardWrapper>
-                            <ProjectImageContainer>
-                                <a href='https://sub-reddit-samd.vercel.app' rel='noopener noreferrer' target='_blank'>
-                                    <ProjectImageWrapper>
-                                        <ProjectsImage src='/subreddit_mobile_sqooshed1.png' alt='subreddit client' width={350} height={625} objectFit='fill' layout='responsive' priority={true} />
-                                    </ProjectImageWrapper>
-                                </a>
-                            </ProjectImageContainer>
-                        </ProjectsCardWrapper>
-                    </ProjectsCard> */}
+                    </ProjectsCardWrapper>
                 </ProjectsSection>
             </Container>
             <LinkGrid>
