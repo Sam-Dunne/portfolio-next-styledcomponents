@@ -4,6 +4,9 @@ import { device } from '../../device';
 export const PDFLinkWrapper = styled.div`
     text-align: center;
     margin: 1em auto 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 `;
 

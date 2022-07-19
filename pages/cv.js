@@ -27,7 +27,7 @@ const CVImageWrapper = styled.div`
         width: 80vw;
     }
     @media ${device.laptop} {
-        width: 40vw;
+        width: 36vw;
     }
     `;
 
@@ -65,7 +65,7 @@ export default function CV() {
             <DownloadPDFLink></DownloadPDFLink>
             <CVContainer>
                 <CVImageWrapper>
-                    <CVImage src="/20220702_Resume-538x690.jpg" alt="Resume" width={538} height={690} objectFit="cover" layout='responsive' priority={true} />
+                    <CVImage src="/2022-07-19-Resume.jpg" alt="Resume" width={402} height={520} objectFit="cover" layout='responsive' priority={true} />
                 </CVImageWrapper>
             </CVContainer>
             <LinkGrid>
