@@ -1,0 +1,11 @@
+
+{
+    "id": "1",
+    "imgSrc": "/rtk.jpg",
+    "imgAlt": "RTK project mobile view",
+    "imgWidth": "224",
+    "imgHeight": "400",
+    "title": "Redux Toolkit",
+    "textCopy": "Learned foundational concepts of Redux. Styled with Bootstrap and Sass.",
+    "url": "https://learning-redux.herokuapp.com/"
+}
