@@ -294,7 +294,7 @@ const GoTo = styled.h3`
     text-align: center;
     background: rgb(140,26,255);
     color: white;
-    padding: 10px;
+    padding: 1vw;
     border-radius: 10px;
     margin-top: 8px;
 `;
