@@ -81,44 +81,55 @@ const ProjectsSection = styled.section`
     `;
 
 const ProjectsCardWrapper = styled.div`
-    width: 90vw;
+    position: relative;
+    width: 70%;
+    margin: 10px auto 30px auto;
+
+    
     @media ${device.tablet} {        
-        
+        width: 35%;
+        margin: 2vw 2vw;
     }
 
     @media ${device.laptopL} {
-        display: flex;
+        width: 20%;
+
+        /* display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: center; */
     }
 `;
 
 const ProjectsCard = styled.div`
     position: relative;
-    width: 70%;
+    /* width: 70%; */
 
     background: rgb(140,26,255);
     background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     padding: 0px 0px;
     border-radius: 15px;
-    margin: 10px auto 30px auto;
-    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    /* margin: 10px auto 30px auto; */
+    /* box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
 -webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45); */
     /* height: 100%; */
+   
 
     &:hover {
         opacity: 0.6;
     }
+    &:focus {
+        opacity: 0.6;
+    }
 
     @media ${device.tablet} {
-        width: 35%;
+        /* width: 35%; */
     }
 
     @media ${device.laptopL} {
         /* margin: 0px 50px 20px 50px;
         height: 65%; */
-        width: 15%;
+        /* width: 20%; */
 
     }
 `;
@@ -197,7 +208,9 @@ const Middle = styled.div`
 
   &:hover {
     opacity: 1;
-
+    }
+  &:focus {
+    opacity: 1;
     }
 `
 
@@ -211,6 +224,9 @@ const ProjectsImage = styled(Image)`
     border-radius: 10px; 
     
     &:hover {
+        opacity: 0.3;
+    }
+    &:focus {
         opacity: 0.3;
     }
     @media ${device.tablet} {
@@ -254,6 +270,33 @@ const Fudge = styled.br`
 `;
 const Anchor = styled.a`
     display: block;
+    border-radius: 10px; 
+    text-decoration: none;
+
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    transition:
+        transform 200ms ease-in;
+
+    &:focus {
+        transform: scale(1.04);
+        text-decoration: underline white 3px;     
+    }   
+    &:hover {
+        transform: scale(1.04);
+        text-decoration: underline white 3px;     
+
+    }   
+`;
+
+const GoTo = styled.h3`
+    text-align: center;
+    background: rgb(140,26,255);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 8px;
 `;
 
 export default function Projects() {
@@ -266,9 +309,102 @@ export default function Projects() {
             <Container>
                 <HeaderTitle>Projects</HeaderTitle>
                 <ProjectsSection>
+                    <ProjectsCardWrapper>
+                        <ProjectsCard>
+                            <Anchor href="">
+                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <Middle>
+                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    </CardOverlayCopy>
+                                </Middle>
+                            </Anchor>
+                        </ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
+                            <GoTo>Go to Project</GoTo>
+                        </Anchor>
+                    </ProjectsCardWrapper>
+           
+                    <ProjectsCardWrapper>
+                        <ProjectsCard>
+                            <Anchor href="">
+                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <Middle>
+                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    </CardOverlayCopy>
+                                </Middle>
+                            </Anchor>
+                        </ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
+                            <GoTo>Go to Project</GoTo>
+                        </Anchor>
+                    </ProjectsCardWrapper>
+                    <ProjectsCardWrapper>
+                        <ProjectsCard>
+                            <Anchor href="">
+                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <Middle>
+                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    </CardOverlayCopy>
+                                </Middle>
+                            </Anchor>
+                        </ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
+                            <GoTo>Go to Project</GoTo>
+                        </Anchor>
+                    </ProjectsCardWrapper>
+               
+                    <ProjectsCardWrapper>
+                        <ProjectsCard>
+                            <Anchor href="">
+                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <Middle>
+                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    </CardOverlayCopy>
+                                </Middle>
+                            </Anchor>
+                        </ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target="blank">
+                            <GoTo>Go to Project</GoTo>
+                        </Anchor>
+                    </ProjectsCardWrapper>
 
-                    <ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                    {/* <ProjectsCardWrapper>
+                        <ProjectsCard>
+                            <Anchor href="">
+                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <Middle>
+                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    </CardOverlayCopy>
+                                </Middle>
+                            </Anchor>
+                        </ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/">
+                            <span>Go to Project</span>
+                        </Anchor>
+                    </ProjectsCardWrapper>
+                    <ProjectsCardWrapper>
+
+                        <ProjectsCard>
+                            <Anchor href="">
+                                <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                                <Middle>
+                                    <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                    <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                    </CardOverlayCopy>
+                                </Middle>
+                            </Anchor>
+                        </ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/">
+                            <span>Go to Project</span>
+                        </Anchor>
+                    </ProjectsCardWrapper> */}
+                    {/* <ProjectsCard>
+                        <Anchor href="">
                             <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
                             <Middle>
                                 <ProjectsTitle>Redux Toolkit</ProjectsTitle>
@@ -278,7 +414,7 @@ export default function Projects() {
                         </Anchor>
                     </ProjectsCard>
                     <ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                        <Anchor href="">
                             <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
                             <Middle>
                                 <ProjectsTitle>Redux Toolkit</ProjectsTitle>
@@ -288,7 +424,7 @@ export default function Projects() {
                         </Anchor>
                     </ProjectsCard>
                     <ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                        <Anchor href="">
                             <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
                             <Middle>
                                 <ProjectsTitle>Redux Toolkit</ProjectsTitle>
@@ -296,17 +432,7 @@ export default function Projects() {
                                 </CardOverlayCopy>
                             </Middle>
                         </Anchor>
-                    </ProjectsCard>
-                    <ProjectsCard>
-                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
-                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
-                            <Middle>
-                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
-                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
-                                </CardOverlayCopy>
-                            </Middle>
-                        </Anchor>
-                    </ProjectsCard>
+                    </ProjectsCard> */}
                     {/* <ProjectsCard>
                         <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
                             <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
