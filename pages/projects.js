@@ -8,12 +8,44 @@ import styled from 'styled-components';
 
 const ProjectsTitle = styled.h3`
     color: #fafafa;
+    /* width: 90%; */
+    /* text-align: center;
+    margin: 14px auto 10px auto; */
     width: 90%;
-    text-align: center;
-    margin: 0px auto 10px auto;
+
+    margin: 20px auto 0 auto;
+    background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 24px 32px;
+  z-index: 999;
     
     @media ${device.tablet} {
-        font-size: 1rem;    
+        /* font-size: 1rem;     */
+    }
+
+    @media ${device.laptopL} {
+       
+    }
+`;
+
+const CardOverlayCopy = styled.p`
+    color: #fafafa;
+    width: 90%;
+    opacity: 1;
+    /* text-align: center;
+    margin: 14px auto 10px auto; */
+
+    background-color: #ffffff;
+  color: black;
+  font-size: 16px;
+  padding: 26px 26px;
+  margin: 0 auto;
+  z-index: 999;
+  height: 60%;
+    
+    @media ${device.tablet} {
+        /* font-size: 1rem;     */
     }
 
     @media ${device.laptopL} {
@@ -22,25 +54,34 @@ const ProjectsTitle = styled.h3`
 `;
 
 const ProjectsSection = styled.section`
+    /* background-color: blue; */
     position: relative;
-    padding: 0px 15px;
-    margin: 0 auto 0 auto;
-
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-wrap: wrap;
+    
+    
+    /* margin: 0 auto 0 auto; */
+    
     @media ${device.tablet} {
-        display: flex;
+        /* display: flex;
         justify-content: center;
         align-items: center;  
-        
+        */
+        padding: 0 10vw;
     }
 
     @media ${device.laptopL} {
-        width: 1000px;
-        height: 55vh;
+        /* width: 1000px;
+        height: 55vh; */
+        padding: 0 15vw;
     }
     `;
 
 const ProjectsCardWrapper = styled.div`
-
+    width: 90vw;
     @media ${device.tablet} {        
         
     }
@@ -53,21 +94,31 @@ const ProjectsCardWrapper = styled.div`
 `;
 
 const ProjectsCard = styled.div`
+    position: relative;
+    width: 70%;
+
     background: rgb(140,26,255);
     background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
-    padding: 20px 40px;
+    padding: 0px 0px;
     border-radius: 15px;
-    margin: 0px auto 20px auto;
-    width: 60vw;
-    height: 100%;
+    margin: 10px auto 30px auto;
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    /* height: 100%; */
+
+    &:hover {
+        opacity: 0.6;
+    }
 
     @media ${device.tablet} {
-        width: 30%;
+        width: 35%;
     }
 
     @media ${device.laptopL} {
-        margin: 0px 50px 20px 50px;
-        height: 65%;
+        /* margin: 0px 50px 20px 50px;
+        height: 65%; */
+        width: 15%;
 
     }
 `;
@@ -131,16 +182,43 @@ const ProjectImageWrapper = styled.div`
     }
     `;
 
+const Middle = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+
+  &:hover {
+    opacity: 1;
+
+    }
+`
+
 const ProjectsImage = styled(Image)`
-    display: block;
-    border-radius: 10px;
+    opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+    border-radius: 10px; 
     
+    &:hover {
+        opacity: 0.3;
+    }
     @media ${device.tablet} {
         
     }
 
     @media ${device.laptopL} {
-        display: inline;
+        /* display: inline; */
     }
 
 `;
@@ -174,6 +252,9 @@ const Fudge = styled.br`
       display: none;
   }
 `;
+const Anchor = styled.a`
+    display: block;
+`;
 
 export default function Projects() {
     return (
@@ -182,10 +263,61 @@ export default function Projects() {
                 <title>Projects</title>
 
             </Head>
-            <HeaderTitle>Projects</HeaderTitle>
             <Container>
+                <HeaderTitle>Projects</HeaderTitle>
                 <ProjectsSection>
+
                     <ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                            <Middle>
+                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                </CardOverlayCopy>
+                            </Middle>
+                        </Anchor>
+                    </ProjectsCard>
+                    <ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                            <Middle>
+                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                </CardOverlayCopy>
+                            </Middle>
+                        </Anchor>
+                    </ProjectsCard>
+                    <ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                            <Middle>
+                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                </CardOverlayCopy>
+                            </Middle>
+                        </Anchor>
+                    </ProjectsCard>
+                    <ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                            <Middle>
+                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                </CardOverlayCopy>
+                            </Middle>
+                        </Anchor>
+                    </ProjectsCard>
+                    {/* <ProjectsCard>
+                        <Anchor href="https://learning-redux.herokuapp.com/" target='blank'>
+                            <ProjectsImage src='/rtk.jpg' alt='shipt clone mobile view' width={224} height={400} objectFit='cover' layout='responsive' priority={true} />
+                            <Middle>
+                                <ProjectsTitle>Redux Toolkit</ProjectsTitle>
+                                <CardOverlayCopy>Learned foundational concepts of Redux. Styled with Bootstrap and Sass.
+                                </CardOverlayCopy>
+                            </Middle>
+                        </Anchor>
+                    </ProjectsCard> */}
+                    {/* <ProjectsCard>
                         <ProjectsTitle>Redux Toolkit</ProjectsTitle>
                         <Fudge></Fudge>
                         <ProjectsCardWrapper>
@@ -242,7 +374,7 @@ export default function Projects() {
                                 </a>
                             </ProjectImageContainer>
                         </ProjectsCardWrapper>
-                    </ProjectsCard>
+                    </ProjectsCard> */}
                 </ProjectsSection>
             </Container>
             <LinkGrid>
