@@ -101,7 +101,7 @@ export const CardOverlayCopy = styled.p`
     opacity: 1;
     background-color: #ffffff;
     color: black;
-    font-size: 16px;
+    font-size: 13px;
     padding: 26px 26px;
     margin: 0 auto;
     z-index: 999;

@@ -55,7 +55,7 @@ const projects = [
         imgWidth: "224",
         imgHeight: "400",
         title: "Recipe Registry",
-        textCopy: "Full stack React/TS/Express/MySQL app with RESTful Api and Auth.",
+        textCopy: "Full stack React/TS/ Express/MySQL app with RESTful Api and Auth.",
         url: "https://recipe-registry.herokuapp.com/"
     },
     {
