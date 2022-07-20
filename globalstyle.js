@@ -11,9 +11,10 @@ export const GlobalStyle = createGlobalStyle`
     } 
     
     html, body {
+        height: 100%;
         max-width: 100%;
         overflow-x: hidden;
-        background: #F4EDFA;
+        background: #f4f0f8;
     }
     
     a, h3, h5, p {
@@ -32,6 +33,10 @@ export const Container = styled.main`
     @media ${device.tablet} {
         padding: 1em 3em;
         min-height: 60vh;
+    }
+    @media ${device.ipadAir} {
+        padding: 1em 3em;
+        min-height: 77vh;
     }
 
     @media ${device.laptopL} {
@@ -109,7 +114,7 @@ export const Button = styled.button`
 
 export const HeroH1 = styled.h1`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
-    color: #6600CC;
+    color: #382c43;
     font-weight: 600;
     text-align: ${props => props.centered ? 'center' : 'start'};
     
@@ -186,7 +191,7 @@ export const HeaderTitle = styled.h1`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     font-weight: 600;
     font-size: 0.5rem;   
-    color: #6600CC;
+    color: #382c43;
     font-size: ${props => props.small ? '1.3rem' : '1.5rem'}; 
     margin: 20px 0 10px 0;
     text-align: center;
@@ -200,7 +205,7 @@ export const HeaderTitle = styled.h1`
 
 export const H2 = styled.h2`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
-    color: #6600CC;
+    color: #382c43;
     font-size: 0.6em;
     line-height: 1.2;
     margin: 1em auto 0 auto;
@@ -223,12 +228,12 @@ grid-gap: 35px;
 height: fit-content;
 width: 90%;
 min-width: fit-content;
-margin: 0 auto 1em auto;
+margin: 1em auto 1em auto;
 @media ${device.tablet} {
     width: 50vw;
     grid-gap: 45px;
     width: 24em;
-    margin-bottom: 3em;
+    margin: 3em auto 6.4em auto;
 }
 @media ${device.laptopL} {
     display: none;

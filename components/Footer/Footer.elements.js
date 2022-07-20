@@ -10,6 +10,7 @@ export const FooterContainer = styled.footer`
     background: #6600CC;
     height: 10vh;
     color: #fafafa;
+    margin-top: auto;
     @media ${device.laptopL} {
     }
     `;

@@ -1,24 +1,24 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import styled from 'styled-components';
-import { Container, Section, HeroH1, ImageWrapper, SCImage, LinkGrid, H2 } from "../globalstyle";
+import { Container,  HeroH1, LinkGrid, H2 } from "../globalstyle";
 import { device } from "../device";
 import InPageLink from "../components/InPageLink/InPageLink";
 
-const LandingWrapper = styled.main`
-    position: relative;
-    padding: 2em 2em;
+// const LandingWrapper = styled.main`
+//     position: relative;
+//     padding: 2em 2em;
 
-    @media ${device.tablet} {
-        padding: 3em 3em;
-        margin-bottom: 130px;
-    }
+//     @media ${device.tablet} {
+//         padding: 3em 3em;
+//         margin-bottom: 130px;
+//     }
 
-    @media ${device.laptopL} {
-       margin-bottom: 80px;
+//     @media ${device.laptopL} {
+//        margin-bottom: 80px;
         
-    }
-    `;
+//     }
+//     `;
 
 const Header = styled.h1`
   color: blue;
@@ -59,7 +59,7 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
-        <LandingWrapper>
+      
           <HeroH1 centered>
             Hi, I&apos;m Sam Dunne
           </HeroH1>
@@ -82,7 +82,7 @@ export default function Home() {
           <H2>
             I would love the chance to interview. Even if I fail, I will learn something along the way.
           </H2>
-        </LandingWrapper>
+        
         <LinkGrid>
                 <InPageLink href='/projects' >Projects</InPageLink>
                 <InPageLink href='/contact' >Contact</InPageLink>

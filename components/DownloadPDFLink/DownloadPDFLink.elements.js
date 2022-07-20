@@ -28,9 +28,11 @@ export const DownloadPDF = styled.a`
      &:hover {
     transform: scale(1.06);
     background-color: #26AD18;
+    color: #fafafa;
     }
 
     &:active {
+    color: #fafafa;
     transform: scale(0.8);
     background-color: green;
     }

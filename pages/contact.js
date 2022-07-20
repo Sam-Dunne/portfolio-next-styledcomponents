@@ -35,16 +35,19 @@ const ContactForm = styled.form`
 
 const Submit = styled.button`
     margin: 1em auto 0 auto;
+    box-sizing: border-box;
     background-color: #f3ecfa;
     text-align: center;
     outline: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: 15px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     color: #6600CC;
-    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.28);
+-webkit-box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.28);
+-moz-box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.28);
 
     transition:
         background-color 100ms ease-in,
@@ -105,8 +108,8 @@ const Contact = ({ small }) => {
             <Head>
                 <title>Contact</title>
             </Head>
-            <HeaderTitle>Contact</HeaderTitle>
             <Container>
+            <HeaderTitle>Contact</HeaderTitle>
                 <ContactForm>
                     <FormItem>
                         <Label htmlFor='Your Email'>Your Email</Label>
@@ -124,12 +127,12 @@ const Contact = ({ small }) => {
                         <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
                     </FormItem>
                 </ContactForm >
-            </Container>
             <LinkGrid>
                 <InPageLink href='/projects' >Projects</InPageLink>
                 <InPageLink href='/cv' >CV</InPageLink>
                 <InPageLink href='/' >Home</InPageLink>
             </LinkGrid>
+            </Container>
 
 
 
