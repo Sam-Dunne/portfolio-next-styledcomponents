@@ -79,7 +79,7 @@ export default function Projects() {
                 <HeaderTitle>Projects</HeaderTitle>
                 <ProjectsSection>
                     {projects.map(p => (
-                        <ProjectsCardCO key={p.id} imgSrc={p.imgSrc} imgAlt={p.imgAlt} imgWidth={p.imgWidth} imgHeight={p.imgHeight} title={p.title} textCopy={p.textCopy} url={p.url} />
+                        <ProjectsCardCO key={p.id} {...p} />
                     ))};
                 </ProjectsSection>
             </Container>
