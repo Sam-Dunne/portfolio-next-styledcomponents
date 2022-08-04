@@ -48,9 +48,9 @@ const Navbar = ({ isOpen, mobile }) => {
                         <NonHomeViewLinks>
                         </NonHomeViewLinks>
                     </NavContainer>
-                    <StyledSvg>
+                    {/* <StyledSvg>
                         <ellipse cx="50%" cy="-5" rx="52%" ry="40" fill="#6600CC"></ellipse>
-                    </StyledSvg>
+                    </StyledSvg> */}
                 </>
                 :
                 // Mobile menu is closed
@@ -75,9 +75,9 @@ const Navbar = ({ isOpen, mobile }) => {
                             </Link>
                         </NonHomeViewLinks>
                     </NavContainer>
-                    <StyledSvg>
+                    {/* <StyledSvg>
                         <ellipse cx="50%" cy="-5" rx="52%" ry="40" fill="#6600CC"></ellipse>
-                    </StyledSvg>
+                    </StyledSvg> */}
                 </>
             }
         </>

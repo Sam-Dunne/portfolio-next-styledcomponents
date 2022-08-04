@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { device } from '../device';
 import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../globalstyle';
 import Head from 'next/head';
@@ -18,6 +18,7 @@ const FormItem = styled.div`
 const ContactForm = styled.form`  
     margin: 20px auto;
     width: 18em;
+    min-height: fit-content;
     padding: 1em 2em;
     border: 2px solid gray;
     border-radius:15px;
@@ -29,25 +30,26 @@ const ContactForm = styled.form`
     } 
     @media ${device.laptopL} {
         width: 36em;
-        height: 30em;
+        /* height: 30em; */
     } 
 `;
 
 const Submit = styled.button`
-    margin: 1em auto 0 auto;
+    display: block;
+    margin: 0 auto 0 auto;
     box-sizing: border-box;
     background-color: #f3ecfa;
     text-align: center;
     outline: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1.2rem;
     border-radius: 15px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     color: #6600CC;
-    box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.28);
--webkit-box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.28);
--moz-box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.28);
+    box-shadow: 1px 2px 2px 3px rgba(0,0,0,0.28);
+-webkit-box-shadow: 1px 2px 2px 3px rgba(0,0,0,0.28);
+-moz-box-shadow: 1px 2px 2px 3px rgba(0,0,0,0.28);
 
     transition:
         background-color 100ms ease-in,
@@ -56,11 +58,11 @@ const Submit = styled.button`
         transform: scale(0.9);
     }
     &:focus {
-        box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
         transform: scale(1.04);
     }
     &:hover {
-        box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
         transform: scale(1.04);
     }
     
@@ -70,37 +72,104 @@ const Submit = styled.button`
     } 
 `;
 
+const BlurContainer = styled.div`
+    /* height: 100vh; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #cccccc; */
+    z-index: 100;
+    opacity: 1;
+    backdrop-filter: blur(6px) grayscale(98%);
+`
+
+// const ContactModal = styled.div`
+//     position: ${props => props.isOpen ? 'sticky' : 'relative'};
+//     position: -webkit-sticky;
+//     z-index: 900;
+//     background-color: #6600CC;
+//     width: 30%;
+//     min-width: fit-content;
+//     padding: ${props => props.isOpen ? '1rem' : '0px'};
+//     top: 200px;
+//     left: 1000px;
+    
+//     display: ${props => props.isOpen ? 'inline' : 'none'};
+//     margin-right: 5px;
+//     border-radius: 30px; 
+//     color: #fafafa;
+//     opacity: ${props => props.isOpen ? '1' : '0'};
+
+//     transition:
+//        opacity 500ms ease;
+      
+// `
+const ContactModal = styled.div`
+    /* position: ${props => props.isOpen ? 'sticky' : 'relative'}; */
+    /* position: -webkit-sticky; */
+    position: fixed;
+    z-index: 900;
+    background-color: #6600CC;
+    width: 30%;
+    min-width: fit-content;
+    padding: ${props => props.isOpen ? '1rem' : '0px'};
+    top: 200px;
+    left: 100px;
+    
+    display: ${props => props.isOpen ? 'inline' : 'none'};
+    margin-right: 5px;
+    border-radius: 30px; 
+    color: #fafafa;
+    opacity: ${props => props.isOpen ? '1' : '0'};
+
+    transition:
+       opacity 500ms ease;
+      
+`
+
 const Contact = ({ small }) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
+    // const [modalMsg, setModalMsg] = useState('')
+    const [displayModal, setDisplayModal] = useState(false)
+
+    // useEffect(() => {
+    //     setDisplayModal(!displayModal)
+    // }, [modalMsg])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!from || !subject || !message) {
-            alert('All fields required')
-            return
-        }
-        try {
-            fetch('/api/contact', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ from, subject, message })
-            })
-                .then(res => {
-                    // alert('Thanks for the Message!', `${res.newEmail.from}`)
-                    console.log(res.json())
-                    setFrom('');
-                    setSubject('');
-                    setMessage('')
-                })
+        setDisplayModal(!displayModal)
+        // if (!from || !subject || !message) {
+        //     alert('All fields required')
+        //     return
+        // }
+        // try {
+        //     fetch('/api/contact', {
+        //         method: 'PUT',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({ from, subject, message })
+        //     })
+        //         .then(res => {
+        //             if (res.status === 200) {
+        //                 setModalMsg(`Thanks for contacting me ${from}`)
+        //             }
+        //             // alert('Thanks for the Message!', `${res.newEmail.from}`)
+        //             console.log(res)
+        //             // setFrom('');
+        //             setSubject('');
+        //             setMessage('')
+        //         })
 
-        } catch (error) {
-            console.log(error);
-            res.status(400);
-        }
+        // } catch (error) {
+        //     console.log(error);
+        //     res.status(400);
+        // }
     }
 
     return (
@@ -108,7 +177,15 @@ const Contact = ({ small }) => {
             <Head>
                 <title>Contact</title>
             </Head>
+            {/* <BlurContainer>
+            </BlurContainer> */}
+            {displayModal ?
+            <ContactModal isOpen>Message received from: <br></br>{from}</ContactModal>
+            :
+            <ContactModal></ContactModal>
+            }
             <Container>
+        
             <HeaderTitle>Contact</HeaderTitle>
                 <ContactForm>
                     <FormItem>

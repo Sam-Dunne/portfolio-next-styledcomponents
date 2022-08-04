@@ -21,8 +21,10 @@ export default async (req, res) => {
                             text: newEmail.message
                         })
                         
-                        return res.json({result, newEmail})
-                        // console.log(newEmail)
+                        console.log(JSON.stringify(result))
+                        console.log(JSON.stringify(newEmail.from))
+                        // return res.json({result, newEmail})
+                        res.status(200).send(newEmail.from)
                     } catch (error) {
                         console.log(error.message);
                         res.status(500).json({ message: 'goof 500'})

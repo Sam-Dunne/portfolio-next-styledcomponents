@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 export const NavContainer = styled.nav`
     min-height: 10vh;
-    padding: 20px 30px 0 30px;
+    padding: 0px 30px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #6600CC;
-    margin-bottom: -4px;
+    /* margin-bottom: -4px; */
 
     @media ${device.mobileL} {
     }

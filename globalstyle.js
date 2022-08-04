@@ -27,20 +27,20 @@ export const Container = styled.main`
     z-index: 1;
     width: 100%;
     padding: 10px 20px;
-    min-height: 75vh;
+    min-height: 80vh;
     position: relative;
 
     @media ${device.tablet} {
         padding: 1em 3em;
-        min-height: 60vh;
+        /* min-height: 60vh; */
     }
     @media ${device.ipadAir} {
         padding: 1em 3em;
-        min-height: 77vh;
+        /* min-height: 77vh; */
     }
 
     @media ${device.laptopL} {
-        min-height: 76vh;
+        /* min-height: 76vh; */
     
     }
     
@@ -131,7 +131,7 @@ export const Input = styled.input`
     border-radius: 10px;
     outline: none;
     width: 100%;
-    padding: 1em 2em;
+    padding: 0.5em 2em;
     transition:
         background-color 250ms ease-in,
         transform 100ms ease-in;
@@ -153,7 +153,7 @@ export const Label = styled.label`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #fafafa;
     display: block;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
     
     
     @media ${device.tablet} {
@@ -169,7 +169,8 @@ export const TextArea = styled.textarea`
     border-radius: 10px;
     outline: none;
     width: 100%;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
+    height: 4rem;
     transition:
         background-color 250ms ease-in,
         transform 100ms ease-in;
@@ -181,9 +182,11 @@ export const TextArea = styled.textarea`
     
     
     @media ${device.tablet} {
+    height: 8rem;
       
     }
     @media ${device.laptopL} {
+        font-size: 1.2rem;
     }
 `;
 
