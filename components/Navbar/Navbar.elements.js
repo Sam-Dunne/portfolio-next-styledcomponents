@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import { device } from '../../device';
 import styled from 'styled-components';
+import { GiHamburger } from 'react-icons/gi';
+import { FaTimesCircle } from 'react-icons/fa';
+
+
 
 export const NavContainer = styled.nav`
+    position: sticky;
+    top: 0;
+    z-index: 999;
     min-height: 10vh;
     padding: 0px 30px 0 30px;
     display: flex;
@@ -50,12 +57,14 @@ export const NonHomeViewLinks = styled.div`
     }
 `;
 
-export const MobileBurger = styled.a`
-    color: #fafafa;
+export const MobileBurger = styled.button`
+    /* color: #fafafa; */
+    background-color: transparent;
     font-size: 2rem;
-    height: 30px;
-    width: fit-content;
-
+    height: fit-content;
+    width: fit-content;    
+    border: none;  
+      
     @media ${device.mobileL} {
         font-size: 2.3rem;
     }
@@ -69,6 +78,13 @@ export const StyledSvg = styled.svg`
     width: 100%;
     height: 40px; 
 `;
+
+export const HamburgerIcon = styled(GiHamburger)`
+    color: white;
+`
+export const XNavIcon = styled(FaTimesCircle)`
+    color: white;
+`
 
 //mobile nav elements
 export const MobileMenuContainer = styled.div`

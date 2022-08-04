@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GiHamburger } from 'react-icons/gi';
 import { FaTimesCircle } from 'react-icons/fa';
-import { NavContainer, NavLink, NonHomeViewLinks, MobileBurger, StyledSvg, MobileMenuContainer, MobileNavBurgerWrapper, MobileNavLinkWrapper } from './Navbar.elements';
+import { NavContainer, NavLink, NonHomeViewLinks, MobileBurger, HamburgerIcon, XNavIcon, MobileMenuContainer, MobileNavBurgerWrapper, MobileNavLinkWrapper } from './Navbar.elements';
 import DownloadPDFLink from '../DownloadPDFLink/DownloadPDFLink';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,7 +10,9 @@ import Image from 'next/image';
 const Navbar = ({ isOpen, mobile }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleNavClick = (e) => setMenuOpen(!menuOpen);
+    const handleNavClick = (e) => {
+        e.preventDefault()
+        setMenuOpen(!menuOpen)};
 
     return (
         <>
@@ -19,8 +21,8 @@ const Navbar = ({ isOpen, mobile }) => {
                     {/* Mobile menu is Open */}
                     <MobileMenuContainer isOpen>
                         <MobileNavBurgerWrapper>
-                            <MobileBurger href='' onClick={handleNavClick}>
-                                <FaTimesCircle />
+                            <MobileBurger onClick={handleNavClick}>
+                                <XNavIcon />
                             </MobileBurger>
                         </MobileNavBurgerWrapper>
                         <MobileNavLinkWrapper>
@@ -61,7 +63,7 @@ const Navbar = ({ isOpen, mobile }) => {
                             <NavLink>Sam Dunne</NavLink>
                         </Link>
                         {/* Hamburger Icon */}
-                        <MobileBurger href='' onClick={handleNavClick} ><GiHamburger ></GiHamburger></MobileBurger>
+                        <MobileBurger onClick={handleNavClick} ><HamburgerIcon ></HamburgerIcon></MobileBurger>
                         <NonHomeViewLinks>
 
                             <Link href='/projects' passHref>

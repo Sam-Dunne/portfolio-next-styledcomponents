@@ -26,8 +26,9 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.main`
     z-index: 1;
     width: 100%;
-    padding: 10px 20px;
-    min-height: 80vh;
+    background-color: ${props => props.dark ? '#d5d2d9' : '#f4f0f8'};
+    min-height: 90vh;
+    min-height: ${props => props.notFirst ? '80vh' : "90vh"};
     position: relative;
 
     @media ${device.tablet} {
@@ -225,6 +226,7 @@ export const H2 = styled.h2`
 
 export const LinkGrid = styled.div`
 display: grid;
+opacity: ${props => props.show ? '1' : '0'};
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 grid-gap: 35px;
@@ -232,6 +234,10 @@ height: fit-content;
 width: 90%;
 min-width: fit-content;
 margin: 1em auto 1em auto;
+
+transition:
+       opacity 1500ms ease;
+       
 @media ${device.tablet} {
     width: 50vw;
     grid-gap: 45px;

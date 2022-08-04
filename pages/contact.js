@@ -19,9 +19,13 @@ const ContactForm = styled.form`
     margin: 20px auto;
     width: 18em;
     min-height: fit-content;
-    padding: 1em 2em;
+    padding: 1rem 2rem ;
     border: 2px solid gray;
     border-radius:15px;
+    outline:none;
+    box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.6);
+-webkit-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.6);
+-moz-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.6);
     background: rgb(140,26,255);
     background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     @media ${device.tablet} {
@@ -41,6 +45,7 @@ const Submit = styled.button`
     background-color: #f3ecfa;
     text-align: center;
     outline: none;
+    border: none;
     padding: 1rem 1.2rem;
     border-radius: 15px;
     text-decoration: none;
