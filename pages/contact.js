@@ -100,7 +100,7 @@ const BlurContainer = styled.div`
 //     padding: ${props => props.isOpen ? '1rem' : '0px'};
 //     top: 200px;
 //     left: 1000px;
-
+    
 //     display: ${props => props.isOpen ? 'inline' : 'none'};
 //     margin-right: 5px;
 //     border-radius: 30px; 
@@ -109,7 +109,7 @@ const BlurContainer = styled.div`
 
 //     transition:
 //        opacity 500ms ease;
-
+      
 // `
 const ContactModal = styled.div`
     /* position: ${props => props.isOpen ? 'sticky' : 'relative'}; */
@@ -122,17 +122,19 @@ const ContactModal = styled.div`
     padding: ${props => props.isOpen ? '1rem' : '0px'};
     top: 200px;
     left: 100px;
+    
     display: ${props => props.isOpen ? 'inline' : 'none'};
     margin-right: 5px;
     border-radius: 30px; 
     color: #fafafa;
     opacity: ${props => props.isOpen ? '1' : '0'};
+
     transition:
        opacity 500ms ease;
       
 `
 
-const Contact = React.forwardRef((props, ref) => {
+const Contact = forwardRef((props, ref) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
@@ -176,21 +178,21 @@ const Contact = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div ref={ref}>
-            {/* <Head>
+        <>
+            <Head>
                 <title>Contact</title>
-            </Head> */}
+            </Head>
             {/* <BlurContainer>
             </BlurContainer> */}
-            {/* {displayModal ?
+            {displayModal ?
             <ContactModal isOpen>Message received from: <br></br>{from}</ContactModal>
             :
             <ContactModal></ContactModal>
-            } */}
+            }
             <Container>
-
-                <HeaderTitle>Contact</HeaderTitle>
-                <ContactForm>
+        
+            <HeaderTitle>Contact</HeaderTitle>
+                <ContactForm ref={ref}>
                     <FormItem>
                         <Label htmlFor='Your Email'>Your Email</Label>
                         <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
@@ -207,13 +209,18 @@ const Contact = React.forwardRef((props, ref) => {
                         <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
                     </FormItem>
                 </ContactForm >
-                {/* <LinkGrid>
-                    <InPageLink href='/projects' >Projects</InPageLink>
-                    <InPageLink href='/cv' >CV</InPageLink>
-                    <InPageLink href='/' >Home</InPageLink>
-                </LinkGrid> */}
+            <LinkGrid>
+                <InPageLink href='/projects' >Projects</InPageLink>
+                <InPageLink href='/cv' >CV</InPageLink>
+                <InPageLink href='/' >Home</InPageLink>
+            </LinkGrid>
             </Container>
-        </div>
+
+
+
+
+
+        </>
     )
 })
 
