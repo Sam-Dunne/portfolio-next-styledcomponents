@@ -35,6 +35,7 @@ const Headshot = styled.img`
   margin: 0 auto;
   width: 200px;
   height: 200px;
+  filter: drop-shadow(3px 6px 4px #7a797a);
 
   @media ${device.tablet} {
       margin: 1em auto 1.2em auto;
@@ -68,7 +69,7 @@ const DblChevWrapper = styled.div`
 
 const DoubleChevBtn = styled.button`
     position: absolute;
-    padding: 2rem;
+    /* padding: 1rem; */
     bottom: 0;
     display: block;
     width: fit-content;
