@@ -8,7 +8,7 @@ import { device } from "../device";
 import InPageLink from "../components/InPageLink/InPageLink";
 import { BsChevronDown, BsChevronDoubleUp } from 'react-icons/bs'
 import ProjectsList from '../components/ProjectsList/ProjectsList'
-import ContactEmail from "../components/EmailContact/EmailContact";
+import ContactEmail from "../components/ContactEmail/ContactEmail";
 import DownloadPDFLink from "../components/DownloadPDFLink/DownloadPDFLink";
 
 // const LandingWrapper = styled.main`

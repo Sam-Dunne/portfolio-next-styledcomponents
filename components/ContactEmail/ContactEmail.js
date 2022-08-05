@@ -134,9 +134,8 @@ const ContactModal = styled.div`
     opacity: ${props => props.isOpen ? '1' : '0'};
 
     transition:
-       opacity 500ms ease;
-      
-`
+       opacity 500ms ease;      
+`;
 
 const ContactEmail = forwardRef((props, ref) => {
     const [from, setFrom] = useState('')
@@ -181,7 +180,6 @@ const ContactEmail = forwardRef((props, ref) => {
     }
 
     return (
-
         <>
             <ContactForm ref={ref} isVisible={props.show}>
                 <FormItem>
