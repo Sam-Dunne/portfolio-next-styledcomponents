@@ -28,6 +28,10 @@ const ContactForm = styled.form`
 -moz-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.6);
     background: rgb(140,26,255);
     background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+    opacity: ${props => props.isVisible ? '1' : '0'};
+    transition:
+     opacity 800ms ease-in 300ms;
+
     @media ${device.tablet} {
         width: 24em;
 
@@ -134,7 +138,7 @@ const ContactModal = styled.div`
       
 `
 
-const ContactEmail = () => {
+const ContactEmail = forwardRef((props, ref) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
@@ -179,9 +183,8 @@ const ContactEmail = () => {
 
     return (
 
-        <>
-            <HeaderTitle>Contact</HeaderTitle>
-            <ContactForm >
+        
+            <ContactForm ref={ref} isVisible={props.show}>
                 <FormItem>
                     <Label htmlFor='Your Email'>Your Email</Label>
                     <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
@@ -195,11 +198,10 @@ const ContactEmail = () => {
                     <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
                 </FormItem>
                 <FormItem>
-                    <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
+                    <Submit primary type='submit' onClick={(e) => {handleSubmit(e) }}>Send</Submit>
                 </FormItem>
             </ContactForm >
-        </>
     )
-}
+})
 
 export default ContactEmail
