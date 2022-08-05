@@ -182,7 +182,7 @@ const ContactEmail = forwardRef((props, ref) => {
 
     return (
 
-        
+        <>
             <ContactForm ref={ref} isVisible={props.show}>
                 <FormItem>
                     <Label htmlFor='Your Email'>Your Email</Label>
@@ -199,8 +199,9 @@ const ContactEmail = forwardRef((props, ref) => {
                 <FormItem>
                     <Submit primary type='submit' onClick={(e) => {handleSubmit(e) }}>Send</Submit>
                 </FormItem>
-            </ContactForm >
+            </ContactForm>
+        </>
     )
 })
 
-export default ContactEmail
+export default ContactEmail;
