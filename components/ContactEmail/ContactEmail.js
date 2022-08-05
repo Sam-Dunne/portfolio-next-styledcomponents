@@ -201,5 +201,5 @@ const ContactEmail = forwardRef((props, ref) => {
         </>
     )
 })
-
+ContactEmail.displayName = 'ContactEmail';
 export default ContactEmail;
