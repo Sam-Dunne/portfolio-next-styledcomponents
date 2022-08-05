@@ -142,7 +142,6 @@ const ContactEmail = forwardRef((props, ref) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
-    // const [modalMsg, setModalMsg] = useState('')
     const [displayModal, setDisplayModal] = useState(false)
 
     // useEffect(() => {
