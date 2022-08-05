@@ -65,21 +65,27 @@ const DblChevWrapper = styled.div`
     margin-bottom: 20px;
     height: fit-content;
 `
-const DblDownChev = styled(BsChevronDown)`
-    font-size: 3em;
+
+const DoubleChevBtn = styled.button`
     position: absolute;
+    padding: 2rem;
     bottom: 0;
     display: block;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+`;
+
+const DblDownChev = styled(BsChevronDown)`
+    font-size: 4em;
     color: #6600CC;
     animation-name: ${bounceAnim};
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 `
 const DblUpChev = styled(BsChevronDoubleUp)`
-    font-size: 3em;
-    position: absolute;
-    bottom: 0;
-    display: block;
+    font-size: 4em;
     color: #6600CC;
     animation-name: ${bounceAnim};
     animation-duration: 1.5s;
@@ -126,7 +132,7 @@ export default function Home() {
       </Head>
       <Container>
         <TopSection >
-          <TipTop  ref={scrollTop}></TipTop>
+          <TipTop ref={scrollTop}></TipTop>
           <HeroH1 centered>
             Hi, I&apos;m Sam Dunne
           </HeroH1>
@@ -139,7 +145,9 @@ export default function Home() {
           </H2>
           <DownloadPDFLink></DownloadPDFLink>
           <DblChevWrapper>
-            <DblDownChev onClick={handleScrollProjects}></DblDownChev>
+            <DoubleChevBtn onClick={handleScrollProjects}>
+              <DblDownChev ></DblDownChev>
+            </DoubleChevBtn>
           </DblChevWrapper>
         </TopSection>
 
@@ -155,15 +163,19 @@ export default function Home() {
             Thanks for visiting this site!
           </H2>
           <DblChevWrapper>
-            <DblDownChev onClick={handleScrollContact}></DblDownChev>
+            <DoubleChevBtn onClick={handleScrollContact}>
+              <DblDownChev ></DblDownChev>
+            </DoubleChevBtn>
           </DblChevWrapper>
         </MidPageSection>
 
         <TopSection last ref={scrollContactRef}>
           <ContactEmail></ContactEmail>
-         
+
           <DblChevWrapper>
-            <DblUpChev onClick={handleScrollTop}></DblUpChev>
+            <DoubleChevBtn onClick={handleScrollTop}>
+              <DblUpChev></DblUpChev>
+            </DoubleChevBtn>
           </DblChevWrapper>
 
         </TopSection>
