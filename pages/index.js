@@ -3,10 +3,13 @@ import { useInView } from "react-intersection-observer";
 import Head from "next/head";
 import styled from 'styled-components';
 import { keyframes } from 'styled-components'
-import { Container, HeroH1, LinkGrid, H2 } from "../globalstyle";
+import { Container, HeroH1, LinkGrid, H2, TopSection, MidPageSection } from "../globalstyle";
 import { device } from "../device";
 import InPageLink from "../components/InPageLink/InPageLink";
-import { BsChevronDoubleDown } from 'react-icons/bs'
+import { BsChevronDown, BsChevronDoubleUp } from 'react-icons/bs'
+import ProjectsList from '../components/ProjectsList/ProjectsList'
+import ContactEmail from "../components/EmailContact/EmailContact";
+import DownloadPDFLink from "../components/DownloadPDFLink/DownloadPDFLink";
 
 // const LandingWrapper = styled.main`
 //     position: relative;
@@ -62,7 +65,17 @@ const DblChevWrapper = styled.div`
     margin-bottom: 20px;
     height: fit-content;
 `
-const DblDownChev = styled(BsChevronDoubleDown)`
+const DblDownChev = styled(BsChevronDown)`
+    font-size: 3em;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    color: #6600CC;
+    animation-name: ${bounceAnim};
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+`
+const DblUpChev = styled(BsChevronDoubleUp)`
     font-size: 3em;
     position: absolute;
     bottom: 0;
@@ -73,13 +86,27 @@ const DblDownChev = styled(BsChevronDoubleDown)`
     animation-iteration-count: infinite;
 `
 
+const TipTop = styled.div`
+    position: absolute;
+    top: -10vh;
+`;
+
 export default function Home() {
-  const scrollClick = useRef()
-  const { ref: myRef, inView: linksVisible, entry } = useInView();
+  const scrollTop = useRef()
+  const scrollProjectsRef = useRef()
+  const scrollContactRef = useRef(null);
+  const { ref: myRef, inView: linksVisible } = useInView();
   console.log(linksVisible)
 
-  const handleScroll = () => {
-    scrollClick.current?.scrollIntoView({ behavior: 'smooth' });
+  const handleScrollProjects = () => {
+    scrollProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleScrollContact = () => {
+    scrollContactRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScrollTop = () => {
+    scrollTop.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   // useEffect(() => {
@@ -98,39 +125,74 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
+        <TopSection >
+          <TipTop  ref={scrollTop}></TipTop>
+          <HeroH1 centered>
+            Hi, I&apos;m Sam Dunne
+          </HeroH1>
+          <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
+          <H2>
+            A developer seeking opportunities to learn and grow in a professional environment.
+          </H2>
+          <H2>
+            Thanks for visiting this site!
+          </H2>
+          <DownloadPDFLink></DownloadPDFLink>
+          <DblChevWrapper>
+            <DblDownChev onClick={handleScrollProjects}></DblDownChev>
+          </DblChevWrapper>
+        </TopSection>
 
-        <HeroH1 centered>
-          Hi, I&apos;m Sam Dunne
-        </HeroH1>
-        <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
-        <H2>
-          A developer seeking opportunities to learn and grow in a professional environment.
-        </H2>
-        <H2>
-          Thanks for visiting this site!
-        </H2>
-        <DblChevWrapper>
-          <DblDownChev onClick={handleScroll}>click</DblDownChev>
-        </DblChevWrapper>
+        <MidPageSection dark ref={scrollProjectsRef}>
+          <HeroH1 centered>
+            Hi, I&apos;m Sam Dunne
+          </HeroH1>
+          <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
+          <H2>
+            A developer seeking opportunities to learn and grow in a professional environment.
+          </H2>
+          <H2>
+            Thanks for visiting this site!
+          </H2>
+          <DblChevWrapper>
+            <DblDownChev onClick={handleScrollContact}></DblDownChev>
+          </DblChevWrapper>
+        </MidPageSection>
+
+        <TopSection last ref={scrollContactRef}>
+          <ContactEmail></ContactEmail>
+         
+          <DblChevWrapper>
+            <DblUpChev onClick={handleScrollTop}></DblUpChev>
+          </DblChevWrapper>
+
+        </TopSection>
+
       </Container>
 
-      <Container dark notFirst ref={scrollClick}>
+      {/* <Container dark ref={scrollProjectsRef}>
+        <DblChevWrapper>
+          <DblDownChev onClick={handleScrollContact}></DblDownChev>
+        </DblChevWrapper> */}
 
-
-        {linksVisible ?
+      {/* <ProjectsList></ProjectsList> */}
+      {/* {linksVisible ?
           <LinkGrid show ref={myRef}>
-            <InPageLink href='/projects' >Projects</InPageLink>
+          <InPageLink href='/projects' >Projects</InPageLink>
             <InPageLink href='/contact' >Contact</InPageLink>
             <InPageLink href='/cv' >CV</InPageLink>
-          </LinkGrid>
-          :
-          <LinkGrid ref={myRef}>
+            </LinkGrid>
+            :
+            <LinkGrid ref={myRef}>
             <InPageLink href='/projects' >Project</InPageLink>
             <InPageLink href='/contact' >Contact</InPageLink>
             <InPageLink href='/cv' >CV</InPageLink>
-          </LinkGrid>
-        }
-      </Container>
+            </LinkGrid>
+          } */}
+      {/* </Container>
+      <Container last ref={scrollContactRef}>
+        <ContactEmail ref={myRef}></ContactEmail>
+      </Container> */}
 
     </>
   );

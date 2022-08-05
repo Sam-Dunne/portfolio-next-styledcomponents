@@ -116,7 +116,7 @@ export const CardOverlayCopy = styled.p`
 
 export const ProjectsSection = styled.section`
     position: relative;
-    padding: 0px 0px;
+    padding: 0px 10%;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -133,7 +133,7 @@ export const ProjectsSection = styled.section`
 
 export const ProjectsCardWrapper = styled.div`
     position: relative;
-    width: 70%;
+    width: 30%;
     margin: 10px auto 30px auto;
    
     @media ${device.tablet} {        
@@ -142,7 +142,7 @@ export const ProjectsCardWrapper = styled.div`
     }
 
     @media ${device.laptopL} {
-        width: 20%;
+        width: 10%;
     }
 `;
 

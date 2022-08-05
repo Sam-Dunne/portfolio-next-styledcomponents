@@ -26,19 +26,17 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.main`
     z-index: 1;
     width: 100%;
-    background-color: ${props => props.dark ? '#d5d2d9' : '#f4f0f8'};
-    min-height: 90vh;
-    min-height: ${props => props.notFirst ? '80vh' : "90vh"};
+    background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
+    /* min-height: 90vh; */
+    
     position: relative;
-
+    
     @media ${device.tablet} {
-        padding: 1em 3em;
+        /* padding-top: ${props => props.last ? '0' : "0"}; */
+        /* padding: 1em 3em; */
         /* min-height: 60vh; */
     }
-    @media ${device.ipadAir} {
-        padding: 1em 3em;
-        /* min-height: 77vh; */
-    }
+  
 
     @media ${device.laptopL} {
         /* min-height: 76vh; */
@@ -46,6 +44,39 @@ export const Container = styled.main`
     }
     
 `;
+
+export const TopSection = styled.section`
+   z-index: 1;
+    width: 100%;
+    background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
+    min-height: ${props => props.last ? '80vh' : "90vh"};
+    position: relative;
+    padding: 5rem 3rem;
+    
+    @media ${device.tablet} {
+       
+    }
+  
+    @media ${device.laptopL} {
+    
+    }
+`
+export const MidPageSection = styled.section`
+   z-index: 1;
+    width: 100%;
+    background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
+    min-height: 100vh;
+    position: relative;
+    padding: 8rem 3rem;
+    
+    @media ${device.tablet} {
+       
+    }
+  
+    @media ${device.laptopL} {
+    
+    }
+`
 
 export const Section = styled.section`
     position: relative;

@@ -7,10 +7,15 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    /* position: absolute;
+    bottom: 0;
+    left:0; */
+    width: 100%;
+    z-index: 999;
     background: #6600CC;
-    min-height: 10vh;
+   height: 10vh;
     color: #fafafa;
-    margin-top: auto;
+    /* margin-top: auto; */
     @media ${device.laptopL} {
     }
     `;

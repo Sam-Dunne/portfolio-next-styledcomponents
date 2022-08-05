@@ -1,8 +1,8 @@
 import React, { useState, useEffect, forwardRef } from 'react'
-import { device } from '../device';
-import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../globalstyle';
+import { device } from '../../device';
+import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../../globalstyle';
 import Head from 'next/head';
-import InPageLink from '../components/InPageLink/InPageLink';
+// import InPageLink from '../components/InPageLink/InPageLink';
 import styled from 'styled-components';
 import 'isomorphic-fetch';
 
@@ -122,17 +122,19 @@ const ContactModal = styled.div`
     padding: ${props => props.isOpen ? '1rem' : '0px'};
     top: 200px;
     left: 100px;
+    
     display: ${props => props.isOpen ? 'inline' : 'none'};
     margin-right: 5px;
     border-radius: 30px; 
     color: #fafafa;
     opacity: ${props => props.isOpen ? '1' : '0'};
+
     transition:
        opacity 500ms ease;
       
 `
 
-const Contact = React.forwardRef((props, ref) => {
+const ContactEmail = () => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
@@ -151,7 +153,7 @@ const Contact = React.forwardRef((props, ref) => {
         //     return
         // }
         // try {
-        //     fetch('/api/contact', {
+        //     fetch('/api/Email', {
         //         method: 'PUT',
         //         headers: {
         //             'Content-Type': 'application/json'
@@ -176,45 +178,28 @@ const Contact = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div ref={ref}>
-            {/* <Head>
-                <title>Contact</title>
-            </Head> */}
-            {/* <BlurContainer>
-            </BlurContainer> */}
-            {/* {displayModal ?
-            <ContactModal isOpen>Message received from: <br></br>{from}</ContactModal>
-            :
-            <ContactModal></ContactModal>
-            } */}
-            <Container>
 
-                <HeaderTitle>Contact</HeaderTitle>
-                <ContactForm>
-                    <FormItem>
-                        <Label htmlFor='Your Email'>Your Email</Label>
-                        <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
-                    </FormItem>
-                    <FormItem>
-                        <Label >Subject</Label>
-                        <Input name='subject' value={subject} onChange={(e) => { setSubject(e.target.value) }} />
-                    </FormItem>
-                    <FormItem>
-                        <Label htmlFor='message'>Message</Label>
-                        <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
-                    </FormItem>
-                    <FormItem>
-                        <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
-                    </FormItem>
-                </ContactForm >
-                {/* <LinkGrid>
-                    <InPageLink href='/projects' >Projects</InPageLink>
-                    <InPageLink href='/cv' >CV</InPageLink>
-                    <InPageLink href='/' >Home</InPageLink>
-                </LinkGrid> */}
-            </Container>
-        </div>
+        <>
+            <HeaderTitle>Contact</HeaderTitle>
+            <ContactForm >
+                <FormItem>
+                    <Label htmlFor='Your Email'>Your Email</Label>
+                    <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
+                </FormItem>
+                <FormItem>
+                    <Label >Subject</Label>
+                    <Input name='subject' value={subject} onChange={(e) => { setSubject(e.target.value) }} />
+                </FormItem>
+                <FormItem>
+                    <Label htmlFor='message'>Message</Label>
+                    <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
+                </FormItem>
+                <FormItem>
+                    <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
+                </FormItem>
+            </ContactForm >
+        </>
     )
-})
+}
 
-export default Contact
+export default ContactEmail

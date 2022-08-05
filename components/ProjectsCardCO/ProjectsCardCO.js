@@ -24,9 +24,9 @@ const ProjectsCardCO = ({id, imgSrc, imgAlt, imgWidth, imgHeight, title, textCop
                     </Middle>
                 </Anchor>
             </ProjectsCard>
-            <Anchor href={url} target="blank">
+            {/* <Anchor href={url} target="blank">
                 <GoTo>Go to Project</GoTo>
-            </Anchor>
+            </Anchor> */}
         </ProjectsCardWrapper>
         // <ProjectsCardWrapper>
         //     <ProjectsCard>
