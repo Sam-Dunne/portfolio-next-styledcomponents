@@ -10,7 +10,7 @@ import ProjectsCardCO from '../../components/ProjectsCardCO/ProjectsCardCO';
 
 const ProjectsSection = styled.section`
     position: relative;
-    padding: 0px 10%;
+    padding: 0px 0;
     display: flex;
     justify-content: center;
     align-items: center;  

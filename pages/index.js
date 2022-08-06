@@ -139,7 +139,7 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
-        <TopSection >
+        <TopSection dark>
           <TipTop ref={scrollTop}></TipTop>
 
           <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
@@ -157,11 +157,11 @@ export default function Home() {
           </DblChevWrapper>
         </TopSection>
 
-        <MidPageSection dark ref={scrollProjectsRef}>
+        <MidPageSection ref={scrollProjectsRef}>
 
-          <H2>
-            Projects cards will go here
-          </H2>
+         
+
+          <ProjectsList></ProjectsList>
 
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollContact}>
@@ -170,7 +170,7 @@ export default function Home() {
           </DblChevWrapper>
         </MidPageSection>
 
-        <TopSection last ref={scrollContactRef}>
+        <TopSection dark last ref={scrollContactRef}>
           {emailContactVisible
             ?
             <ContactEmail ref={emailContactRef} show="isVisible"></ContactEmail>

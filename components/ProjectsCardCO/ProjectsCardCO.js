@@ -17,11 +17,11 @@ const ProjectsCardCO = ({id, imgSrc, imgAlt, imgWidth, imgHeight, title, textCop
             <ProjectsCard>
                 <Anchor href="">
                     <ProjectsImage src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} objectFit='cover' layout='responsive' priority={true} />
-                    <Middle>
+                    {/* <Middle>
                         <ProjectsTitle>{title}</ProjectsTitle>
                         <CardOverlayCopy>{textCopy}
                         </CardOverlayCopy>
-                    </Middle>
+                    </Middle> */}
                 </Anchor>
             </ProjectsCard>
             {/* <Anchor href={url} target="blank">

@@ -64,10 +64,10 @@ export const ProjectsImage = styled(Image)`
     border-radius: 10px; 
     
     &:hover {
-        opacity: 0.3;
+        /* opacity: 0.3; */
     }
     &:focus {
-        opacity: 0.3;
+        /* opacity: 0.3; */
     }
     @media ${device.tablet} {
         
@@ -133,11 +133,11 @@ export const ProjectsSection = styled.section`
 
 export const ProjectsCardWrapper = styled.div`
     position: relative;
-    width: 30%;
-    margin: 10px auto 30px auto;
+    width: 40%;
+    margin: 10px auto 10px auto;
    
     @media ${device.tablet} {        
-        width: 35%;
+        width: 30%;
         margin: 2vw 2vw;
     }
 
@@ -148,16 +148,16 @@ export const ProjectsCardWrapper = styled.div`
 
 export const ProjectsCard = styled.div`
     position: relative;
-    background: rgb(140,26,255);
-    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+    /* background: rgb(140,26,255);
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%); */
     padding: 0px 0px;
     border-radius: 15px;
 
     &:hover {
-        opacity: 0.6;
+        /* opacity: 0.6; */
     }
     &:focus {
-        opacity: 0.6;
+        /* opacity: 0.6; */
     }
 
     @media ${device.tablet} {

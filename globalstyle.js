@@ -51,13 +51,14 @@ export const TopSection = styled.section`
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
     padding: 3rem 2rem;
+    background-color: ${props => props.dark ? '#e9e6ed' : '#fafafa'};
     
     @media ${device.tablet} {
-        background-color: ${props => props.dark ? '#e9e6ed' : '#fafafa'};
-       
+        
     }
-  
+    
     @media ${device.laptopL} {
+        padding: 5rem 2rem;
     
     }
 `
@@ -67,13 +68,15 @@ export const MidPageSection = styled.section`
     background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
     min-height: 100vh;
     position: relative;
-    padding: 8rem 3rem;
+    padding: 6rem 3rem;
     
     @media ${device.tablet} {
-       
+        padding: 9rem 3rem;
+        
     }
   
     @media ${device.laptopL} {
+        padding: 12rem 3rem;
     
     }
 `
@@ -228,7 +231,7 @@ export const HeaderTitle = styled.h1`
     font-size: 0.5rem;   
     color: #382c43;
     font-size: ${props => props.small ? '1.3rem' : '1.5rem'}; 
-    margin: 20px 0 10px 0;
+    margin: 0px 0 10px 0;
     text-align: center;
     
     @media ${device.tablet} {
