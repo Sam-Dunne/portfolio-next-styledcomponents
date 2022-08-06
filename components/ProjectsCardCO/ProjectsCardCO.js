@@ -16,7 +16,7 @@ const ProjectsCardCO = ({id, imgSrc, imgAlt, imgWidth, imgHeight, title, textCop
         <ProjectsCardWrapper key={id}>
             <ProjectsCard>
                 <Anchor href="">
-                    <ProjectsImage src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} objectFit='cover' layout='responsive' priority={true} />
+                    <ProjectsImage src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} objectFit='cover' layout='responsive' priority={false} />
                     {/* <Middle>
                         <ProjectsTitle>{title}</ProjectsTitle>
                         <CardOverlayCopy>{textCopy}

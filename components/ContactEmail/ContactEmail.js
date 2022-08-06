@@ -1,6 +1,6 @@
 import React, { useState, useEffect, forwardRef } from 'react'
 import { device } from '../../device';
-import { Container, HeaderTitle, LinkGrid, Input, Label, TextArea } from '../../globalstyle';
+import { Input, Label, TextArea } from '../../globalstyle';
 import Head from 'next/head';
 // import InPageLink from '../components/InPageLink/InPageLink';
 import styled from 'styled-components';
@@ -137,7 +137,7 @@ const ContactModal = styled.div`
        opacity 500ms ease;      
 `;
 
-const ContactEmail = forwardRef((props, ref) => {
+const ContactEmail = forwardRef(({show}, ref) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
@@ -181,7 +181,7 @@ const ContactEmail = forwardRef((props, ref) => {
 
     return (
         <>
-            <ContactForm ref={ref} isVisible={props.show}>
+            <ContactForm ref={ref} isVisible={show}>
                 <FormItem>
                     <Label htmlFor='Your Email'>Your Email</Label>
                     <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
@@ -195,7 +195,7 @@ const ContactEmail = forwardRef((props, ref) => {
                     <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
                 </FormItem>
                 <FormItem>
-                    <Submit primary type='submit' onClick={(e) => {handleSubmit(e) }}>Send</Submit>
+                    <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
                 </FormItem>
             </ContactForm>
         </>
