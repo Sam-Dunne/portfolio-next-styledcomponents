@@ -68,11 +68,12 @@ const DblChevWrapper = styled.div`
 `
 
 const DoubleChevBtn = styled.button`
-    position: absolute;
-    /* padding: 1rem; */
+    /* position: absolute; */
+    padding: 1px;
     bottom: 0;
     display: block;
     width: fit-content;
+    height: fit-content;
     border: none;
     background-color: transparent;
     cursor: pointer;

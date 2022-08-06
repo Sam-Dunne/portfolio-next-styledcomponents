@@ -27,7 +27,7 @@ const Navbar = ({ isOpen, mobile }) => {
                         </MobileNavBurgerWrapper>
                         <MobileNavLinkWrapper>
 
-                            <Link href='/projects' passHref>
+                            {/* <Link href='/projects' passHref>
                                 <NavLink mobile onClick={handleNavClick}>Projects</NavLink>
                             </Link>
                             <Link href='/cv' passHref>
@@ -38,7 +38,7 @@ const Navbar = ({ isOpen, mobile }) => {
                             </Link>
                             <Link href='/' passHref>
                                 <NavLink mobile onClick={handleNavClick}>Home</NavLink>
-                            </Link>
+                            </Link> */}
                             <DownloadPDFLink textWhite></DownloadPDFLink>
                         </MobileNavLinkWrapper>
                     </MobileMenuContainer>
@@ -46,7 +46,7 @@ const Navbar = ({ isOpen, mobile }) => {
                         <Link href='/' passHref>
                             <NavLink>Sam Dunne</NavLink>
                         </Link>
-                        <MobileBurger onClick={handleNavClick}  ><GiHamburger ></GiHamburger></MobileBurger>
+                        <MobileBurger onClick={handleNavClick}  ><HamburgerIcon ></HamburgerIcon></MobileBurger>
                         <NonHomeViewLinks>
                         </NonHomeViewLinks>
                     </NavContainer>
@@ -66,7 +66,7 @@ const Navbar = ({ isOpen, mobile }) => {
                         <MobileBurger onClick={handleNavClick} ><HamburgerIcon ></HamburgerIcon></MobileBurger>
                         <NonHomeViewLinks>
 
-                            <Link href='/projects' passHref>
+                            {/* <Link href='/projects' passHref>
                                 <NavLink>Projects</NavLink>
                             </Link>
                             <Link href='/cv' passHref>
@@ -74,7 +74,7 @@ const Navbar = ({ isOpen, mobile }) => {
                             </Link>
                             <Link href='/contact' passHref>
                                 <NavLink>Contact</NavLink>
-                            </Link>
+                            </Link> */}
                         </NonHomeViewLinks>
                     </NavContainer>
                     {/* <StyledSvg>

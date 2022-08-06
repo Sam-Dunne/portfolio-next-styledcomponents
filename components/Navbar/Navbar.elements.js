@@ -64,6 +64,7 @@ export const MobileBurger = styled.button`
     height: fit-content;
     width: fit-content;    
     border: none;  
+    cursor: pointer;
       
     @media ${device.mobileL} {
         font-size: 2.3rem;

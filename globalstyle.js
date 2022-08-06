@@ -53,7 +53,7 @@ export const TopSection = styled.section`
     padding: 3rem 2rem;
     
     @media ${device.tablet} {
-        background-color: ${props => props.dark ? '#e9e6ed' : '#6600CC'};
+        background-color: ${props => props.dark ? '#e9e6ed' : '#fafafa'};
        
     }
   
