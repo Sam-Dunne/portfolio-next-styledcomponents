@@ -98,8 +98,10 @@ const TipTop = styled.div`
     top: -10vh;
 `;
 
+
+
 export default function Home() {
-  
+
   // const emailContactRef = useRef(null)
   const { ref: emailContactRef, inView: emailContactVisible } = useInView();
   // const [emailContactVisible, setEmailContactVisible] = useState();
@@ -138,9 +140,7 @@ export default function Home() {
       <Container>
         <TopSection >
           <TipTop ref={scrollTop}></TipTop>
-          <HeroH1 centered>
-            Hi, I&apos;m Sam Dunne
-          </HeroH1>
+
           <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
           <H2>
             A developer seeking opportunities to learn and grow in a professional environment.
@@ -157,16 +157,11 @@ export default function Home() {
         </TopSection>
 
         <MidPageSection dark ref={scrollProjectsRef}>
-          <HeroH1 centered>
-            Hi, I&apos;m Sam Dunne
-          </HeroH1>
-          <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
+
           <H2>
-            A developer seeking opportunities to learn and grow in a professional environment.
+            Projects cards will go here
           </H2>
-          <H2>
-            Thanks for visiting this site!
-          </H2>
+
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollContact}>
               <DblDownChev ></DblDownChev>

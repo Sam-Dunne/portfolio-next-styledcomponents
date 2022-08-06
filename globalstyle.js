@@ -48,12 +48,12 @@ export const Container = styled.main`
 export const TopSection = styled.section`
    z-index: 1;
     width: 100%;
-    background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
-    padding: 5rem 3rem;
+    padding: 3rem 2rem;
     
     @media ${device.tablet} {
+        background-color: ${props => props.dark ? '#e9e6ed' : '#6600CC'};
        
     }
   
