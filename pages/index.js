@@ -139,9 +139,9 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Container>
+
         <TopSection dark>
           <TipTop ref={scrollTop}></TipTop>
-
           <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
           <H2>
             A developer seeking opportunities to learn and grow in a professional environment.
@@ -158,11 +158,7 @@ export default function Home() {
         </TopSection>
 
         <MidPageSection ref={scrollProjectsRef}>
-
-         
-
           <ProjectsList></ProjectsList>
-
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollContact}>
               <DblDownChev ></DblDownChev>
@@ -177,13 +173,11 @@ export default function Home() {
             :
             <ContactEmail ref={emailContactRef} ></ContactEmail>
           }
-
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollTop}>
               <DblUpChev></DblUpChev>
             </DoubleChevBtn>
           </DblChevWrapper>
-
         </TopSection>
 
       </Container>

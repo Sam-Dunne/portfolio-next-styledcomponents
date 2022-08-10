@@ -1,3 +1,4 @@
+import {useRouter} from 'next/router'
 import { ProjectsCardWrapper, ProjectsCard, Anchor, ProjectsImage, Middle, ProjectsTitle, CardOverlayCopy, GoTo } from './ProjectCardCO.elements';
 
 // Props 
@@ -12,17 +13,21 @@ import { ProjectsCardWrapper, ProjectsCard, Anchor, ProjectsImage, Middle, Proje
 // }
 
 const ProjectsCardCO = ({id, imgSrc, imgAlt, imgWidth, imgHeight, title, textCopy, url}) => {
+    const router = useRouter();
+    function showProjectDetailHandler() {
+        router.push(`/${id}`)
+    }
     return (
-        <ProjectsCardWrapper key={id}>
+        <ProjectsCardWrapper key={id} onClick={showProjectDetailHandler}>
             <ProjectsCard>
-                <Anchor href="">
+                {/* <Anchor href=""> */}
                     <ProjectsImage src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} objectFit='cover' layout='responsive' priority={false} />
                     {/* <Middle>
                         <ProjectsTitle>{title}</ProjectsTitle>
                         <CardOverlayCopy>{textCopy}
                         </CardOverlayCopy>
                     </Middle> */}
-                </Anchor>
+                {/* </Anchor> */}
             </ProjectsCard>
             {/* <Anchor href={url} target="blank">
                 <GoTo>Go to Project</GoTo>
