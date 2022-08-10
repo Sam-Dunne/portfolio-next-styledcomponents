@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import {projectsData} from '../projectsData'
 import { useInView } from "react-intersection-observer";
 import Head from "next/head";
 import styled from 'styled-components';
@@ -102,7 +103,7 @@ const TipTop = styled.div`
 
 
 export default function Home() {
-
+  console.log(projectsData)
   // const emailContactRef = useRef(null)
   const { ref: emailContactRef, inView: emailContactVisible } = useInView();
   // const [emailContactVisible, setEmailContactVisible] = useState();
@@ -110,7 +111,7 @@ export default function Home() {
   const scrollTop = useRef()
   const scrollProjectsRef = useRef()
   const scrollContactRef = useRef(null);
-  console.log(emailContactVisible)
+  // console.log(emailContactVisible)
 
   const handleScrollProjects = () => {
     scrollProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -158,7 +159,7 @@ export default function Home() {
         </TopSection>
 
         <MidPageSection ref={scrollProjectsRef}>
-          <ProjectsList></ProjectsList>
+          <ProjectsList data={projectsData}></ProjectsList>
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollContact}>
               <DblDownChev ></DblDownChev>
