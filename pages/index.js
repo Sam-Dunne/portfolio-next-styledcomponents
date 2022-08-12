@@ -100,9 +100,16 @@ const TipTop = styled.div`
     top: -10vh;
 `;
 
+export function getStaticProps() {
+    return {
+      props: {
+        data: projectsData
+      }
+    }
+}
 
 
-export default function Home() {
+export default function Home(props) {
   // console.log(projectsData)
   // const emailContactRef = useRef(null)
   const { ref: emailContactRef, inView: emailContactVisible } = useInView();
@@ -159,7 +166,7 @@ export default function Home() {
         </TopSection>
 
         <MidPageSection ref={scrollProjectsRef}>
-          <ProjectsList data={projectsData}></ProjectsList>
+          <ProjectsList data={props.data}></ProjectsList>
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollContact}>
               <DblDownChev ></DblDownChev>

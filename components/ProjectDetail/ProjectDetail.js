@@ -10,7 +10,7 @@ function ProjectDetail(props) {
     const index = router.query.projectId - 1
     // console.log(index)
     const data = props.data[index]
-    console.log(data)
+    // console.log(data)
   return (
     <TopSection last>
         <h1>{data.title}</h1>
