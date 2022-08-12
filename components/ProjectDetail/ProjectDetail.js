@@ -5,12 +5,12 @@ import { projectsData } from '../../projectsData';
 import Link from 'next/link';
 import Image from 'next/image'
 
-function ProjectDetail() {
+function ProjectDetail(props) {
     const router = useRouter();
     const index = router.query.projectId - 1
     // console.log(index)
-    const data = projectsData[index]
-    // console.log(data)
+    const data = props.data[index]
+    console.log(data)
   return (
     <TopSection last>
         <h1>{data.title}</h1>

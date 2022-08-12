@@ -103,7 +103,7 @@ const TipTop = styled.div`
 
 
 export default function Home() {
-  console.log(projectsData)
+  // console.log(projectsData)
   // const emailContactRef = useRef(null)
   const { ref: emailContactRef, inView: emailContactVisible } = useInView();
   // const [emailContactVisible, setEmailContactVisible] = useState();
