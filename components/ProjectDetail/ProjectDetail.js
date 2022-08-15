@@ -1,21 +1,39 @@
 import { TopSection} from '../../globalstyle';
 import {useRouter} from 'next/router'
-import { projectsData } from '../../projectsData';
-
 import Link from 'next/link';
 import Image from 'next/image'
 
-function ProjectDetail(props) {
+function ProjectDetail({data}) {
     const router = useRouter();
-    const index = router.query.projectId - 1
-    // console.log(index)
-    const data = props.data[index]
-    // console.log(data)
+    const projectId = router.query.projectId;
+    const next = Number(projectId) + 1;
+    const prev = Number(projectId) - 1;
+    
+    const index = projectId - 1
+    const pData = data[index]
+
+    function nextProjHandler() {
+        router.push(`/${next}`)
+    };
+    function prevProjHandler() {
+        router.push(`/${prev}`)
+    };
+
   return (
     <TopSection last>
-        <h1>{data.title}</h1>
-        {/* <Image src={data.imgSrc} alt={data.imgAlt} width={data.imgWidth} height={data.imgHeight} objectFit='cover' layout='responsive' priority={false}></Image> */}
+        <h1>{pData.title}</h1>
+        <Image src={pData.imgSrc} alt={pData.imgAlt} width={pData.imgWidth} height={pData.imgHeight} objectFit='cover' layout='responsive' priority={false}></Image>
         <Link href='/'>Go Back</Link>
+        {projectId != 1 ? 
+        <button onClick={prevProjHandler}>previous</button>
+        :
+        <button disabled>previous</button>
+        }
+        {projectId < data.length ? 
+        <button onClick={nextProjHandler}>next</button>
+        :
+        <button disabled>next</button>
+        }
     </TopSection>
   )
 }

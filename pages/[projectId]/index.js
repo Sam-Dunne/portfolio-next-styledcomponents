@@ -27,7 +27,7 @@ export function getStaticPaths() {
 
 export function getStaticProps(context) {
   const projectId = context.params.projectId;
-  console.log({key: projectId})
+  // console.log({key: projectId})
   return {
     props: {
       data: projectsData
