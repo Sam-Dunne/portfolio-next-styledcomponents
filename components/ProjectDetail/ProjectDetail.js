@@ -2,7 +2,7 @@ import { Container, TopSection, HeroH1 } from '../../globalstyle';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import Image from 'next/image';
-import {ProjectsCard, ProjectsImage, DynNavWrapper, ProjDetailSection, DynNavButton, NextIcon, PrevIcon } from './ProjectDetail.elements';
+import { ProjectsCard, ProjectsImage, DynNavWrapper, ProjDetailSection, DynNavButton, NextIcon, PrevIcon, DetailsWrapper, Article, StackUL } from './ProjectDetail.elements';
 
 function ProjectDetail({ data }) {
   const router = useRouter();
@@ -22,24 +22,32 @@ function ProjectDetail({ data }) {
 
   return (
     <Container>
-      <ProjDetailSection last>
+      <ProjDetailSection last dark>
         <DynNavWrapper>
           {projectId != 1 ?
-            <DynNavButton onClick={prevProjHandler}><PrevIcon/> Prev</DynNavButton>
+            <DynNavButton onClick={prevProjHandler}><PrevIcon /> Prev</DynNavButton>
             :
-            <DynNavButton disabled><PrevIcon/>Prev</DynNavButton>
+            <DynNavButton disabled><PrevIcon />Prev</DynNavButton>
           }
           <Link href='/'><DynNavButton>Go back to main page</DynNavButton></Link>
           {projectId < data.length ?
-            <DynNavButton onClick={nextProjHandler}>Next <NextIcon/></DynNavButton>
+            <DynNavButton onClick={nextProjHandler}>Next <NextIcon /></DynNavButton>
             :
-            <DynNavButton disabled>Next <NextIcon/></DynNavButton>
+            <DynNavButton disabled>Next <NextIcon /></DynNavButton>
           }
         </DynNavWrapper>
         <HeroH1 centered>{pData.title}</HeroH1>
-        <ProjectsCard>
-          <ProjectsImage src={pData.imgSrc} alt={pData.imgAlt} width={pData.imgWidth} height={pData.imgHeight} objectFit='cover' layout='responsive' priority={false} />
-        </ProjectsCard>
+        <DetailsWrapper>
+          <ProjectsCard>
+            <ProjectsImage src={pData.imgSrc} alt={pData.imgAlt} width={pData.imgWidth} height={pData.imgHeight} objectFit='cover' layout='responsive' priority={false} />
+          </ProjectsCard>
+          <Article>
+            <p><strong>Purpose: </strong>{pData.textCopy}</p>
+            <StackUL>
+              {pData.stack.map(s => <li key={s}>{s}</li>)}
+            </StackUL>
+          </Article>
+        </DetailsWrapper>
       </ProjDetailSection>
     </Container>
   )

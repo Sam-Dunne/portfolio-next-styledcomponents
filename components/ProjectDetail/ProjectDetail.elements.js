@@ -130,56 +130,49 @@ export const ProjectsSection = styled.section`
     }
     `;
 
-export const ProjectsCardWrapper = styled.button`
-    position: relative;
-    border: none;
-    width: 40%;
-    margin: 10px auto 10px auto;
-    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
-    transition:
-    transform 200ms ease-in;
+export const DetailsWrapper = styled.div`
+    margin: 1em auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
 
     &:focus {
-        transform: scale(1.04);
     }   
     &:hover {
-        transform: scale(1.04);
     }  
    
     @media ${device.tablet} {        
-        width: 30%;
-        margin: 2vw 2vw;
+    margin: 2em auto 0 auto;
+        
     }
 
     @media ${device.laptopL} {
-        width: 10%;
+    margin: 3em auto 0 auto;
+    max-width: 50%;
+
     }
 `;
 
 export const ProjectsCard = styled.div`
     position: relative;
-    width: 40%;
-
-    /* background: rgb(140,26,255);
-    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%); */
+    flex-basis: 45%;
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
     padding: 0px 0px;
     border-radius: 15px;
 
     &:hover {
-        /* opacity: 0.6; */
     }
     &:focus {
-        /* opacity: 0.6; */
     }
 
     @media ${device.tablet} {
-        width: 30%;
     }
 
     @media ${device.laptopL} {
-        width: 10%;
+        flex-basis: 35%;
     }
 `;
 
@@ -190,10 +183,12 @@ export const DynNavWrapper = styled.div`
     margin: 0 0 2em 0;
     
     @media ${device.tablet} {
+    margin: 0 0 5em 0;
+
     }
 
-    @media ${device.laptopL} {
-      
+    @media ${device.laptopL} {  
+        padding: 0 24em;    
     }
 `;
 
@@ -233,7 +228,30 @@ export const DynNavButton = styled.button`
       
     }
 `;
+export const Article = styled.article`          
+    flex-basis: 45%;
+     
+    
 
+    &:hover {
+    }
+    &:focus {
+    }
+    &:disabled {
+    }
+
+    @media ${device.tablet} {
+    }
+
+    @media ${device.laptopL} {
+      
+    }
+`;
+
+export const StackUL = styled.ul` 
+    margin: 1em auto 0 2em;
+  
+`
 export const NextIcon = styled(MdNavigateNext)` 
     font-size: 1.5em;
 `

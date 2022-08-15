@@ -20,6 +20,17 @@ export const GlobalStyle = createGlobalStyle`
     a, h3, h5, p {
         font-family: 'Nunito','Source Sans Pro', sans-serif;
     }
+
+    p, li {
+        font-size: 0.8em;
+
+        @media ${device.tablet} {
+        font-size: 1.2em;
+        }
+        @media ${device.laptopL} {
+        font-size: 1.3em;
+        }
+    }
 `;
 
 
@@ -27,20 +38,12 @@ export const Container = styled.main`
     z-index: 1;
     width: 100%;
     background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
-    /* min-height: 90vh; */
-    
     position: relative;
     
-    @media ${device.tablet} {
-        /* padding-top: ${props => props.last ? '0' : "0"}; */
-        /* padding: 1em 3em; */
-        /* min-height: 60vh; */
+    @media ${device.tablet} {  
     }
   
-
     @media ${device.laptopL} {
-        /* min-height: 76vh; */
-    
     }
     
 `;
@@ -54,12 +57,10 @@ export const TopSection = styled.section`
     background-color: ${props => props.dark ? '#e9e6ed' : '#fafafa'};
     
     @media ${device.tablet} {
-        
     }
     
     @media ${device.laptopL} {
         padding: 5rem 2rem;
-    
     }
 `
 export const MidPageSection = styled.section`
@@ -71,13 +72,11 @@ export const MidPageSection = styled.section`
     padding: 6rem 3rem;
     
     @media ${device.tablet} {
-        padding: 9rem 3rem;
-        
+        padding: 9rem 3rem;  
     }
   
     @media ${device.laptopL} {
-        padding: 12rem 3rem;
-    
+        padding: 12rem 3rem;  
     }
 `
 

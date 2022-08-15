@@ -6,8 +6,11 @@
         imgWidth: "224",
         imgHeight: "400",
         title: "Redux Toolkit",
-        textCopy: "Learned foundational concepts of Redux. Styled with Bootstrap and Sass.",
-        url: "https://learning-redux.herokuapp.com/"
+        textCopy: "To understand and apply Redux into a project and to practice configuring styling with BootStrap and SASS. It has an incremental counter and simple calculator functionality that pass global state to several components and page views.",
+        url: "https://learning-redux.herokuapp.com/",
+        stack: [
+            "React", "Redux Toolkit", "BootStrap 5", "SASS" 
+        ]
     },
     {
         id: "2",
@@ -16,8 +19,11 @@
         imgWidth: "224",
         imgHeight: "400",
         title: "`Styled Clone",
-        textCopy: "Focused sandbox for applying Styled Components.",
-        url: "https://blooming-wave-03926.herokuapp.com/"
+        textCopy: "Explore using replicating an existing responsive design. Improve raw CSS skills. Build a mobile nav menu by hand.",
+        url: "https://blooming-wave-03926.herokuapp.com/",
+        stack: [
+            "React", "Styled-Components", "Responsive Design" 
+        ]
     },
     {
         id: "3",
@@ -26,8 +32,11 @@
         imgWidth: "224",
         imgHeight: "400",
         title: "Recipe Registry",
-        textCopy: "Full stack React/TS/ Express/MySQL app with RESTful Api and Auth.",
-        url: "https://recipe-registry.herokuapp.com/"
+        textCopy: "Full stack CRUD app with RESTful Api and Authentication/Authorization. Focused on function over form... I know it ain't the prettiest :)",
+        url: "https://recipe-registry.herokuapp.com/",
+        stack: [
+            "React", "BootStrap", "Express", "JWT", "TS", "Mailgun", "React-Select", "Responsive Design" 
+        ]
     },
     {
         id: "4",
@@ -36,7 +45,10 @@
         imgWidth: "350",
         imgHeight: "625",
         title: "Subreddit Client",
-        textCopy: "Fetches and paginates data from Subreddit API. Built in NextJS. Styled with Tailwind.",
-        url: "https://sub-reddit-samd.vercel.app"
+        textCopy: "Fetches and paginates data from Subreddit API. Partly a 'code-along', but I absorbed many concepts and best practices that I applied in building this portfolio site.",
+        url: "https://sub-reddit-samd.vercel.app",
+        stack: [
+            "NextJS", "Tailwind", "Responsive Design" 
+        ]
     }
 ]
