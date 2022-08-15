@@ -135,6 +135,7 @@ export const ProjectsCardWrapper = styled.button`
     position: relative;
     border: none;
     width: 40%;
+    border-radius: 15px;
     margin: 10px auto 10px auto;
     box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
 -webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
@@ -164,7 +165,6 @@ export const ProjectsCard = styled.div`
     /* background: rgb(140,26,255);
     background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%); */
     padding: 0px 0px;
-    border-radius: 15px;
 
     &:hover {
         /* opacity: 0.6; */
