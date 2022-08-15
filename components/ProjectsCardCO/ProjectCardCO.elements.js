@@ -131,10 +131,23 @@ export const ProjectsSection = styled.section`
     }
     `;
 
-export const ProjectsCardWrapper = styled.div`
+export const ProjectsCardWrapper = styled.button`
     position: relative;
+    border: none;
     width: 40%;
     margin: 10px auto 10px auto;
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    transition:
+    transform 200ms ease-in;
+
+    &:focus {
+        transform: scale(1.04);
+    }   
+    &:hover {
+        transform: scale(1.04);
+    }  
    
     @media ${device.tablet} {        
         width: 30%;
