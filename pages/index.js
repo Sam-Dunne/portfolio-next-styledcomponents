@@ -67,7 +67,6 @@ const DblChevWrapper = styled.div`
     margin-bottom: 20px;
     height: fit-content;
 `
-
 const DoubleChevBtn = styled.button`
     /* position: absolute; */
     padding: 1px;
@@ -94,7 +93,6 @@ const DblUpChev = styled(BsChevronDoubleUp)`
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 `
-
 const TipTop = styled.div`
     position: absolute;
     top: -10vh;
