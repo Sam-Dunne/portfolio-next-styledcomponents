@@ -172,7 +172,7 @@ export default function Home(props) {
           <HeroH1 centered>Dev Journey</HeroH1>
           <article>
             <H2>Pre-Dev Background</H2>
-            <p>Prior to Covid, I worked as a Sound Engineer for concerts, events, churches. In addition to &quot;"day of show&quot;" duties, I also provided technical training, consultation, system design/installation, and planning/logistics.</p>
+            <p>Prior to Covid, I worked as a Sound Engineer for concerts, events, churches. In addition to &quot;day of show&quot; duties, I also provided technical training, consultation, system design/installation, and planning/logistics.</p>
             <H2>Unplanned Transition</H2>
             <p>Covid destroyed event production for ~18 months. In the midst of that hardship, I elected to define a new life path and attended the <strong>Covalence Full Stack Bootcamp</strong>. There I was challenged in fulfilling ways and discovered my passion for Front End Development.</p>
             <H2>Stint at CAVU</H2>
