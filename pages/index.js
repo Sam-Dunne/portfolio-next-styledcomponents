@@ -33,7 +33,7 @@ const Header = styled.h1`
 
 const Headshot = styled.img`
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
   width: 200px;
   height: 200px;
   filter: drop-shadow(3px 6px 4px #7a797a);
@@ -113,11 +113,15 @@ export default function Home(props) {
   const { ref: emailContactRef, inView: emailContactVisible } = useInView();
   // const [emailContactVisible, setEmailContactVisible] = useState();
 
-  const scrollTop = useRef()
-  const scrollProjectsRef = useRef()
+  const scrollTop = useRef();
+  const scrollAboutRef = useRef();
+  const scrollProjectsRef = useRef();
   const scrollContactRef = useRef(null);
   // console.log(emailContactVisible)
 
+  const handleScrollAbout = () => {
+    scrollAboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   const handleScrollProjects = () => {
     scrollProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -149,11 +153,28 @@ export default function Home(props) {
         <TopSection dark>
           <TipTop ref={scrollTop}></TipTop>
           <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
+          <HeroH1 centered>Front End Developer</HeroH1>
           <H2>
-            A developer seeking opportunities to learn and grow in a professional environment.
+            React  |  JS  |  TS  |  Redux
           </H2>
           <H2>
-            Thanks for visiting this site!
+            Thanks for visiting!
+          </H2>
+          <DownloadPDFLink></DownloadPDFLink>
+          <DblChevWrapper>
+            <DoubleChevBtn onClick={handleScrollAbout}>
+              <DblDownChev ></DblDownChev>
+            </DoubleChevBtn>
+          </DblChevWrapper>
+        </TopSection>
+        
+        <MidPageSection ref={scrollAboutRef}>
+          <HeroH1 centered>Dev Journey</HeroH1>
+          <H2>
+            React  |  JS  |  TS  |  Redux
+          </H2>
+          <H2>
+            Thanks for visiting!
           </H2>
           <DownloadPDFLink></DownloadPDFLink>
           <DblChevWrapper>
@@ -161,7 +182,7 @@ export default function Home(props) {
               <DblDownChev ></DblDownChev>
             </DoubleChevBtn>
           </DblChevWrapper>
-        </TopSection>
+        </MidPageSection>
 
         <MidPageSection ref={scrollProjectsRef}>
           <ProjectsList data={props.data}></ProjectsList>

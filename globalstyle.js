@@ -243,9 +243,10 @@ export const HeaderTitle = styled.h1`
 export const H2 = styled.h2`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #382c43;
-    font-size: 0.6em;
+    font-size: 1em;
     line-height: 1.2;
     margin: 1em auto 0 auto;
+    text-align: center;
     @media ${device.tablet} {
         font-size: 1em;
         width: 60%;
