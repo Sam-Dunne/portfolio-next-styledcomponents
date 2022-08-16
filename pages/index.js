@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import {projectsData} from '../projectsData'
+import { projectsData } from '../projectsData'
 import { useInView } from "react-intersection-observer";
 import Head from "next/head";
 import styled from 'styled-components';
 import { keyframes } from 'styled-components'
-import { Container, HeroH1, LinkGrid, H2, TopSection, MidPageSection } from "../globalstyle";
+import { Container, HeroH1, H2, TopSection, MidPageSection } from "../globalstyle";
 import { device } from "../device";
-import InPageLink from "../components/InPageLink/InPageLink";
 import { BsChevronDown, BsChevronDoubleUp } from 'react-icons/bs'
 import ProjectsList from '../components/ProjectsList/ProjectsList'
 import ContactEmail from "../components/ContactEmail/ContactEmail";
@@ -44,8 +43,18 @@ const Headshot = styled.img`
       height: 200px;
     }
     @media ${device.laptopL} {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
+    }
+`;
+
+const ArticleWrapper = styled.article`
+
+  @media ${device.tablet} {
+     padding: 2em 6em 0 6em;
+    }
+    @media ${device.laptopL} {
+      padding: 2em 32em 0 32em;     
     }
 `;
 
@@ -99,11 +108,11 @@ const TipTop = styled.div`
 `;
 
 export function getStaticProps() {
-    return {
-      props: {
-        data: projectsData
-      }
+  return {
+    props: {
+      data: projectsData
     }
+  }
 }
 
 
@@ -167,17 +176,21 @@ export default function Home(props) {
             </DoubleChevBtn>
           </DblChevWrapper>
         </TopSection>
-        
+
         <MidPageSection ref={scrollAboutRef}>
           <HeroH1 centered>Dev Journey</HeroH1>
-          <article>
+          <ArticleWrapper>
             <H2>Pre-Dev Background</H2>
             <p>Prior to Covid, I worked as a Sound Engineer for concerts, events, churches. In addition to &quot;day of show&quot; duties, I also provided technical training, consultation, system design/installation, and planning/logistics.</p>
+          </ArticleWrapper>
+          <ArticleWrapper>
             <H2>Unplanned Transition</H2>
             <p>Covid destroyed event production for ~18 months. In the midst of that hardship, I elected to define a new life path and attended the <strong>Covalence Full Stack Bootcamp</strong>. There I was challenged in fulfilling ways and discovered my passion for Front End Development.</p>
+          </ArticleWrapper>
+          <ArticleWrapper>
             <H2>Stint at CAVU</H2>
             <p>Here I worked as an e-Learning Developer. During my brief time there, I decreased course production time by 4x, learned much about the creative development process, and earned <strong>Scrum Master and Product Owner</strong> certifications. I left by choice, on good terms, to refocus on my goal of becoming a Front End Developer.</p>
-          </article>
+          </ArticleWrapper>
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollProjects}>
               <DblDownChev ></DblDownChev>

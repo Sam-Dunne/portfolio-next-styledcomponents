@@ -248,13 +248,13 @@ export const H2 = styled.h2`
     margin: 1em auto 0 auto;
     text-align: center;
     @media ${device.tablet} {
-        font-size: 1em;
-        width: 60%;
+        font-size: 1.2em;
+        /* width: 60%; */
     }
     @media ${device.laptop} {
-        font-size: 1.2em;
+        font-size: 1.3em;
         margin: 1em auto 0 auto;
-        width: 30%;
+        /* width: 30%; */
     }
 `;
 
