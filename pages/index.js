@@ -54,7 +54,7 @@ const ArticleWrapper = styled.article`
      padding: 2em 6em 0 6em;
     }
     @media ${device.laptopL} {
-      padding: 2em 32em 0 32em;     
+    padding: 2em 28em 0 28em;     
     }
 `;
 
