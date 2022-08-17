@@ -4,22 +4,22 @@ import {device} from '../../device';
 
 
 export const Anchor = styled.a`
-    display: block;
+    /* display: block;
     border-radius: 10px; 
     text-decoration: none;
     box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
 -webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
 -moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
     transition:
-    transform 200ms ease-in;
+    transform 200ms ease-in; */
 
     &:focus {
-        transform: scale(1.04);
-        text-decoration: underline white 3px;     
+        /* transform: scale(1.04);
+        text-decoration: underline white 3px;      */
     }   
     &:hover {
-        transform: scale(1.04);
-        text-decoration: underline white 3px;     
+        /* transform: scale(1.04);
+        text-decoration: underline white 3px;      */
     }   
 `;
 
@@ -162,15 +162,11 @@ export const ProjectsCardWrapper = styled.button`
 
 export const ProjectsCard = styled.div`
     position: relative;
-    /* background: rgb(140,26,255);
-    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%); */
     padding: 0px 0px;
 
     &:hover {
-        /* opacity: 0.6; */
     }
     &:focus {
-        /* opacity: 0.6; */
     }
 
     @media ${device.tablet} {

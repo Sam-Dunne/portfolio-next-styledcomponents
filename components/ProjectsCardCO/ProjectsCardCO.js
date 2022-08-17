@@ -20,7 +20,7 @@ const ProjectsCardCO = ({id, imgSrc, imgAlt, imgWidth, imgHeight, title, textCop
     return (
         <ProjectsCardWrapper key={id} onClick={showProjectDetailHandler}>
             <ProjectsCard>
-                {/* <Anchor href=""> */}
+                {/* <Anchor href={url}> */}
                     <ProjectsImage src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} objectFit='cover' layout='responsive' priority={false} />
                     {/* <Middle>
                         <ProjectsTitle>{title}</ProjectsTitle>

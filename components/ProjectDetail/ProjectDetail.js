@@ -2,7 +2,7 @@ import { Container, TopSection, HeroH1 } from '../../globalstyle';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import Image from 'next/image';
-import { ProjectsCard, ProjectsImage, DynNavWrapper, ProjDetailSection, DynNavButton, NextIcon, PrevIcon, DetailsWrapper, Article, StackUL } from './ProjectDetail.elements';
+import { ProjectsCard, ProjectsImage, DynNavWrapper, ProjDetailSection, DynNavButton, NextIcon, PrevIcon, DetailsWrapper, Article, StackUL, Anchor } from './ProjectDetail.elements';
 
 function ProjectDetail({ data }) {
   const router = useRouter();
@@ -39,7 +39,9 @@ function ProjectDetail({ data }) {
         <HeroH1 centered>{pData.title}</HeroH1>
         <DetailsWrapper>
           <ProjectsCard>
-            <ProjectsImage src={pData.imgSrc} alt={pData.imgAlt} width={pData.imgWidth} height={pData.imgHeight} objectFit='cover' layout='responsive' priority={false} />
+            <Anchor href={pData.url} target="blank">
+              <ProjectsImage src={pData.imgSrc} alt={pData.imgAlt} width={pData.imgWidth} height={pData.imgHeight} objectFit='cover' layout='responsive' priority={false} />
+            </Anchor>
           </ProjectsCard>
           <Article>
             <p><strong>Purpose: </strong>{pData.textCopy}</p>

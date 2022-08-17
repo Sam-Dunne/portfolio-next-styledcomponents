@@ -22,6 +22,28 @@ export const ProjDetailSection = styled.section`
     }
 `
 
+export const Anchor = styled.a`
+    /* display: block;
+    min-width: fit-content;
+    min-height: fit-content; */
+    /* border-radius: 10px; 
+    text-decoration: none;
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    transition:
+    transform 200ms ease-in; */
+
+    &:focus {
+        /* transform: scale(1.04);
+        text-decoration: underline white 3px;      */
+    }   
+    &:hover {
+        /* transform: scale(1.04);
+        text-decoration: underline white 3px;      */
+    }   
+`;
+
 export const GoTo = styled.h3`
     text-align: center;
     background: rgb(140,26,255);
