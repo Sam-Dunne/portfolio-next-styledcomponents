@@ -23,24 +23,11 @@ export const ProjDetailSection = styled.section`
 `
 
 export const Anchor = styled.a`
-    /* display: block;
-    min-width: fit-content;
-    min-height: fit-content; */
-    /* border-radius: 10px; 
-    text-decoration: none;
-    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
-    transition:
-    transform 200ms ease-in; */
-
     &:focus {
-        /* transform: scale(1.04);
-        text-decoration: underline white 3px;      */
+        
     }   
     &:hover {
-        /* transform: scale(1.04);
-        text-decoration: underline white 3px;      */
+       
     }   
 `;
 
@@ -79,7 +66,7 @@ export const ProjectsImage = styled(Image)`
     opacity: 1;
     display: block;
     width: 100%;
-    height: auto;
+    /* height: auto; */
     transition: .5s ease;
     backface-visibility: hidden;
     border-radius: 10px; 
@@ -157,6 +144,7 @@ export const DetailsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
    
 
     &:focus {
@@ -165,13 +153,18 @@ export const DetailsWrapper = styled.div`
     }  
    
     @media ${device.tablet} {        
-    margin: 2em auto 0 auto;
-        
+    /* margin: 2em auto 0 auto; */
+       margin: 3em auto 0 auto;
+       padding: 0 2em; 
+       width: 80%;
     }
 
     @media ${device.laptopL} {
-    margin: 3em auto 0 auto;
-    max-width: 50%;
+        /* width: 60%; */
+    /* margin: 3em auto 0 auto; */
+    /* max-width: 50%; */
+    padding: 0;
+
 
     }
 `;
@@ -180,21 +173,27 @@ export const ProjectsCard = styled.div`
     position: relative;
     flex-basis: 45%;
     box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
--moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
     padding: 0px 0px;
     border-radius: 15px;
-
+    
     &:hover {
     }
     &:focus {
     }
-
+    
     @media ${device.tablet} {
+        min-width: 180px;
+        max-width: 200px;
     }
-
+    
     @media ${device.laptopL} {
-        flex-basis: 35%;
+        max-width: 250px;
+        /* flex-basis: 30%; */
+        margin-right: 40px;
+        /* max-height: 350px; */
+        /* min-width: 300px; */
     }
 `;
 
@@ -210,7 +209,7 @@ export const DynNavWrapper = styled.div`
     }
 
     @media ${device.laptopL} {  
-        padding: 0 24em;    
+        padding: 0 10em;    
     }
 `;
 
@@ -266,6 +265,7 @@ export const Article = styled.article`
     }
 
     @media ${device.laptopL} {
+    flex-basis: 55%;
       
     }
 `;
