@@ -36,8 +36,8 @@ const Header = styled.h1`
 const Headshot = styled.img`
   display: block;
   margin: 0 auto 1em auto;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   filter: drop-shadow(3px 6px 4px #7a797a);
 
   @media ${device.tablet} {
@@ -70,7 +70,7 @@ const bounceAnim = keyframes`
       100% {transform: scale(1.0);};
     }
 `
-const DblChevWrapper = styled.div`
+const ChevronContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +81,7 @@ const DblChevWrapper = styled.div`
     margin-bottom: 12px;
     height: fit-content;
 `
-const DoubleChevBtn = styled.button`
+const ChevronButtonWrapper = styled.button`
     /* position: absolute; */
     padding: 1px;
     bottom: 0;
@@ -93,7 +93,7 @@ const DoubleChevBtn = styled.button`
     cursor: pointer;
 `;
 
-const DblDownChev = styled(BsChevronDown)`
+const DownChevron = styled(BsChevronDown)`
     font-size: 4em;
     color: #6600CC;
     animation-name: ${bounceAnim};
@@ -171,11 +171,11 @@ export default function Home(props) {
           <StackIcons />
           <DownloadPDFLink></DownloadPDFLink>
           <H2>Thanks for visiting!</H2>
-          <DblChevWrapper>
-            <DoubleChevBtn onClick={handleScrollAbout}>
-              <DblDownChev ></DblDownChev>
-            </DoubleChevBtn>
-          </DblChevWrapper>
+          <ChevronContainer>
+            <ChevronButtonWrapper onClick={handleScrollAbout}>
+              <DownChevron />
+            </ChevronButtonWrapper>
+          </ChevronContainer>
         </TopSection>
 
         <MidPageSection ref={scrollAboutRef}>
@@ -192,20 +192,20 @@ export default function Home(props) {
             <H2>Stint at CAVU</H2>
             <p>Here I worked as an e-Learning Developer. During my brief time there, I decreased course production time by 4x, learned much about the creative development process, and earned <strong>Scrum Master and Product Owner</strong> certifications. I left by choice, on good terms, to refocus on my goal of becoming a Front End Developer.</p>
           </ArticleWrapper>
-          <DblChevWrapper>
-            <DoubleChevBtn onClick={handleScrollProjects}>
-              <DblDownChev ></DblDownChev>
-            </DoubleChevBtn>
-          </DblChevWrapper>
+          <ChevronContainer>
+            <ChevronButtonWrapper onClick={handleScrollProjects}>
+              <DownChevron />
+            </ChevronButtonWrapper>
+          </ChevronContainer>
         </MidPageSection>
 
         <MidPageSection ref={scrollProjectsRef}>
           <ProjectsList data={props.data}></ProjectsList>
-          <DblChevWrapper>
-            <DoubleChevBtn onClick={handleScrollContact}>
-              <DblDownChev ></DblDownChev>
-            </DoubleChevBtn>
-          </DblChevWrapper>
+          <ChevronContainer>
+            <ChevronButtonWrapper onClick={handleScrollContact}>
+              <DownChevron />
+            </ChevronButtonWrapper>
+          </ChevronContainer>
         </MidPageSection>
 
         <TopSection dark last ref={scrollContactRef}>
@@ -215,11 +215,11 @@ export default function Home(props) {
             :
             <ContactEmail ref={emailContactRef} ></ContactEmail>
           }
-          <DblChevWrapper>
-            <DoubleChevBtn onClick={handleScrollTop}>
+          <ChevronContainer>
+            <ChevronButtonWrapper onClick={handleScrollTop}>
               <DblUpChev></DblUpChev>
-            </DoubleChevBtn>
-          </DblChevWrapper>
+            </ChevronButtonWrapper>
+          </ChevronContainer>
         </TopSection>
 
       </Container>
