@@ -223,31 +223,6 @@ export default function Home(props) {
         </TopSection>
 
       </Container>
-
-      {/* <Container dark ref={scrollProjectsRef}>
-        <DblChevWrapper>
-          <DblDownChev onClick={handleScrollContact}></DblDownChev>
-        </DblChevWrapper> */}
-
-      {/* <ProjectsList></ProjectsList> */}
-      {/* {linksVisible ?
-          <LinkGrid show ref={myRef}>
-          <InPageLink href='/projects' >Projects</InPageLink>
-            <InPageLink href='/contact' >Contact</InPageLink>
-            <InPageLink href='/cv' >CV</InPageLink>
-            </LinkGrid>
-            :
-            <LinkGrid ref={myRef}>
-            <InPageLink href='/projects' >Project</InPageLink>
-            <InPageLink href='/contact' >Contact</InPageLink>
-            <InPageLink href='/cv' >CV</InPageLink>
-            </LinkGrid>
-          } */}
-      {/* </Container>
-      <Container last ref={scrollContactRef}>
-        <ContactEmail ref={myRef}></ContactEmail>
-      </Container> */}
-
     </>
   );
 }

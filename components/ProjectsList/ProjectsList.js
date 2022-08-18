@@ -1,29 +1,25 @@
-import Head from 'next/head';
-import styled from 'styled-components';
-// import React, { useState } from 'react';
-// import Image from 'next/image';
-import { device } from '../../device';
-import { Container, HeaderTitle, LinkGrid } from '../../globalstyle';
+import { HeaderTitle } from '../../globalstyle';
+import { ProjectsSection } from './ProjectsList.elements';
 import ProjectsCardCO from '../../components/ProjectsCardCO/ProjectsCardCO';
 
 
 
-const ProjectsSection = styled.section`
-    position: relative;
-    padding: 0px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;  
-    flex-wrap: wrap;
+// const ProjectsSection = styled.section`
+//     position: relative;
+//     padding: 0px 0;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;  
+//     flex-wrap: wrap;
     
-    @media ${device.tablet} {
-        padding: 0 4em;
-    }
+//     @media ${device.tablet} {
+//         padding: 0 4em;
+//     }
 
-    @media ${device.laptopL} {
-        padding: 0 15vw;
-    }
-    `;
+//     @media ${device.laptopL} {
+//         padding: 0 15vw;
+//     }
+//     `;
 
 
 
