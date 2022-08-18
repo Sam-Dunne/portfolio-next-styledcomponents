@@ -15,7 +15,9 @@ export const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #6600CC;
+    /* background: #6600CC; */
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+
     /* margin-bottom: -4px; */
 
     @media ${device.mobileL} {

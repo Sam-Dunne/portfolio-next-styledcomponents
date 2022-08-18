@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
     left:0; */
     width: 100%;
     z-index: 999;
-    background: #6600CC;
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
    height: 10vh;
     color: #fafafa;
     /* margin-top: auto; */
