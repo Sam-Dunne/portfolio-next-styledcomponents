@@ -12,16 +12,16 @@ const ProjectsSection = styled.section`
     position: relative;
     padding: 0px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;  
     flex-wrap: wrap;
     
     @media ${device.tablet} {
-        /* padding: 0 10vw; */
+        padding: 0 4em;
     }
 
     @media ${device.laptopL} {
-        /* padding: 0 15vw; */
+        padding: 0 15vw;
     }
     `;
 

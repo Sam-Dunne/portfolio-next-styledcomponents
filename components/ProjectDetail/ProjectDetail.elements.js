@@ -155,14 +155,14 @@ export const DetailsWrapper = styled.div`
     @media ${device.tablet} {        
     /* margin: 2em auto 0 auto; */
        margin: 3em auto 0 auto;
-       padding: 0 2em; 
-       width: 80%;
+       padding: 0 0; 
+       max-width: 500px;
     }
 
     @media ${device.laptopL} {
         /* width: 60%; */
     /* margin: 3em auto 0 auto; */
-    /* max-width: 50%; */
+    max-width: 700px;
     padding: 0;
 
 

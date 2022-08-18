@@ -10,6 +10,9 @@ import { BsChevronDown, BsChevronDoubleUp } from 'react-icons/bs'
 import ProjectsList from '../components/ProjectsList/ProjectsList'
 import ContactEmail from "../components/ContactEmail/ContactEmail";
 import DownloadPDFLink from "../components/DownloadPDFLink/DownloadPDFLink";
+import StackIcons from "../components/StackIcons/StackIcons";
+// import {SiHtml5, SiCss3, SiReact, SiRedux, SiTailwindcss, SiBootstrap, SiGit, SiGithub} from 'react-icons/si'
+// import {TbBrandNextjs} from 'react-icons/tb'
 
 // const LandingWrapper = styled.main`
 //     position: relative;
@@ -54,7 +57,9 @@ const ArticleWrapper = styled.article`
      padding: 2em 6em 0 6em;
     }
     @media ${device.laptopL} {
-    padding: 1em 28em 0 28em;     
+    padding: 0;     
+    width: 540px;
+    margin: 0 auto;
     }
 `;
 
@@ -73,7 +78,7 @@ const DblChevWrapper = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     height: fit-content;
 `
 const DoubleChevBtn = styled.button`
@@ -163,13 +168,9 @@ export default function Home(props) {
           <TipTop ref={scrollTop}></TipTop>
           <Headshot src="/sd_headshot_350.png" alt="Resume" width={350} height={350} objectFit="cover" layout='responsive' priority={true}></Headshot>
           <HeroH1 centered>Front End Developer</HeroH1>
-          <H2>
-            React  |  JS  |  TS  |  Redux
-          </H2>
-          <H2>
-            Thanks for visiting!
-          </H2>
+          <StackIcons />
           <DownloadPDFLink></DownloadPDFLink>
+          <H2>Thanks for visiting!</H2>
           <DblChevWrapper>
             <DoubleChevBtn onClick={handleScrollAbout}>
               <DblDownChev ></DblDownChev>

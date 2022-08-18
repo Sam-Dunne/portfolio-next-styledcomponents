@@ -152,11 +152,13 @@ export const ProjectsCardWrapper = styled.button`
    
     @media ${device.tablet} {        
         width: 30%;
+        max-width: 180px;
+
         margin: 2vw 2vw;
     }
 
     @media ${device.laptopL} {
-        width: 10%;
+        width: 500px;;
     }
 `;
 
