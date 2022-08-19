@@ -19,7 +19,7 @@
         imgWidth: "224",
         imgHeight: "400",
         title: "`Styled Clone",
-        textCopy: "Explore using replicating an existing responsive design. Improve raw CSS skills. Build a mobile nav menu by hand.",
+        textCopy: "Explore replicating an existing responsive design. Improve raw CSS skills. Build a mobile nav menu by hand.",
         url: "https://blooming-wave-03926.herokuapp.com/",
         stack: [
             "React", "Styled-Components", "Responsive Design" 
@@ -32,10 +32,10 @@
         imgWidth: "224",
         imgHeight: "400",
         title: "Recipe Registry",
-        textCopy: "Full stack CRUD app with RESTful Api and Authentication/Authorization. Focused on function over form... I know it ain't the prettiest :)",
+        textCopy: "Full stack CRUD app with RESTful Api and Authentication/Authorization. Focused on function over form. I know it ain't the prettiest :)",
         url: "https://recipe-registry.herokuapp.com/",
         stack: [
-            "React", "BootStrap", "Express", "JWT", "TS", "Mailgun", "React-Select", "Responsive Design" 
+            "React", "BootStrap", "Express", "JWT", "TS" 
         ]
     },
     {

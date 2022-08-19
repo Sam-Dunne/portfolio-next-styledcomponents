@@ -37,8 +37,8 @@ const Header = styled.h1`
 const Headshot = styled.img`
   display: block;
   margin: 0 auto 1em auto;
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   filter: drop-shadow(3px 6px 4px #7a797a);
 
   @media ${device.tablet} {

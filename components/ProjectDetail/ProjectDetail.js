@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link';
 import Image from 'next/image';
 import { ProjectsCard, ProjectsImage, DynNavWrapper, ProjDetailSection, DynNavButton, NextIcon, PrevIcon, DetailsWrapper, Article, StackUL, Anchor } from './ProjectDetail.elements';
+import { PARA } from '../../globalstyle';
 
 function ProjectDetail({ data }) {
   const router = useRouter();
@@ -22,20 +23,22 @@ function ProjectDetail({ data }) {
 
   return (
     <Container>
-      <ProjDetailSection last dark>
+      <ProjDetailSection last>
+
         <DynNavWrapper>
           {projectId != 1 ?
             <DynNavButton onClick={prevProjHandler}><PrevIcon /> Prev</DynNavButton>
             :
             <DynNavButton disabled><PrevIcon />Prev</DynNavButton>
           }
-          <Link href='/'><DynNavButton>Go back to main page</DynNavButton></Link>
+          <Link href='/'><DynNavButton>To main page</DynNavButton></Link>
           {projectId < data.length ?
             <DynNavButton onClick={nextProjHandler}>Next <NextIcon /></DynNavButton>
             :
             <DynNavButton disabled>Next <NextIcon /></DynNavButton>
           }
         </DynNavWrapper>
+
         <HeroH1 centered>{pData.title}</HeroH1>
         <DetailsWrapper>
           <ProjectsCard>
@@ -44,7 +47,7 @@ function ProjectDetail({ data }) {
             </Anchor>
           </ProjectsCard>
           <Article>
-            <p><strong>Purpose: </strong>{pData.textCopy}</p>
+            <PARA><strong>Purpose: </strong>{pData.textCopy}</PARA>
             <StackUL>
               {pData.stack.map(s => <li key={s}>{s}</li>)}
             </StackUL>

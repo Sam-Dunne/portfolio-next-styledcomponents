@@ -150,6 +150,7 @@ export const HeroH1 = styled.h1`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
     color: #382c43;
     font-weight: 600;
+    letter-spacing: 0.05em;
     text-align: ${props => props.centered ? 'center' : 'start'};
     
     @media ${device.tablet} {
@@ -245,7 +246,7 @@ export const H2 = styled.h2`
     color: #382c43;
     font-size: 1em;
     line-height: 1.2;
-    margin: 1em auto 0 auto;
+    margin: 1em auto 0.5em auto;
     text-align: center;
     @media ${device.tablet} {
         font-size: 1.2em;
@@ -255,6 +256,16 @@ export const H2 = styled.h2`
         font-size: 1.3em;
         margin: 1em auto 0 auto;
         /* width: 30%; */
+    }
+`;
+
+export const PARA = styled.p`
+    letter-spacing: 0.01em;
+  @media ${device.tablet} {
+    }
+
+    @media ${device.laptopL} {
+    font-size: 1.1em;
     }
 `;
 

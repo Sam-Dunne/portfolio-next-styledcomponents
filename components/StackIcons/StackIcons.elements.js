@@ -3,7 +3,7 @@ import {device} from '../../device';
 import {SiHtml5, SiCss3, SiReact, SiRedux, SiTailwindcss, SiBootstrap, SiGit, SiJavascript, SiStyledComponents, SiNextDotJs} from 'react-icons/si'
 // import {TbBrandNextjs} from 'react-icons/tb'
 const fontSize = {
-    mobile: '2.4em',
+    mobile: '2.1em',
     tablet: '4em',
     laptopL: '3.2em'
 };

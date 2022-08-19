@@ -1,5 +1,6 @@
 import { HeroH1, H2 } from '../../globalstyle';
-import { ArticleWrapper, PARA } from './AboutMe.elements'
+import { ArticleWrapper } from './AboutMe.elements';
+import { PARA } from '../../globalstyle';
 
 export default function AboutMe() {
     return (

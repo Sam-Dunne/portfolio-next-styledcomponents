@@ -12,9 +12,9 @@ export const FormItem = styled.div`
 
 export const ContactForm = styled.form`  
     margin: 20px auto;
-    width: 18em;
+    /* width: 90%; */
     min-height: fit-content;
-    padding: 1rem 2rem ;
+    padding: 1rem 1.3rem ;
     border: 2px solid gray;
     border-radius:15px;
     outline:none;
@@ -25,7 +25,7 @@ export const ContactForm = styled.form`
     background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
     opacity: ${props => props.isVisible ? '1' : '0'};
     transition:
-     opacity 800ms ease-in 300ms;
+     opacity 600ms ease-in 150ms;
 
     @media ${device.tablet} {
         width: 24em;

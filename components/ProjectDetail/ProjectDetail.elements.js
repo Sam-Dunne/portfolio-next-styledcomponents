@@ -10,7 +10,7 @@ export const ProjDetailSection = styled.section`
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
     padding: 1rem 1rem;
-    background-color: ${props => props.dark ? '#e9e6ed' : '#fafafa'};
+    background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     
     @media ${device.tablet} {
         padding: 2rem 6rem;
@@ -213,9 +213,11 @@ export const DynNavWrapper = styled.div`
     }
 `;
 
-export const DynNavButton = styled.button`          
-    padding: 0.8em 0.5em;
+export const DynNavButton = styled.button` 
+    flex-shrink: 1;         
+    padding: 0.8em 0.8em;
     border-radius: 10px;
+    letter-spacing: 0.05em;
     color: #fafafa;
     outline: none;
     display: flex;
@@ -225,6 +227,10 @@ export const DynNavButton = styled.button`
     background-color: #8c1aff;
     transition:
     transform 200ms ease-in;
+    border: none;
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
 
     &:hover {
         transform: scale(1.04);
@@ -243,6 +249,8 @@ export const DynNavButton = styled.button`
     }
 
     @media ${device.tablet} {
+    padding: 1em 1em;
+
     }
 
     @media ${device.laptopL} {
@@ -250,7 +258,7 @@ export const DynNavButton = styled.button`
     }
 `;
 export const Article = styled.article`          
-    flex-basis: 45%;
+    flex-basis: 40%;
      
     
 
@@ -275,8 +283,9 @@ export const StackUL = styled.ul`
   
 `
 export const NextIcon = styled(MdNavigateNext)` 
-    font-size: 1.5em;
+    font-size: 1.2em;
+    
 `
 export const PrevIcon = styled(MdNavigateBefore)` 
-    font-size: 1.5em;
+    font-size: 1.2em;
 `

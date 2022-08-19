@@ -13,12 +13,3 @@ export const ArticleWrapper = styled.article`
     }
 `;
 
-export const PARA = styled.p`
-
-  @media ${device.tablet} {
-    }
-
-    @media ${device.laptopL} {
-    font-size: 1.1em;
-    }
-`;
