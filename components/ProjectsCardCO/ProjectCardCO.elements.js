@@ -142,6 +142,11 @@ export const ProjectsCardWrapper = styled.button`
 -moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
     transition:
     transform 200ms ease-in;
+    cursor: pointer;
+    opacity: ${props => props.isVisible ? '1' : '0'};
+    transition:
+     opacity 600ms ease-in 150ms;
+   
 
     &:focus {
         transform: scale(1.04);
@@ -158,7 +163,7 @@ export const ProjectsCardWrapper = styled.button`
     }
 
     @media ${device.laptopL} {
-        max-width: 150px;
+        max-width: 160px;
 
     }
 `;

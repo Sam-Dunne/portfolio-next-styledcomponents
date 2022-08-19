@@ -126,6 +126,7 @@ export default function Home(props) {
   // console.log(projectsData)
   // const emailContactRef = useRef(null)
   const { ref: emailContactRef, inView: emailContactVisible } = useInView();
+  const { ref: aboutMeRef, inView:aboutMeVisible } = useInView();
   // const [emailContactVisible, setEmailContactVisible] = useState();
 
   const scrollTop = useRef();
@@ -180,7 +181,13 @@ export default function Home(props) {
         </TopSection>
 
         <MidPageSection ref={scrollAboutRef}>
-          <AboutMe />
+          {aboutMeVisible ?
+          <AboutMe ref={aboutMeRef} show="isVisible"/>
+          
+          :
+          <AboutMe ref={aboutMeRef}/>
+        
+        }
           <ChevronContainer>
             <ChevronButtonWrapper onClick={handleScrollProjects}>
               <DownChevron />

@@ -10,7 +10,9 @@
         url: "https://learning-redux.herokuapp.com/",
         stack: [
             "React", "Redux Toolkit", "BootStrap 5", "SASS" 
-        ]
+        ],
+        opacity: "fade1"
+
     },
     {
         id: "2",
@@ -23,7 +25,8 @@
         url: "https://blooming-wave-03926.herokuapp.com/",
         stack: [
             "React", "Styled-Components", "Responsive Design" 
-        ]
+        ],
+        opacity: "fade2"
     },
     {
         id: "3",
@@ -36,7 +39,9 @@
         url: "https://recipe-registry.herokuapp.com/",
         stack: [
             "React", "BootStrap", "Express", "JWT", "TS" 
-        ]
+        ],
+        opacity: "fade3"
+
     },
     {
         id: "4",
@@ -49,6 +54,8 @@
         url: "https://sub-reddit-samd.vercel.app",
         stack: [
             "NextJS", "Tailwind", "Responsive Design" 
-        ]
+        ],
+        opacity: "fade4"
+
     }
 ]
