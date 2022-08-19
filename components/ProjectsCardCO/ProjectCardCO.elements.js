@@ -158,7 +158,8 @@ export const ProjectsCardWrapper = styled.button`
     }
 
     @media ${device.laptopL} {
-        width: 500px;;
+        max-width: 150px;
+
     }
 `;
 

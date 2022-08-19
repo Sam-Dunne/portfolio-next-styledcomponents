@@ -14,6 +14,7 @@ export const ProjectsSection = styled.section`
     }
 
     @media ${device.laptopL} {
-        padding: 0 15vw;
+        padding: 0 12vw;
+        margin-top: 4em;
     }
     `;

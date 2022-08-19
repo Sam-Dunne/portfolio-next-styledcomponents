@@ -17,7 +17,7 @@ export const ProjDetailSection = styled.section`
     }
     
     @media ${device.laptopL} {
-        padding: 3rem 18rem;
+        padding: 2rem 18rem;
     
     }
 `
@@ -163,7 +163,7 @@ export const DetailsWrapper = styled.div`
         /* width: 60%; */
     /* margin: 3em auto 0 auto; */
     max-width: 700px;
-    padding: 0;
+    padding: 0 3em;
 
 
     }
@@ -189,9 +189,9 @@ export const ProjectsCard = styled.div`
     }
     
     @media ${device.laptopL} {
-        max-width: 250px;
+        max-width: 150px;
         /* flex-basis: 30%; */
-        margin-right: 40px;
+        /* margin-right: 40px; */
         /* max-height: 350px; */
         /* min-width: 300px; */
     }
@@ -209,12 +209,12 @@ export const DynNavWrapper = styled.div`
     }
 
     @media ${device.laptopL} {  
-        padding: 0 10em;    
+        padding: 0 7em;    
     }
 `;
 
 export const DynNavButton = styled.button`          
-    padding: 0.5em 0.5em;
+    padding: 0.8em 0.5em;
     border-radius: 10px;
     color: #fafafa;
     outline: none;
@@ -222,7 +222,7 @@ export const DynNavButton = styled.button`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: #6600CC;
+    background-color: #8c1aff;
     transition:
     transform 200ms ease-in;
 

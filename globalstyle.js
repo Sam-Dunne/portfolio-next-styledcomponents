@@ -54,19 +54,19 @@ export const TopSection = styled.section`
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
     padding: 3rem 2rem;
-    background-color: ${props => props.dark ? '#e9e6ed' : '#fafafa'};
+    background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     
     @media ${device.tablet} {
     }
     
     @media ${device.laptopL} {
-        padding: 5rem 2rem;
+        padding: 4rem 2rem;
     }
 `
 export const MidPageSection = styled.section`
    z-index: 1;
     width: 100%;
-    background-color: ${props => props.dark ? '#e9e6ed' : '#f4f0f8'};
+    background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     min-height: 100vh;
     position: relative;
     padding: 6rem 3rem;
@@ -76,7 +76,7 @@ export const MidPageSection = styled.section`
     }
   
     @media ${device.laptopL} {
-        padding: 12rem 3rem;  
+        padding: 9rem 3rem;  
     }
 `
 

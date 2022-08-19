@@ -47,8 +47,8 @@ const Headshot = styled.img`
       height: 200px;
     }
     @media ${device.laptopL} {
-      width: 250px;
-      height: 250px;
+      /* width: 250px;
+      height: 250px; */
     }
 `;
 
@@ -188,7 +188,7 @@ export default function Home(props) {
           </ChevronContainer>
         </MidPageSection>
 
-        <MidPageSection ref={scrollProjectsRef}>
+        <MidPageSection dark ref={scrollProjectsRef}>
           <ProjectsList data={props.data}></ProjectsList>
           <ChevronContainer>
             <ChevronButtonWrapper onClick={handleScrollContact}>
@@ -197,7 +197,7 @@ export default function Home(props) {
           </ChevronContainer>
         </MidPageSection>
 
-        <TopSection dark last ref={scrollContactRef}>
+        <TopSection last ref={scrollContactRef}>
           {emailContactVisible
             ?
             <ContactEmail ref={emailContactRef} show="isVisible"></ContactEmail>
