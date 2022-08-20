@@ -57,10 +57,11 @@ export const TopSection = styled.section`
     background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     
     @media ${device.tablet} {
+        padding: 6rem 2rem;
     }
     
     @media ${device.laptopL} {
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
     }
 `
 export const MidPageSection = styled.section`
@@ -243,7 +244,7 @@ export const HeaderTitle = styled.h1`
 
 export const H2 = styled.h2`
     font-family: 'Nunito', 'Source Sans Pro',sans-serif;
-    color: #382c43;
+    color: ${props => props.light ? '#f9f7fc' : '#382c43'};
     font-size: 1em;
     line-height: 1.2;
     margin: 1em auto 0.5em auto;

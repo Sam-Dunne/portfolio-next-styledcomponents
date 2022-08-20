@@ -28,7 +28,7 @@ export const ContactForm = styled.form`
      opacity 600ms ease-in 150ms;
 
     @media ${device.tablet} {
-        width: 24em;
+        width: 30em;
 
     } 
     @media ${device.laptopL} {
@@ -79,34 +79,44 @@ export const Submit = styled.button`
 export const BlurContainer = styled.div`
     /* height: 100vh; */
     position: absolute;
-    top: 0;
+    top: -10vh;
     left: 0;
+    display: flex;
+    justify-content: center;
+    /* align-items: top; */
     height: 100vh;
     width: 100vw;
     /* background-color: #cccccc; */
-    z-index: 100;
-    opacity: 1;
-    backdrop-filter: blur(6px) grayscale(98%);
-`
+    z-index: ${props => props.show ? '100' : '-100'};
+    opacity: ${props => props.show ? '1' : '0'};
+    backdrop-filter: blur(6px) grayscale(80%);
+    transition:
+       opacity 500ms ease-in-out,
+       z-index 100ms ease-in;
+`;
 
 export const ContactModal = styled.div`
-    /* position: ${props => props.isOpen ? 'sticky' : 'relative'}; */
-    /* position: -webkit-sticky; */
+    
     position: fixed;
     z-index: 900;
-    background-color: #6600CC;
-    width: 30%;
-    min-width: fit-content;
-    padding: ${props => props.isOpen ? '1rem' : '0px'};
-    top: 200px;
-    left: 100px;
-    
-    display: ${props => props.isOpen ? 'inline' : 'none'};
-    margin-right: 5px;
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+    top: ${props => props.isOpen ? '15vh' : '-20vh'};
+
+    /* width: 35%; */
+    width: ${props => props.isOpen ? '36%' : '0px'};
+    padding: ${props => props.isOpen ? '4rem' : '0px'};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12vh auto 0 auto;
+    /* margin-right: 5px; */
     border-radius: 30px; 
     color: #fafafa;
     opacity: ${props => props.isOpen ? '1' : '0'};
-
+    
     transition:
-       opacity 500ms ease;      
+       opacity 50ms ease-in-out,
+       top 400ms ease-in-out 50ms;
+       /* width 800ms ease-in; */
 `;

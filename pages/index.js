@@ -213,7 +213,7 @@ export default function Home(props) {
           }
           <ChevronContainer>
             <ChevronButtonWrapper onClick={handleScrollTop}>
-              <DblUpChev></DblUpChev>
+              <DblUpChev />
             </ChevronButtonWrapper>
           </ChevronContainer>
         </TopSection>

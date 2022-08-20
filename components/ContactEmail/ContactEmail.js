@@ -1,25 +1,32 @@
-import React, { useState, forwardRef } from 'react'
-import { Input, Label, TextArea } from '../../globalstyle';
-import {ContactForm, FormItem, Submit} from './ContactEmail.elements'
+import React, { useState, forwardRef, useEffect } from 'react'
+import { Input, Label, TextArea, H2 } from '../../globalstyle';
+import { ContactForm, FormItem, Submit, BlurContainer, ContactModal } from './ContactEmail.elements'
 import 'isomorphic-fetch';
 
 
 
-const ContactEmail = forwardRef(({show}, ref) => {
+const ContactEmail = forwardRef(({ show }, ref) => {
     const [from, setFrom] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
-    // const [displayModal, setDisplayModal] = useState(false)
+    const [displayModal, setDisplayModal] = useState(false)
+    const [modalMsg, setModalMsg] = useState('')
 
     // useEffect(() => {
     //     setDisplayModal(!displayModal)
     // }, [modalMsg])
 
+    const handleCloseModal = (e) => {
+        e.preventDefault();
+        setDisplayModal(!displayModal)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // setDisplayModal(!displayModal)
         if (!from || !subject || !message) {
-            alert('All fields required')
+            setModalMsg('All fields are required.')
+            setDisplayModal(!displayModal)
             return
         }
         try {
@@ -31,18 +38,18 @@ const ContactEmail = forwardRef(({show}, ref) => {
                 body: JSON.stringify({ from, subject, message })
             })
                 .then(res => {
-                    // if (res.status === 200) {
-                    //     setModalMsg(`Thanks for contacting me ${from}`)
-                    // }
-                    // alert('Thanks for the Message!', `${res.newEmail.from}`)
-                    // console.log(res)
+                    if (res.status === 200) {
+                        setModalMsg(`Thanks for contacting me ${from}.`)
+                        setDisplayModal(!displayModal)
+                    }
                     setFrom('');
                     setSubject('');
                     setMessage('')
                 })
 
         } catch (error) {
-            console.log(error);
+            setModalMsg(`An error occured...Message not delivered.`)
+            setDisplayModal(!displayModal)
             res.status(400);
         }
     }
@@ -66,6 +73,22 @@ const ContactEmail = forwardRef(({show}, ref) => {
                     <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
                 </FormItem>
             </ContactForm>
+            {displayModal
+                ?
+                <BlurContainer show onClick={(e) => { handleCloseModal(e) }}>
+                    <ContactModal isOpen>
+                        <H2 light center>
+                            {modalMsg}
+                        </H2>
+                        <br></br>
+                        <Label>Click anywhere to resume.</Label>
+                    </ContactModal>
+                </BlurContainer>
+                :
+                <BlurContainer>
+                    <ContactModal></ContactModal>
+                </BlurContainer>
+            }
         </>
     )
 })
