@@ -79,7 +79,7 @@ const ChevronContainer = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 10vh;
     height: fit-content;
 `
 const ChevronButtonWrapper = styled.button`
@@ -172,7 +172,7 @@ export default function Home(props) {
           <HeroH1 centered>Front End Developer</HeroH1>
           <StackIcons />
           <DownloadPDFLink></DownloadPDFLink>
-          <H2>Thanks for visiting!</H2>
+          {/* <H2>Thanks for visiting!</H2> */}
           <ChevronContainer>
             <ChevronButtonWrapper onClick={handleScrollAbout}>
               <DownChevron />

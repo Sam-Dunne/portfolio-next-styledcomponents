@@ -134,7 +134,7 @@ export const ProjectsSection = styled.section`
 export const ProjectsCardWrapper = styled.button`
     position: relative;
     border: none;
-    width: 40%;
+    width: 34%;
     border-radius: 15px;
     margin: 10px auto 10px auto;
     box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);

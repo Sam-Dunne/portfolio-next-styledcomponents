@@ -9,7 +9,7 @@ export const ProjDetailSection = styled.section`
     width: 100%;
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
-    padding: 1rem 1rem;
+    padding: 3rem 1rem;
     background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     
     @media ${device.tablet} {

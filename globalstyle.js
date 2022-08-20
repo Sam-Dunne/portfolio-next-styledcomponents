@@ -69,7 +69,7 @@ export const MidPageSection = styled.section`
     background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     min-height: 100vh;
     position: relative;
-    padding: 6rem 3rem;
+    padding: 6rem 2rem;
     
     @media ${device.tablet} {
         padding: 9rem 3rem;  
