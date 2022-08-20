@@ -25,19 +25,7 @@ function ProjectDetail({ data }) {
     <Container>
       <ProjDetailSection last>
 
-        <DynNavWrapper>
-          {projectId != 1 ?
-            <DynNavButton onClick={prevProjHandler}><PrevIcon /> Prev</DynNavButton>
-            :
-            <DynNavButton disabled><PrevIcon />Prev</DynNavButton>
-          }
-          <Link href='/'><DynNavButton>To main page</DynNavButton></Link>
-          {projectId < data.length ?
-            <DynNavButton onClick={nextProjHandler}>Next <NextIcon /></DynNavButton>
-            :
-            <DynNavButton disabled>Next <NextIcon /></DynNavButton>
-          }
-        </DynNavWrapper>
+        
 
         <HeroH1 centered>{pData.title}</HeroH1>
         <DetailsWrapper>
@@ -53,6 +41,20 @@ function ProjectDetail({ data }) {
             </StackUL>
           </Article>
         </DetailsWrapper>
+
+        <DynNavWrapper>
+          {projectId != 1 ?
+            <DynNavButton onClick={prevProjHandler}><PrevIcon /> Prev</DynNavButton>
+            :
+            <DynNavButton disabled><PrevIcon />Prev</DynNavButton>
+          }
+          <Link href='/'><DynNavButton>To main page</DynNavButton></Link>
+          {projectId < data.length ?
+            <DynNavButton onClick={nextProjHandler}>Next <NextIcon /></DynNavButton>
+            :
+            <DynNavButton disabled>Next <NextIcon /></DynNavButton>
+          }
+        </DynNavWrapper>
       </ProjDetailSection>
     </Container>
   )

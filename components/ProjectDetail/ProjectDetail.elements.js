@@ -201,15 +201,20 @@ export const DynNavWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 2em 0;
+    /* margin: 0 0 2em 0; */
+    margin: 2em 0 0 0;
     
     @media ${device.tablet} {
-    margin: 0 0 5em 0;
+    /* margin: 0 0 5em 0; */
+    margin: 5em 0 0 0;
 
     }
 
     @media ${device.laptopL} {  
-        padding: 0 7em;    
+        /* padding: 0 7em;     */
+        padding: 0 7em;   
+    margin: 7em 0 0 0;
+
     }
 `;
 
