@@ -42,7 +42,7 @@ const Headshot = styled.img`
   filter: drop-shadow(3px 6px 4px #7a797a);
 
   @media ${device.tablet} {
-      margin: 1em auto 1.2em auto;
+      margin: 0 auto 1.2em auto;
       width: 200px;
       height: 200px;
     }

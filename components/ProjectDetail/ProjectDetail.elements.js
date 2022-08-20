@@ -9,11 +9,12 @@ export const ProjDetailSection = styled.section`
     width: 100%;
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
-    padding: 3rem 1rem;
+    padding: 10vh 1rem;
+    /* margin-top: 10vh; */
     background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     
     @media ${device.tablet} {
-        padding: 2rem 6rem;
+        padding: 12vh 6rem;
     }
     
     @media ${device.laptopL} {
@@ -23,6 +24,7 @@ export const ProjDetailSection = styled.section`
 `
 
 export const Anchor = styled.a`
+width: fit-content;
     &:focus {
         
     }   
@@ -65,7 +67,7 @@ export const Middle = styled.div`
 export const ProjectsImage = styled(Image)`
     opacity: 1;
     display: block;
-    width: 100%;
+    /* width: 100%; */
     /* height: auto; */
     transition: .5s ease;
     backface-visibility: hidden;
@@ -144,8 +146,7 @@ export const DetailsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-   
+    padding: 0 2em;
 
     &:focus {
     }   
@@ -171,7 +172,7 @@ export const DetailsWrapper = styled.div`
 
 export const ProjectsCard = styled.div`
     position: relative;
-    flex-basis: 45%;
+    flex-basis: 35%;
     box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
     -webkit-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
     -moz-box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.45);
@@ -184,12 +185,14 @@ export const ProjectsCard = styled.div`
     }
     
     @media ${device.tablet} {
-        min-width: 180px;
-        max-width: 200px;
+        min-width: 160px;
+        max-width: 180px;
     }
     
     @media ${device.laptopL} {
-        max-width: 150px;
+        flex-basis: none;
+        min-width: 100px;
+        max-width: 160px;
         /* flex-basis: 30%; */
         /* margin-right: 40px; */
         /* max-height: 350px; */
@@ -203,6 +206,7 @@ export const DynNavWrapper = styled.div`
     align-items: center;
     /* margin: 0 0 2em 0; */
     margin: 2em 0 0 0;
+    height: fit-content;
     
     @media ${device.tablet} {
     /* margin: 0 0 5em 0; */
@@ -263,7 +267,7 @@ export const DynNavButton = styled.button`
     }
 `;
 export const Article = styled.article`          
-    flex-basis: 40%;
+    flex-basis: 52%;
      
     
 
@@ -275,6 +279,7 @@ export const Article = styled.article`
     }
 
     @media ${device.tablet} {
+        flex-basis: 50%;
     }
 
     @media ${device.laptopL} {
