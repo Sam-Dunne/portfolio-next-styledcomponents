@@ -158,7 +158,7 @@ export const HeroH1 = styled.h1`
        
     }
     @media ${device.laptop} {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 `;
 
@@ -254,7 +254,7 @@ export const H2 = styled.h2`
         /* width: 60%; */
     }
     @media ${device.laptop} {
-        font-size: 1.3em;
+        font-size: 1.2em;
         margin: 1em auto 0 auto;
         /* width: 30%; */
     }
@@ -266,7 +266,7 @@ export const PARA = styled.p`
     }
 
     @media ${device.laptopL} {
-    font-size: 1.1em;
+    font-size: 1em;
     }
 `;
 

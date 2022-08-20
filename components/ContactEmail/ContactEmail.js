@@ -56,24 +56,7 @@ const ContactEmail = forwardRef(({ show }, ref) => {
 
     return (
         <>
-            <ContactForm ref={ref} isVisible={show}>
-                <FormItem>
-                    <Label htmlFor='Your Email'>Your Email</Label>
-                    <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
-                </FormItem>
-                <FormItem>
-                    <Label >Subject</Label>
-                    <Input name='subject' value={subject} onChange={(e) => { setSubject(e.target.value) }} />
-                </FormItem>
-                <FormItem>
-                    <Label htmlFor='message'>Message</Label>
-                    <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
-                </FormItem>
-                <FormItem>
-                    <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
-                </FormItem>
-            </ContactForm>
-            {displayModal
+            {/* {displayModal
                 ?
                 <BlurContainer show onClick={(e) => { handleCloseModal(e) }}>
                     <ContactModal isOpen>
@@ -88,7 +71,25 @@ const ContactEmail = forwardRef(({ show }, ref) => {
                 <BlurContainer>
                     <ContactModal></ContactModal>
                 </BlurContainer>
-            }
+            } */}
+            <ContactForm ref={ref} isVisible={show}>
+                <FormItem>
+                    <Label htmlFor='Your Email'>Your Email Address</Label>
+                    <Input type='email' value={from} onChange={(e) => { setFrom(e.target.value) }} />
+                </FormItem>
+                <FormItem>
+                    <Label >Subject</Label>
+                    <Input name='subject' value={subject} onChange={(e) => { setSubject(e.target.value) }} />
+                </FormItem>
+                <FormItem>
+                    <Label htmlFor='message'>Message</Label>
+                    <TextArea rows={6} type='text' name='message' value={message} onChange={(e) => { setMessage(e.target.value) }} />
+                </FormItem>
+                <FormItem>
+                    <Submit primary type='submit' onClick={(e) => { handleSubmit(e) }}>Send</Submit>
+                </FormItem>
+            </ContactForm>
+
         </>
     )
 })

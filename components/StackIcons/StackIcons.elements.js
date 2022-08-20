@@ -5,7 +5,7 @@ import {SiHtml5, SiCss3, SiReact, SiRedux, SiTailwindcss, SiBootstrap, SiGit, Si
 const fontSize = {
     mobile: '2.1em',
     tablet: '3em',
-    laptopL: '3em'
+    laptopL: '2.8em'
 };
 
 export const IconGrid = styled.div`
@@ -30,8 +30,6 @@ export const IconHTML = styled(SiHtml5)`
     font-size: ${fontSize.mobile};
     margin: 0 auto;
     filter: drop-shadow(4px 3px 3px #9589a1);
-
-
 
     @media ${device.tablet} {
     font-size: ${fontSize.tablet};    
