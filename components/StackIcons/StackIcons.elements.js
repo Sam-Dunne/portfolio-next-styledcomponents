@@ -5,7 +5,7 @@ import {SiHtml5, SiCss3, SiReact, SiRedux, SiTailwindcss, SiBootstrap, SiGit, Si
 const fontSize = {
     mobile: '2.1em',
     tablet: '3em',
-    laptopL: '3.2em'
+    laptopL: '3em'
 };
 
 export const IconGrid = styled.div`

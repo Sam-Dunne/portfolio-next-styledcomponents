@@ -99,11 +99,11 @@ export const ContactModal = styled.div`
     
     position: fixed;
     z-index: 900;
-    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,0.9587185215883228) 71%);
+    background: linear-gradient(45deg, rgba(140,26,255,1) 30%, rgba(152,26,255,1) 71%);
     top: ${props => props.isOpen ? '15vh' : '-20vh'};
 
     /* width: 35%; */
-    width: ${props => props.isOpen ? '36%' : '0px'};
+    /* width: ${props => props.isOpen ? '50%' : '0px'}; */
     padding: ${props => props.isOpen ? '4rem' : '0px'};
     display: flex;
     flex-direction: column;
@@ -117,6 +117,7 @@ export const ContactModal = styled.div`
     
     transition:
        opacity 50ms ease-in-out,
+       padding 200ms ease 400ms,
        top 400ms ease-in-out 50ms;
        /* width 800ms ease-in; */
 `;
