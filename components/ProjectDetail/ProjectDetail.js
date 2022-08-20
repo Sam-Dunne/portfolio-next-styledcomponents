@@ -23,7 +23,7 @@ function ProjectDetail({ data }) {
 
   return (
     <Container>
-      <ProjDetailSection>
+      <ProjDetailSection last>
 
         
 

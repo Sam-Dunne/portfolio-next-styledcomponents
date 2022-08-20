@@ -79,7 +79,7 @@ const ChevronContainer = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-bottom: 10vh;
+    margin-bottom: 12px;
     height: fit-content;
 `
 const ChevronButtonWrapper = styled.button`

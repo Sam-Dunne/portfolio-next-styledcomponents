@@ -1,4 +1,4 @@
-import {IconGrid, IconHTML, IconCSS, IconREACT, IconREDUX, IconTAILWIND, IconBOOTSTRAP, IconGIT, IconJS, IconSTYLED, IconNEXT} from "./StackIcons.elements";
+import {IconGrid, IconHTML, IconCSS, IconREACT, IconREDUX, IconTAILWIND, IconBOOTSTRAP, IconGIT, IconJS, IconSTYLED, IconNEXT, IconMySQL, IconTS} from "./StackIcons.elements";
 
 export default function StackIcons() {
   return (
@@ -6,6 +6,7 @@ export default function StackIcons() {
         <IconHTML />
         <IconCSS />
         <IconJS />
+        <IconTS />
         <IconREACT />
         <IconREDUX />
         <IconNEXT />
@@ -13,6 +14,7 @@ export default function StackIcons() {
         <IconBOOTSTRAP />
         <IconSTYLED />
         <IconGIT />
+        <IconMySQL />
     </IconGrid>
   )
 }
