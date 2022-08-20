@@ -32,17 +32,17 @@ export const NavLink = styled.a`
     padding: 0 0;
     margin: ${props => props.mobile ? '0 0 50px 0' : '0'};
     color: #fafafa;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 
     @media ${device.tablet} {  
       padding: 0 20px;   
-      font-size: 2.3rem;
+      font-size: 2.3em;
     }
     
     @media ${device.laptop} {  
       padding: 0 20px;   
-      font-size: 1.3rem;
+      font-size: 1.3em;
     }
 
     &:hover{
