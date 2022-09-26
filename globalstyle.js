@@ -10,12 +10,26 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
     } 
     
-    html, body {
+    html {
+    max-width: 100%;
+    }
+
+    body {
         height: 100%;
         max-width: 100%;
         overflow-x: hidden;
         background: #f4f0f8;
+        overflow-y: scroll;
+
     }
+
+    /* 
+    body {
+    height: 100%;
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+    } */
+
     
     a, h3, h5, p {
         font-family: 'Nunito','Source Sans Pro', sans-serif;
