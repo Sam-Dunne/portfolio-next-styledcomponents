@@ -10,6 +10,7 @@ export const ProjDetailSection = styled.section`
     min-height: ${props => props.last ? '80vh' : "90vh"};
     position: relative;
     padding: 10vh 1rem;
+    offset-position: top; 
     /* margin-top: 10vh; */
     background-color: ${props => props.dark ? '#e9e6ed' : '#f9f7fc'};
     

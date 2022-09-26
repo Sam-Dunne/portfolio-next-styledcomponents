@@ -36,6 +36,7 @@ class MyFontDocument extends MyDocument {
     return (
       <Html>
         <Head>
+          <meta charSet='UTF-8'></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"></link>

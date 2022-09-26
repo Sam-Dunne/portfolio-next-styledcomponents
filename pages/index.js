@@ -159,6 +159,8 @@ export default function Home(props) {
     <>
       <Head>
         <title>Hi, I&apos;m Sam</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, max-scale=1 min-scale=1"></meta>
+
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
